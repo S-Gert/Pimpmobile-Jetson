@@ -1,0 +1,24 @@
+[3.063s] Invoking command in '/home/pimpmobile/ros2_ws/src/teleop_pm': PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed
+[3.513s] running egg_info
+[3.514s] writing ../../build/teleop_pm/teleop_pm.egg-info/PKG-INFO
+[3.515s] writing dependency_links to ../../build/teleop_pm/teleop_pm.egg-info/dependency_links.txt
+[3.515s] writing entry points to ../../build/teleop_pm/teleop_pm.egg-info/entry_points.txt
+[3.517s] writing requirements to ../../build/teleop_pm/teleop_pm.egg-info/requires.txt
+[3.518s] writing top-level names to ../../build/teleop_pm/teleop_pm.egg-info/top_level.txt
+[3.579s] reading manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[3.580s] writing manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[3.581s] running build
+[3.581s] running build_py
+[3.581s] copying teleop_pm/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm
+[3.581s] running install
+[3.583s] running install_lib
+[3.585s] copying /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm
+[3.586s] byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm/subscriber_member_function.py to subscriber_member_function.cpython-38.pyc
+[3.590s] running install_data
+[3.592s] running install_egg_info
+[3.594s] removing '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info' (and everything under it)
+[3.596s] Copying ../../build/teleop_pm/teleop_pm.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info
+[3.597s] running install_scripts
+[3.632s] Installing teleop_pm_sub script to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/teleop_pm
+[3.633s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log'
+[3.693s] Invoked command in '/home/pimpmobile/ros2_ws/src/teleop_pm' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed

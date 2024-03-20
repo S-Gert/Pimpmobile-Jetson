@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info
+writing ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/PKG-INFO
+writing dependency_links to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/dependency_links.txt
+writing entry points to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/entry_points.txt
+writing requirements to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/requires.txt
+writing top-level names to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/top_level.txt
+writing manifest file '../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/SOURCES.txt'
+reading manifest file '../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/SOURCES.txt'
+writing manifest file '../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build
+creating /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib
+creating /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile
+copying teleop_pimpmobile/pimpmobile_teleop_subs.py -> /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile
+copying teleop_pimpmobile/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile
+running install
+running install_lib
+creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile
+copying /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile/pimpmobile_teleop_subs.py -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile
+copying /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile/__init__.py -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile/pimpmobile_teleop_subs.py to pimpmobile_teleop_subs.cpython-38.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index
+creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index/resource_index
+creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index/resource_index/packages
+copying resource/teleop_pimpmobile -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index/resource_index/packages
+copying package.xml -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/teleop_pimpmobile
+running install_egg_info
+Copying ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile-0.0.0-py3.8.egg-info
+running install_scripts
+Installing pmteleop script to /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/teleop_pimpmobile
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pimpmobile/install.log'

@@ -1,0 +1,1 @@
+Invoking command in '/home/pimpmobile/ros2_ws/build/turtlesim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pimpmobile/ros2_ws/install/teleop_python:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/turtlesim -- -j6 -l6

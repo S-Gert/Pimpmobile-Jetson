@@ -1,0 +1,21 @@
+[2.499s] Invoking command in '/home/pimpmobile/ros2_ws/src/teleop_pm': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed
+[2.946s] running egg_info
+[2.948s] writing ../../build/teleop_pm/teleop_pm.egg-info/PKG-INFO
+[2.948s] writing dependency_links to ../../build/teleop_pm/teleop_pm.egg-info/dependency_links.txt
+[2.948s] writing entry points to ../../build/teleop_pm/teleop_pm.egg-info/entry_points.txt
+[2.949s] writing requirements to ../../build/teleop_pm/teleop_pm.egg-info/requires.txt
+[2.949s] writing top-level names to ../../build/teleop_pm/teleop_pm.egg-info/top_level.txt
+[3.012s] reading manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[3.013s] writing manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[3.013s] running build
+[3.014s] running build_py
+[3.014s] running install
+[3.015s] running install_lib
+[3.018s] running install_data
+[3.019s] running install_egg_info
+[3.023s] removing '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info' (and everything under it)
+[3.023s] Copying ../../build/teleop_pm/teleop_pm.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info
+[3.025s] running install_scripts
+[3.059s] Installing tops script to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/teleop_pm
+[3.060s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log'
+[3.116s] Invoked command in '/home/pimpmobile/ros2_ws/src/teleop_pm' returned '0': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed

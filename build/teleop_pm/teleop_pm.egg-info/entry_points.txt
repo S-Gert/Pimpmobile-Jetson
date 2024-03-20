@@ -1,0 +1,2 @@
+[console_scripts]
+tops = teleop_pm.teleopserial:main

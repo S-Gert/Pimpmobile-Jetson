@@ -1,0 +1,5 @@
+[ 50%] Built target talker
+make[2]: *** No rule to make target '/home/pimpmobile/ros2_ws/src/teleop/src/subscriber_member_function.cpp', needed by 'CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/listener.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

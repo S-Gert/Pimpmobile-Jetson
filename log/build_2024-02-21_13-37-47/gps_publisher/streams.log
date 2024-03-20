@@ -1,0 +1,21 @@
+[6.265s] Invoking command in '/home/pimpmobile/ros2_ws/src/gps_publisher': PYTHONPATH=/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/gps_publisher build --build-base /home/pimpmobile/ros2_ws/build/gps_publisher/build install --record /home/pimpmobile/ros2_ws/build/gps_publisher/install.log --install-scripts $base/lib/gps_publisher --single-version-externally-managed
+[6.737s] running egg_info
+[6.740s] writing ../../build/gps_publisher/gps_publisher.egg-info/PKG-INFO
+[6.742s] writing dependency_links to ../../build/gps_publisher/gps_publisher.egg-info/dependency_links.txt
+[6.743s] writing entry points to ../../build/gps_publisher/gps_publisher.egg-info/entry_points.txt
+[6.746s] writing requirements to ../../build/gps_publisher/gps_publisher.egg-info/requires.txt
+[6.747s] writing top-level names to ../../build/gps_publisher/gps_publisher.egg-info/top_level.txt
+[6.807s] reading manifest file '../../build/gps_publisher/gps_publisher.egg-info/SOURCES.txt'
+[6.810s] writing manifest file '../../build/gps_publisher/gps_publisher.egg-info/SOURCES.txt'
+[6.811s] running build
+[6.811s] running build_py
+[6.811s] running install
+[6.812s] running install_lib
+[6.820s] running install_data
+[6.821s] running install_egg_info
+[6.821s] removing '/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info' (and everything under it)
+[6.823s] Copying ../../build/gps_publisher/gps_publisher.egg-info to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info
+[6.825s] running install_scripts
+[6.866s] Installing gps script to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/gps_publisher
+[6.867s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/gps_publisher/install.log'
+[7.177s] Invoked command in '/home/pimpmobile/ros2_ws/src/gps_publisher' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/gps_publisher build --build-base /home/pimpmobile/ros2_ws/build/gps_publisher/build install --record /home/pimpmobile/ros2_ws/build/gps_publisher/install.log --install-scripts $base/lib/gps_publisher --single-version-externally-managed

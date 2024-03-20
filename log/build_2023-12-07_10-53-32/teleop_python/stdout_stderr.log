@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/teleop_python/teleop_python.egg-info
+writing ../../build/teleop_python/teleop_python.egg-info/PKG-INFO
+writing dependency_links to ../../build/teleop_python/teleop_python.egg-info/dependency_links.txt
+writing entry points to ../../build/teleop_python/teleop_python.egg-info/entry_points.txt
+writing requirements to ../../build/teleop_python/teleop_python.egg-info/requires.txt
+writing top-level names to ../../build/teleop_python/teleop_python.egg-info/top_level.txt
+writing manifest file '../../build/teleop_python/teleop_python.egg-info/SOURCES.txt'
+reading manifest file '../../build/teleop_python/teleop_python.egg-info/SOURCES.txt'
+writing manifest file '../../build/teleop_python/teleop_python.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pimpmobile/ros2_ws/build/teleop_python/build
+creating /home/pimpmobile/ros2_ws/build/teleop_python/build/lib
+creating /home/pimpmobile/ros2_ws/build/teleop_python/build/lib/teleop_python
+copying teleop_python/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_python/build/lib/teleop_python
+copying teleop_python/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/build/teleop_python/build/lib/teleop_python
+copying teleop_python/publisher_member_function.py -> /home/pimpmobile/ros2_ws/build/teleop_python/build/lib/teleop_python
+running install
+running install_lib
+creating /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python
+copying /home/pimpmobile/ros2_ws/build/teleop_python/build/lib/teleop_python/__init__.py -> /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python
+copying /home/pimpmobile/ros2_ws/build/teleop_python/build/lib/teleop_python/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python
+copying /home/pimpmobile/ros2_ws/build/teleop_python/build/lib/teleop_python/publisher_member_function.py -> /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python/subscriber_member_function.py to subscriber_member_function.cpython-38.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python/publisher_member_function.py to publisher_member_function.cpython-38.pyc
+running install_data
+creating /home/pimpmobile/ros2_ws/install/teleop_python/share/ament_index
+creating /home/pimpmobile/ros2_ws/install/teleop_python/share/ament_index/resource_index
+creating /home/pimpmobile/ros2_ws/install/teleop_python/share/ament_index/resource_index/packages
+copying resource/teleop_python -> /home/pimpmobile/ros2_ws/install/teleop_python/share/ament_index/resource_index/packages
+copying package.xml -> /home/pimpmobile/ros2_ws/install/teleop_python/share/teleop_python
+running install_egg_info
+Copying ../../build/teleop_python/teleop_python.egg-info to /home/pimpmobile/ros2_ws/install/teleop_python/lib/python3.8/site-packages/teleop_python-0.0.0-py3.8.egg-info
+running install_scripts
+Installing listener script to /home/pimpmobile/ros2_ws/install/teleop_python/lib/teleop_python
+Installing talker script to /home/pimpmobile/ros2_ws/install/teleop_python/lib/teleop_python
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_python/install.log'

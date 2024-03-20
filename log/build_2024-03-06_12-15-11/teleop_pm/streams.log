@@ -1,0 +1,55 @@
+[2.197s] Invoking command in '/home/pimpmobile/ros2_ws/src/teleop_pm': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed
+[2.469s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[2.469s] !!
+[2.470s] 
+[2.470s]         ********************************************************************************
+[2.470s]         Usage of dash-separated 'script-dir' will not be supported in future
+[2.471s]         versions. Please use the underscore name 'script_dir' instead.
+[2.471s] 
+[2.471s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[2.471s]         or your builds will no longer be supported.
+[2.471s] 
+[2.472s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[2.472s]         ********************************************************************************
+[2.472s] 
+[2.472s] !!
+[2.473s]   opt = self.warn_dash_deprecation(opt, section)
+[2.696s] running egg_info
+[2.732s] writing ../../build/teleop_pm/teleop_pm.egg-info/PKG-INFO
+[2.733s] writing dependency_links to ../../build/teleop_pm/teleop_pm.egg-info/dependency_links.txt
+[2.733s] writing entry points to ../../build/teleop_pm/teleop_pm.egg-info/entry_points.txt
+[2.734s] writing requirements to ../../build/teleop_pm/teleop_pm.egg-info/requires.txt
+[2.734s] writing top-level names to ../../build/teleop_pm/teleop_pm.egg-info/top_level.txt
+[3.016s] reading manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[3.017s] writing manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[3.018s] running build
+[3.018s] running build_py
+[3.019s] copying teleop_pm/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm
+[3.019s] copying teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm
+[3.019s] running install
+[3.020s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[3.020s] !!
+[3.020s] 
+[3.021s]         ********************************************************************************
+[3.021s]         Please avoid running ``setup.py`` directly.
+[3.021s]         Instead, use pypa/build, pypa/installer or other
+[3.021s]         standards-based tools.
+[3.021s] 
+[3.021s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[3.021s]         ********************************************************************************
+[3.022s] 
+[3.022s] !!
+[3.022s]   self.initialize_options()
+[3.031s] running install_lib
+[3.068s] copying /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm
+[3.070s] byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm/teleopserial.py to teleopserial.cpython-38.pyc
+[3.071s] running install_data
+[3.107s] copying resource/teleop_pm -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/ament_index/resource_index/packages
+[3.108s] copying package.xml -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm
+[3.108s] running install_egg_info
+[3.146s] removing '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info' (and everything under it)
+[3.147s] Copying ../../build/teleop_pm/teleop_pm.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info
+[3.149s] running install_scripts
+[3.258s] Installing tops script to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/teleop_pm
+[3.259s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log'
+[3.334s] Invoked command in '/home/pimpmobile/ros2_ws/src/teleop_pm' returned '0': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed

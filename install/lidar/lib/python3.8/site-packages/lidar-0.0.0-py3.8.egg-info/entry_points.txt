@@ -1,0 +1,3 @@
+[console_scripts]
+lidar_listener = lidar.lidarsubscriber:main
+lidar_talker = lidar.publisher_member_function:main

@@ -1,0 +1,19 @@
+[1.465s] Invoking command in '/home/pimpmobile/ros2_ws/build/turtlesim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/turtlesim -- -j6 -l6
+[1.588s] [  3%] Built target turtlesim__cpp
+[1.589s] [ 11%] Built target turtlesim__rosidl_generator_c
+[1.642s] [ 31%] Built target turtlesim__rosidl_typesupport_introspection_c
+[1.642s] [ 31%] Built target turtlesim__rosidl_typesupport_introspection_cpp
+[1.645s] [ 41%] Built target turtlesim__rosidl_typesupport_cpp
+[1.651s] [ 51%] Built target turtlesim__rosidl_typesupport_fastrtps_cpp
+[1.697s] [ 61%] Built target turtlesim__rosidl_typesupport_c
+[1.715s] [ 71%] Built target turtlesim__rosidl_typesupport_fastrtps_c
+[1.762s] [ 71%] Built target turtlesim
+[1.827s] [ 75%] Built target draw_square
+[1.827s] [ 75%] Built target mimic
+[1.831s] [ 76%] Built target turtlesim__py
+[1.862s] [ 78%] Built target turtle_teleop_key
+[1.863s] [ 84%] Built target turtlesim_node
+[1.896s] [ 93%] Built target turtlesim__python
+[1.954s] [ 95%] Built target turtlesim__rosidl_typesupport_fastrtps_c__pyext
+[1.964s] [ 97%] Built target turtlesim__rosidl_typesupport_c__pyext
+[1.969s] [100%] Built target turtlesim__rosidl_typesupport_introspection_c__pyext

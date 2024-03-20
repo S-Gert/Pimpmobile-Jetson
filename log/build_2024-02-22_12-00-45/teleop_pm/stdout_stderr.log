@@ -1,0 +1,24 @@
+/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'script-dir' will not be supported in future
+        versions. Please use the underscore name 'script_dir' instead.
+
+        By 2024-Sep-26, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+running egg_info
+creating ../../build/teleop_pm/src_teleop_pm.egg-info
+writing ../../build/teleop_pm/src_teleop_pm.egg-info/PKG-INFO
+writing dependency_links to ../../build/teleop_pm/src_teleop_pm.egg-info/dependency_links.txt
+writing entry points to ../../build/teleop_pm/src_teleop_pm.egg-info/entry_points.txt
+writing requirements to ../../build/teleop_pm/src_teleop_pm.egg-info/requires.txt
+writing top-level names to ../../build/teleop_pm/src_teleop_pm.egg-info/top_level.txt
+writing manifest file '../../build/teleop_pm/src_teleop_pm.egg-info/SOURCES.txt'
+error: package directory 'src/teleop_pm' does not exist

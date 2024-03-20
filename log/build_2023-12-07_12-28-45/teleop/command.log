@@ -1,0 +1,2 @@
+Invoking command in '/home/pimpmobile/ros2_ws/build/teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/teleop -- -j6 -l6
+Invoked command in '/home/pimpmobile/ros2_ws/build/teleop' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/teleop -- -j6 -l6

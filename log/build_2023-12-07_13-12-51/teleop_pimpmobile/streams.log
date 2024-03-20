@@ -1,0 +1,37 @@
+[3.502s] Invoking command in '/home/pimpmobile/ros2_ws/src/teleop_pimpmobile': PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pimpmobile/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pimpmobile build --build-base /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build install --record /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/install.log --install-scripts $base/lib/teleop_pimpmobile --single-version-externally-managed
+[3.961s] running egg_info
+[3.962s] creating ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info
+[3.963s] writing ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/PKG-INFO
+[3.964s] writing dependency_links to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/dependency_links.txt
+[3.965s] writing entry points to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/entry_points.txt
+[3.966s] writing requirements to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/requires.txt
+[3.967s] writing top-level names to ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/top_level.txt
+[3.967s] writing manifest file '../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/SOURCES.txt'
+[4.029s] reading manifest file '../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/SOURCES.txt'
+[4.030s] writing manifest file '../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info/SOURCES.txt'
+[4.031s] running build
+[4.031s] running build_py
+[4.032s] creating /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build
+[4.032s] creating /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib
+[4.033s] creating /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile
+[4.034s] copying teleop_pimpmobile/pimpmobile_teleop_subs.py -> /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile
+[4.034s] copying teleop_pimpmobile/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile
+[4.035s] running install
+[4.035s] running install_lib
+[4.036s] creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile
+[4.036s] copying /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile/pimpmobile_teleop_subs.py -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile
+[4.039s] copying /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build/lib/teleop_pimpmobile/__init__.py -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile
+[4.039s] byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile/pimpmobile_teleop_subs.py to pimpmobile_teleop_subs.cpython-38.pyc
+[4.040s] byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile/__init__.py to __init__.cpython-38.pyc
+[4.042s] running install_data
+[4.042s] creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index
+[4.043s] creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index/resource_index
+[4.043s] creating /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index/resource_index/packages
+[4.044s] copying resource/teleop_pimpmobile -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/ament_index/resource_index/packages
+[4.044s] copying package.xml -> /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/share/teleop_pimpmobile
+[4.045s] running install_egg_info
+[4.045s] Copying ../../build/teleop_pimpmobile/teleop_pimpmobile.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages/teleop_pimpmobile-0.0.0-py3.8.egg-info
+[4.047s] running install_scripts
+[4.122s] Installing pmteleop script to /home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/teleop_pimpmobile
+[4.123s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pimpmobile/install.log'
+[4.430s] Invoked command in '/home/pimpmobile/ros2_ws/src/teleop_pimpmobile' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pimpmobile/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pimpmobile/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pimpmobile build --build-base /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/build install --record /home/pimpmobile/ros2_ws/build/teleop_pimpmobile/install.log --install-scripts $base/lib/teleop_pimpmobile --single-version-externally-managed

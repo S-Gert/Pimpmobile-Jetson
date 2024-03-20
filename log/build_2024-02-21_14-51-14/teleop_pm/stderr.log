@@ -1,0 +1,2 @@
+/usr/lib/python3.8/distutils/dist.py:274: UserWarning: Unknown distribution option: 'depend'
+  warnings.warn(msg)

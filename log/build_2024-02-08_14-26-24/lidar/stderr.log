@@ -1,0 +1,5 @@
+  File "/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar/subscriber_member_function.py", line 39
+    self.get_logger().info('I got the distance of: "%s"' % msg.ranges[]) #ranges[1]
+                                                                      ^
+SyntaxError: invalid syntax
+

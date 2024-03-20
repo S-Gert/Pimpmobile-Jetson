@@ -1,0 +1,28 @@
+[0.942s] Invoking command in '/home/pimpmobile/ros2_ws/build/teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/teleop -- -j6 -l6
+[1.062s] [35m[1mScanning dependencies of target listener[0m
+[1.101s] [ 50%] Built target talker
+[1.119s] [ 75%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[11.097s] [100%] [32m[1mLinking CXX executable listener[0m
+[11.537s] [100%] Built target listener
+[11.561s] Invoked command in '/home/pimpmobile/ros2_ws/build/teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/teleop -- -j6 -l6
+[11.620s] Invoking command in '/home/pimpmobile/ros2_ws/build/teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/pimpmobile/ros2_ws/build/teleop
+[11.640s] -- Install configuration: ""
+[11.640s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/lib/teleop/talker
+[11.641s] -- Installing: /home/pimpmobile/ros2_ws/install/teleop/lib/teleop/listener
+[11.645s] -- Set runtime path of "/home/pimpmobile/ros2_ws/install/teleop/lib/teleop/listener" to ""
+[11.645s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/ament_index/resource_index/package_run_dependencies/teleop
+[11.646s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/ament_index/resource_index/parent_prefix_path/teleop
+[11.646s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/environment/ament_prefix_path.sh
+[11.646s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/environment/ament_prefix_path.dsv
+[11.647s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/environment/path.sh
+[11.647s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/environment/path.dsv
+[11.647s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/local_setup.bash
+[11.648s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/local_setup.sh
+[11.648s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/local_setup.zsh
+[11.648s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/local_setup.dsv
+[11.648s] -- Installing: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/package.dsv
+[11.648s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/ament_index/resource_index/packages/teleop
+[11.649s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/cmake/teleopConfig.cmake
+[11.649s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/cmake/teleopConfig-version.cmake
+[11.649s] -- Up-to-date: /home/pimpmobile/ros2_ws/install/teleop/share/teleop/package.xml
+[11.652s] Invoked command in '/home/pimpmobile/ros2_ws/build/teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/pimpmobile/ros2_ws/build/teleop

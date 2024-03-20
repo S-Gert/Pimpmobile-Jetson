@@ -1,0 +1,7 @@
+[1.516s] Invoking command in '/home/pimpmobile/ros2_ws/build/teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pimpmobile/ros2_ws/install/teleop_python:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/teleop -- -j6 -l6
+[2.561s] make[2]: *** No rule to make target '/home/pimpmobile/ros2_ws/src/teleop/src/subscriber_member_function.cpp', needed by 'CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o'.  Stop.
+[2.562s] make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/listener.dir/all] Error 2
+[2.562s] make[1]: *** Waiting for unfinished jobs....
+[2.563s] make: *** [Makefile:141: all] Error 2
+[2.563s] [ 50%] Built target talker
+[2.573s] Invoked command in '/home/pimpmobile/ros2_ws/build/teleop' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pimpmobile/ros2_ws/install/teleop_python:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/teleop -- -j6 -l6

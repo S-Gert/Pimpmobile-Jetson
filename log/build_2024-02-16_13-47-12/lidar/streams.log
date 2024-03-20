@@ -1,0 +1,24 @@
+[2.501s] Invoking command in '/home/pimpmobile/ros2_ws/src/lidar': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed
+[2.951s] running egg_info
+[2.952s] writing ../../build/lidar/lidar.egg-info/PKG-INFO
+[2.952s] writing dependency_links to ../../build/lidar/lidar.egg-info/dependency_links.txt
+[2.953s] writing entry points to ../../build/lidar/lidar.egg-info/entry_points.txt
+[2.953s] writing requirements to ../../build/lidar/lidar.egg-info/requires.txt
+[2.953s] writing top-level names to ../../build/lidar/lidar.egg-info/top_level.txt
+[3.016s] reading manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+[3.017s] writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+[3.017s] running build
+[3.018s] running build_py
+[3.018s] running install
+[3.019s] running install_lib
+[3.022s] running install_data
+[3.023s] copying package.xml -> /home/pimpmobile/ros2_ws/install/lidar/share/lidar
+[3.024s] running install_egg_info
+[3.027s] removing '/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info' (and everything under it)
+[3.027s] Copying ../../build/lidar/lidar.egg-info to /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info
+[3.029s] running install_scripts
+[3.064s] Installing combined_launch script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+[3.064s] Installing lidar_listener script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+[3.065s] Installing lidar_talker script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+[3.065s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/lidar/install.log'
+[3.117s] Invoked command in '/home/pimpmobile/ros2_ws/src/lidar' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed

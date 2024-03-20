@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/lidar/lidar.egg-info
+writing ../../build/lidar/lidar.egg-info/PKG-INFO
+writing dependency_links to ../../build/lidar/lidar.egg-info/dependency_links.txt
+writing entry points to ../../build/lidar/lidar.egg-info/entry_points.txt
+writing requirements to ../../build/lidar/lidar.egg-info/requires.txt
+writing top-level names to ../../build/lidar/lidar.egg-info/top_level.txt
+writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+reading manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pimpmobile/ros2_ws/build/lidar/build
+creating /home/pimpmobile/ros2_ws/build/lidar/build/lib
+creating /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+copying lidar/__init__.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+copying lidar/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+copying lidar/publisher_member_function.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+running install
+running install_lib
+creating /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/__init__.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/publisher_member_function.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar/subscriber_member_function.py to subscriber_member_function.cpython-38.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar/publisher_member_function.py to publisher_member_function.cpython-38.pyc
+running install_data
+creating /home/pimpmobile/ros2_ws/install/lidar/share/ament_index
+creating /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index
+creating /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index/packages
+copying resource/lidar -> /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index/packages
+copying package.xml -> /home/pimpmobile/ros2_ws/install/lidar/share/lidar
+running install_egg_info
+Copying ../../build/lidar/lidar.egg-info to /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info
+running install_scripts
+Installing lidar_listener script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+Installing lidar_talker script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/lidar/install.log'
