@@ -1,10 +1,14 @@
 import rclpy
+import threading
 from rclpy.node import Node
 import serial
 import time
 from std_msgs.msg import String, Int32MultiArray
 
-arduino = serial.Serial(port='/dev/ttyACM0', baudrate=9600, timeout=.2)
+arduino_port = '/dev/ttyACM0'
+arduino_nano_port = '/dev/ttyUSB0' # '/dev/ttyUSB1'
+
+arduino = serial.Serial(port=arduino_port, baudrate=9600, timeout=.2)
 print("Opening arduino port...")
 time.sleep(3)
 
@@ -29,17 +33,33 @@ class TeleopSerial(Node):
         self.arduino_commands = "0, 0, 0"
         self.obstacle = 0
 
+        self.running = True
+        self.arduino_nano_open = False
+        self.encoders = '0, 0'
+
+    # def read_arduino_data(self):
+    #     self.get_logger().info(arduino.readline().strip().decode())
+
+    def read_arduino_nano_data(self):
+        if self.arduino_nano_open == False:
+            arduino_nano = serial.Serial(port=arduino_nano_port, baudrate=9600, timeout=.2)
+            print("Opening arduino nano port...")
+            time.sleep(3)
+            self.arduino_nano_open = True
+        while self.running:
+            self.encoders = arduino_nano.readline().decode().strip()
+            #print(self.encoders)
+
     def write_data(self, x):
-        #arduino.flushInput()
         x_str = str(x)
         arduino.write(bytes(x_str, 'utf-8'))
-        self.get_logger().info(arduino.readline().strip().decode())
+        arduino_line = arduino.readline().strip().decode()
+        self.get_logger().info(arduino_line)
         #time.sleep(0.05)
 
     def lidar_callback(self, msg):
         lid_arr = msg.data
         if lid_arr[1] == 1 or lid_arr[2] == 1 or lid_arr[3] == 1:
-            #self.get_logger().info("WALL!!!!!")
             self.obstacle = 1
         else:
             self.obstacle = 0
@@ -62,19 +82,21 @@ class TeleopSerial(Node):
         self.get_logger().info(f"{motors}, {servo}, {brakes}")
         self.arduino_commands = f"{motors}, {servo}, {brakes}"
         self.write_data(self.arduino_commands) 
-        #self.get_logger().info('I heard: "%s"' % steering_wheel)
-
 
 def main(args=None):
     rclpy.init(args=args)
 
     teleop_serial = TeleopSerial()
 
+    encoder_read_thread = threading.Thread(target = teleop_serial.read_arduino_nano_data)
+    encoder_read_thread.start()
+
     rclpy.spin(teleop_serial)
+    teleop_serial.running = False
+    encoder_read_thread.join()
 
     teleop_serial.destroy_node()
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()

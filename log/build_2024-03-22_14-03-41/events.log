@@ -1,0 +1,125 @@
+[0.000000] (-) TimerEvent: {}
+[0.000614] (-) JobUnselected: {'identifier': 'gps_publisher'}
+[0.000983] (-) JobUnselected: {'identifier': 'lidar'}
+[0.001172] (-) JobUnselected: {'identifier': 'slam'}
+[0.001564] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.001912] (teleop_pm) JobQueued: {'identifier': 'teleop_pm', 'dependencies': OrderedDict([('lidar', '/home/pimpmobile/ros2_ws/install/lidar')])}
+[0.002084] (teleop_pm) JobStarted: {'identifier': 'teleop_pm'}
+[0.103255] (-) TimerEvent: {}
+[0.204455] (-) TimerEvent: {}
+[0.306169] (-) TimerEvent: {}
+[0.406952] (-) TimerEvent: {}
+[0.508748] (-) TimerEvent: {}
+[0.610092] (-) TimerEvent: {}
+[0.711111] (-) TimerEvent: {}
+[0.812224] (-) TimerEvent: {}
+[0.914831] (-) TimerEvent: {}
+[1.018154] (-) TimerEvent: {}
+[1.119993] (-) TimerEvent: {}
+[1.221288] (-) TimerEvent: {}
+[1.323265] (-) TimerEvent: {}
+[1.424505] (-) TimerEvent: {}
+[1.525443] (-) TimerEvent: {}
+[1.626105] (-) TimerEvent: {}
+[1.726674] (-) TimerEvent: {}
+[1.827441] (-) TimerEvent: {}
+[1.928456] (-) TimerEvent: {}
+[2.029556] (-) TimerEvent: {}
+[2.130189] (-) TimerEvent: {}
+[2.231594] (-) TimerEvent: {}
+[2.332180] (-) TimerEvent: {}
+[2.432695] (-) TimerEvent: {}
+[2.533187] (-) TimerEvent: {}
+[2.633698] (-) TimerEvent: {}
+[2.734371] (-) TimerEvent: {}
+[2.835253] (-) TimerEvent: {}
+[2.935972] (-) TimerEvent: {}
+[3.036535] (-) TimerEvent: {}
+[3.137199] (-) TimerEvent: {}
+[3.237732] (-) TimerEvent: {}
+[3.338252] (-) TimerEvent: {}
+[3.438788] (-) TimerEvent: {}
+[3.539309] (-) TimerEvent: {}
+[3.639829] (-) TimerEvent: {}
+[3.740347] (-) TimerEvent: {}
+[3.840881] (-) TimerEvent: {}
+[3.941449] (-) TimerEvent: {}
+[4.041957] (-) TimerEvent: {}
+[4.142450] (-) TimerEvent: {}
+[4.243006] (-) TimerEvent: {}
+[4.332681] (teleop_pm) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/teleop_pm', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/teleop_pm/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log', '--install-scripts', '$base/lib/teleop_pm', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/teleop_pm', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2580', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1860', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:62774', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2616,unix/pimpmobile-desktop:/tmp/.ICE-unix/2616', 'INVOCATION_ID': 'f071f88555fa4caea1d54e84e87d4f75', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/03070adb_3e26_4ca9_b251_b4a36cc5098e', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.88', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/teleop_pm', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[4.344908] (-) TimerEvent: {}
+[4.446326] (-) TimerEvent: {}
+[4.547055] (-) TimerEvent: {}
+[4.601941] (teleop_pm) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[4.602523] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[4.602724] (teleop_pm) StderrLine: {'line': b'\n'}
+[4.602869] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.603002] (teleop_pm) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[4.603130] (teleop_pm) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[4.603273] (teleop_pm) StderrLine: {'line': b'\n'}
+[4.603397] (teleop_pm) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[4.603518] (teleop_pm) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[4.603635] (teleop_pm) StderrLine: {'line': b'\n'}
+[4.603750] (teleop_pm) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[4.603867] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.603983] (teleop_pm) StderrLine: {'line': b'\n'}
+[4.604099] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[4.604213] (teleop_pm) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[4.647138] (-) TimerEvent: {}
+[4.747579] (-) TimerEvent: {}
+[4.818224] (teleop_pm) StdoutLine: {'line': b'running egg_info\n'}
+[4.847687] (-) TimerEvent: {}
+[4.852633] (teleop_pm) StdoutLine: {'line': b'writing ../../build/teleop_pm/teleop_pm.egg-info/PKG-INFO\n'}
+[4.853679] (teleop_pm) StdoutLine: {'line': b'writing dependency_links to ../../build/teleop_pm/teleop_pm.egg-info/dependency_links.txt\n'}
+[4.854256] (teleop_pm) StdoutLine: {'line': b'writing entry points to ../../build/teleop_pm/teleop_pm.egg-info/entry_points.txt\n'}
+[4.854702] (teleop_pm) StdoutLine: {'line': b'writing requirements to ../../build/teleop_pm/teleop_pm.egg-info/requires.txt\n'}
+[4.854999] (teleop_pm) StdoutLine: {'line': b'writing top-level names to ../../build/teleop_pm/teleop_pm.egg-info/top_level.txt\n'}
+[4.947826] (-) TimerEvent: {}
+[5.048348] (-) TimerEvent: {}
+[5.129691] (teleop_pm) StdoutLine: {'line': b"reading manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'\n"}
+[5.131332] (teleop_pm) StdoutLine: {'line': b"writing manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'\n"}
+[5.131727] (teleop_pm) StdoutLine: {'line': b'running build\n'}
+[5.131951] (teleop_pm) StdoutLine: {'line': b'running build_py\n'}
+[5.132227] (teleop_pm) StdoutLine: {'line': b'copying teleop_pm/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm\n'}
+[5.132593] (teleop_pm) StdoutLine: {'line': b'copying teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm\n'}
+[5.133219] (teleop_pm) StdoutLine: {'line': b'running install\n'}
+[5.133716] (teleop_pm) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[5.133978] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[5.134132] (teleop_pm) StderrLine: {'line': b'\n'}
+[5.134266] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.134392] (teleop_pm) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[5.134511] (teleop_pm) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[5.134644] (teleop_pm) StderrLine: {'line': b'        standards-based tools.\n'}
+[5.134773] (teleop_pm) StderrLine: {'line': b'\n'}
+[5.134891] (teleop_pm) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[5.135011] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.135126] (teleop_pm) StderrLine: {'line': b'\n'}
+[5.135239] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[5.135351] (teleop_pm) StderrLine: {'line': b'  self.initialize_options()\n'}
+[5.144775] (teleop_pm) StdoutLine: {'line': b'running install_lib\n'}
+[5.148407] (-) TimerEvent: {}
+[5.180007] (teleop_pm) StdoutLine: {'line': b'copying /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm\n'}
+[5.181246] (teleop_pm) StdoutLine: {'line': b'byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm/teleopserial.py to teleopserial.cpython-38.pyc\n'}
+[5.183310] (teleop_pm) StdoutLine: {'line': b'running install_data\n'}
+[5.217633] (teleop_pm) StdoutLine: {'line': b'copying resource/teleop_pm -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/ament_index/resource_index/packages\n'}
+[5.217980] (teleop_pm) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm\n'}
+[5.218255] (teleop_pm) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.248507] (-) TimerEvent: {}
+[5.254311] (teleop_pm) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.255119] (teleop_pm) StdoutLine: {'line': b'Copying ../../build/teleop_pm/teleop_pm.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info\n'}
+[5.257032] (teleop_pm) StdoutLine: {'line': b'running install_scripts\n'}
+[5.348619] (-) TimerEvent: {}
+[5.361619] (teleop_pm) StdoutLine: {'line': b'Installing tops script to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/teleop_pm\n'}
+[5.362521] (teleop_pm) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log'\n"}
+[5.435147] (teleop_pm) CommandEnded: {'returncode': 0}
+[5.448825] (-) TimerEvent: {}
+[5.549617] (-) TimerEvent: {}
+[5.651674] (-) TimerEvent: {}
+[5.754741] (-) TimerEvent: {}
+[5.856471] (-) TimerEvent: {}
+[5.957719] (-) TimerEvent: {}
+[6.059690] (-) TimerEvent: {}
+[6.159667] (teleop_pm) JobEnded: {'identifier': 'teleop_pm', 'rc': 0}
+[6.161994] (-) TimerEvent: {}
+[6.162288] (-) EventReactorShutdown: {}
