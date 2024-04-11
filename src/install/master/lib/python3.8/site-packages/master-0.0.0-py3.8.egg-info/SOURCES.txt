@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../build/master/master.egg-info/PKG-INFO
+../build/master/master.egg-info/SOURCES.txt
+../build/master/master.egg-info/dependency_links.txt
+../build/master/master.egg-info/entry_points.txt
+../build/master/master.egg-info/requires.txt
+../build/master/master.egg-info/top_level.txt
+../build/master/master.egg-info/zip-safe
+master/__init__.py
+master/master_code.py
+master/odometry.py
+resource/master
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

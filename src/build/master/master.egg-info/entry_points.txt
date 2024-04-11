@@ -1,0 +1,2 @@
+[console_scripts]
+master = master.master_code:main

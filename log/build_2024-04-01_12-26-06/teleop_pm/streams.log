@@ -1,0 +1,53 @@
+[5.104s] Invoking command in '/home/pimpmobile/ros2_ws/src/teleop_pm': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed
+[5.371s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[5.371s] !!
+[5.372s] 
+[5.372s]         ********************************************************************************
+[5.372s]         Usage of dash-separated 'script-dir' will not be supported in future
+[5.372s]         versions. Please use the underscore name 'script_dir' instead.
+[5.372s] 
+[5.372s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[5.372s]         or your builds will no longer be supported.
+[5.372s] 
+[5.373s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[5.373s]         ********************************************************************************
+[5.373s] 
+[5.373s] !!
+[5.373s]   opt = self.warn_dash_deprecation(opt, section)
+[5.595s] running egg_info
+[5.631s] writing ../../build/teleop_pm/teleop_pm.egg-info/PKG-INFO
+[5.632s] writing dependency_links to ../../build/teleop_pm/teleop_pm.egg-info/dependency_links.txt
+[5.633s] writing entry points to ../../build/teleop_pm/teleop_pm.egg-info/entry_points.txt
+[5.633s] writing requirements to ../../build/teleop_pm/teleop_pm.egg-info/requires.txt
+[5.633s] writing top-level names to ../../build/teleop_pm/teleop_pm.egg-info/top_level.txt
+[5.917s] reading manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[5.918s] writing manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+[5.919s] running build
+[5.919s] running build_py
+[5.919s] copying teleop_pm/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm
+[5.920s] copying teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm
+[5.920s] running install
+[5.921s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[5.921s] !!
+[5.921s] 
+[5.921s]         ********************************************************************************
+[5.922s]         Please avoid running ``setup.py`` directly.
+[5.922s]         Instead, use pypa/build, pypa/installer or other
+[5.922s]         standards-based tools.
+[5.922s] 
+[5.922s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[5.922s]         ********************************************************************************
+[5.922s] 
+[5.922s] !!
+[5.922s]   self.initialize_options()
+[5.932s] running install_lib
+[5.969s] running install_data
+[6.006s] copying resource/teleop_pm -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/ament_index/resource_index/packages
+[6.006s] copying package.xml -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm
+[6.006s] running install_egg_info
+[6.043s] removing '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info' (and everything under it)
+[6.044s] Copying ../../build/teleop_pm/teleop_pm.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info
+[6.046s] running install_scripts
+[6.154s] Installing tops script to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/teleop_pm
+[6.155s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log'
+[6.228s] Invoked command in '/home/pimpmobile/ros2_ws/src/teleop_pm' returned '0': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed

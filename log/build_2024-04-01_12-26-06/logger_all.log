@@ -1,0 +1,490 @@
+[13.506s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[13.506s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa350bf40>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa350bf40>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffffa351e490>)
+[14.084s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[14.085s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[14.085s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[14.085s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[14.085s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[14.085s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[14.085s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pimpmobile/ros2_ws'
+[14.085s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[14.086s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[14.116s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[14.116s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[14.116s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[14.116s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[14.116s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[14.117s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[14.117s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[14.117s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[14.117s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[14.117s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[14.117s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[14.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[14.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[14.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[14.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[14.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['ignore', 'ignore_ament_install']
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'ignore'
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'ignore_ament_install'
+[14.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['colcon_pkg']
+[14.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'colcon_pkg'
+[14.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['colcon_meta']
+[14.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'colcon_meta'
+[14.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['ros']
+[14.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'ros'
+[14.128s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gps_publisher' with type 'ros.ament_python' and name 'gps_publisher'
+[14.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['ignore', 'ignore_ament_install']
+[14.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'ignore'
+[14.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'ignore_ament_install'
+[14.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['colcon_pkg']
+[14.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'colcon_pkg'
+[14.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['colcon_meta']
+[14.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'colcon_meta'
+[14.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['ros']
+[14.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'ros'
+[14.131s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar' with type 'ros.ament_python' and name 'lidar'
+[14.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['ignore', 'ignore_ament_install']
+[14.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'ignore'
+[14.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'ignore_ament_install'
+[14.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['colcon_pkg']
+[14.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'colcon_pkg'
+[14.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['colcon_meta']
+[14.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'colcon_meta'
+[14.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['ros']
+[14.132s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'ros'
+[14.133s] DEBUG:colcon.colcon_core.package_identification:Package 'src/master' with type 'ros.ament_python' and name 'master'
+[14.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extensions ['ignore', 'ignore_ament_install']
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extension 'ignore'
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extension 'ignore_ament_install'
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extensions ['colcon_pkg']
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extension 'colcon_pkg'
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extensions ['colcon_meta']
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extension 'colcon_meta'
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extensions ['ros']
+[14.134s] Level 1:colcon.colcon_core.package_identification:_identify(src/odometry) by extension 'ros'
+[14.135s] DEBUG:colcon.colcon_core.package_identification:Package 'src/odometry' with type 'ros.ament_python' and name 'odometry'
+[14.136s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[14.136s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ignore'
+[14.136s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ignore_ament_install'
+[14.136s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['colcon_pkg']
+[14.136s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'colcon_pkg'
+[14.136s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['colcon_meta']
+[14.136s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'colcon_meta'
+[14.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['ros']
+[14.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ros'
+[14.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['cmake', 'python']
+[14.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'cmake'
+[14.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'python'
+[14.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['python_setup_py']
+[14.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'python_setup_py'
+[14.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[14.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) by extension 'ignore'
+[14.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) ignored
+[14.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[14.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) by extension 'ignore'
+[14.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) ignored
+[14.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[14.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) by extension 'ignore'
+[14.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) ignored
+[14.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['ignore', 'ignore_ament_install']
+[14.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ignore'
+[14.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ignore_ament_install'
+[14.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['colcon_pkg']
+[14.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'colcon_pkg'
+[14.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['colcon_meta']
+[14.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'colcon_meta'
+[14.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['ros']
+[14.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ros'
+[14.142s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_tutorials/turtlesim' with type 'ros.ament_cmake' and name 'turtlesim'
+[14.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['ignore', 'ignore_ament_install']
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ignore'
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ignore_ament_install'
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['colcon_pkg']
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'colcon_pkg'
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['colcon_meta']
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'colcon_meta'
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['ros']
+[14.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ros'
+[14.144s] DEBUG:colcon.colcon_core.package_identification:Package 'src/slam' with type 'ros.ament_python' and name 'slam'
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['ignore', 'ignore_ament_install']
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'ignore'
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'ignore_ament_install'
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['colcon_pkg']
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'colcon_pkg'
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['colcon_meta']
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'colcon_meta'
+[14.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['ros']
+[14.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'ros'
+[14.147s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop_pm' with type 'ros.ament_python' and name 'teleop_pm'
+[14.147s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[14.147s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[14.147s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[14.147s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[14.147s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[15.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[15.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[15.782s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/pimpmobile/ldlidar_ros2_ws/install
+[16.008s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/pimpmobile/ros2_ws/install
+[16.235s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 276 installed packages in /opt/ros/foxy
+[16.238s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[16.575s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'turtlesim' is in: /home/pimpmobile/ros2_ws/install/turtlesim, /opt/ros/foxy
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding turtlesim
+
+This may be promoted to an error in a future release of colcon-override-check.
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'cmake_args' from command line to 'None'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'cmake_target' from command line to 'None'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[16.810s] Level 5:colcon.colcon_core.verb:set package 'gps_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[16.810s] DEBUG:colcon.colcon_core.verb:Building package 'gps_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/gps_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/gps_publisher', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/gps_publisher', 'symlink_install': False, 'test_result_base': None}
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_args' from command line to 'None'
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target' from command line to 'None'
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_cache' from command line to 'False'
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_first' from command line to 'False'
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_force_configure' from command line to 'False'
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'ament_cmake_args' from command line to 'None'
+[17.036s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_cmake_args' from command line to 'None'
+[17.037s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.037s] DEBUG:colcon.colcon_core.verb:Building package 'lidar' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/lidar', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/lidar', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/lidar', 'symlink_install': False, 'test_result_base': None}
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'cmake_args' from command line to 'None'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'cmake_target' from command line to 'None'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'cmake_clean_cache' from command line to 'False'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'cmake_clean_first' from command line to 'False'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'cmake_force_configure' from command line to 'False'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'ament_cmake_args' from command line to 'None'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'catkin_cmake_args' from command line to 'None'
+[17.264s] Level 5:colcon.colcon_core.verb:set package 'master' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.265s] DEBUG:colcon.colcon_core.verb:Building package 'master' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/master', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/master', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/master', 'symlink_install': False, 'test_result_base': None}
+[17.490s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'cmake_args' from command line to 'None'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'cmake_target' from command line to 'None'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'cmake_clean_cache' from command line to 'False'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'cmake_clean_first' from command line to 'False'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'cmake_force_configure' from command line to 'False'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'ament_cmake_args' from command line to 'None'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'catkin_cmake_args' from command line to 'None'
+[17.491s] Level 5:colcon.colcon_core.verb:set package 'odometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.491s] DEBUG:colcon.colcon_core.verb:Building package 'odometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/odometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/odometry', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/odometry', 'symlink_install': False, 'test_result_base': None}
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'cmake_args' from command line to 'None'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'cmake_target' from command line to 'None'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'cmake_clean_cache' from command line to 'False'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'cmake_clean_first' from command line to 'False'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'cmake_force_configure' from command line to 'False'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'ament_cmake_args' from command line to 'None'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'catkin_cmake_args' from command line to 'None'
+[17.717s] Level 5:colcon.colcon_core.verb:set package 'slam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.717s] DEBUG:colcon.colcon_core.verb:Building package 'slam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/slam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/slam', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/slam', 'symlink_install': False, 'test_result_base': None}
+[17.944s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_args' from command line to 'None'
+[17.944s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_target' from command line to 'None'
+[17.944s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.944s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_clean_cache' from command line to 'False'
+[17.945s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_clean_first' from command line to 'False'
+[17.945s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'cmake_force_configure' from command line to 'False'
+[17.945s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'ament_cmake_args' from command line to 'None'
+[17.945s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'catkin_cmake_args' from command line to 'None'
+[17.945s] Level 5:colcon.colcon_core.verb:set package 'turtlesim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.945s] DEBUG:colcon.colcon_core.verb:Building package 'turtlesim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/turtlesim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/turtlesim', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/ros_tutorials/turtlesim', 'symlink_install': False, 'test_result_base': None}
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'cmake_args' from command line to 'None'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'cmake_target' from command line to 'None'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'cmake_clean_cache' from command line to 'False'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'cmake_clean_first' from command line to 'False'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'cmake_force_configure' from command line to 'False'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'ament_cmake_args' from command line to 'None'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'catkin_cmake_args' from command line to 'None'
+[18.170s] Level 5:colcon.colcon_core.verb:set package 'teleop_pm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[18.170s] DEBUG:colcon.colcon_core.verb:Building package 'teleop_pm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/teleop_pm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/teleop_pm', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/teleop_pm', 'symlink_install': False, 'test_result_base': None}
+[18.394s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[18.623s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[18.624s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/lidar' with build type 'ament_python'
+[18.624s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'ament_prefix_path')
+[18.874s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[18.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/ament_prefix_path.ps1'
+[18.876s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/ament_prefix_path.dsv'
+[18.877s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/ament_prefix_path.sh'
+[19.113s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[19.113s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[20.055s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/gps_publisher' with build type 'ament_python'
+[20.056s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_publisher', 'ament_prefix_path')
+[20.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/hook/ament_prefix_path.ps1'
+[20.300s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/hook/ament_prefix_path.dsv'
+[20.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/hook/ament_prefix_path.sh'
+[20.533s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[20.533s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[21.472s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/master' with build type 'ament_python'
+[21.473s] Level 1:colcon.colcon_core.shell:create_environment_hook('master', 'ament_prefix_path')
+[21.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/master/share/master/hook/ament_prefix_path.ps1'
+[21.714s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/master/share/master/hook/ament_prefix_path.dsv'
+[21.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/master/share/master/hook/ament_prefix_path.sh'
+[21.946s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[21.946s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[22.872s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/odometry' with build type 'ament_python'
+[22.873s] Level 1:colcon.colcon_core.shell:create_environment_hook('odometry', 'ament_prefix_path')
+[23.104s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/hook/ament_prefix_path.ps1'
+[23.106s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/hook/ament_prefix_path.dsv'
+[23.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/hook/ament_prefix_path.sh'
+[23.336s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[23.336s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[24.259s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/slam' with build type 'ament_python'
+[24.260s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam', 'ament_prefix_path')
+[24.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/slam/share/slam/hook/ament_prefix_path.ps1'
+[24.493s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/slam/share/slam/hook/ament_prefix_path.dsv'
+[24.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/slam/share/slam/hook/ament_prefix_path.sh'
+[24.725s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[24.725s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[25.651s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/ros_tutorials/turtlesim' with build type 'ament_cmake'
+[25.652s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/pimpmobile/ros2_ws/src/ros_tutorials/turtlesim'
+[25.884s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[25.884s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[27.263s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pimpmobile/ros2_ws/src/lidar'
+[27.496s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[27.496s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[28.851s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pimpmobile/ros2_ws/src/gps_publisher'
+[29.084s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[29.084s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.452s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pimpmobile/ros2_ws/src/master'
+[30.686s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[30.686s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[32.050s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pimpmobile/ros2_ws/src/odometry'
+[32.283s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[32.283s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[33.642s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pimpmobile/ros2_ws/src/slam'
+[33.874s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[33.874s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[34.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/build/turtlesim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/turtlesim -- -j6 -l6
+[35.783s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy /usr/bin/cmake --build /home/pimpmobile/ros2_ws/build/turtlesim -- -j6 -l6
+[36.187s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/build/turtlesim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy /usr/bin/cmake --install /home/pimpmobile/ros2_ws/build/turtlesim
+[36.402s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlesim)
+[36.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy /usr/bin/cmake --install /home/pimpmobile/ros2_ws/build/turtlesim
+[36.657s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim' for CMake module files
+[36.658s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim' for CMake config files
+[36.659s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'cmake_prefix_path')
+[36.890s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.ps1'
+[36.891s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.dsv'
+[36.892s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.sh'
+[36.894s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/lib'
+[36.894s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'ld_library_path_lib')
+[37.123s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.ps1'
+[37.124s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.dsv'
+[37.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.sh'
+[37.125s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/bin'
+[37.126s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/lib/pkgconfig/turtlesim.pc'
+[37.126s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages'
+[37.126s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'pythonpath')
+[37.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/pythonpath.ps1'
+[37.356s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/pythonpath.dsv'
+[37.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/pythonpath.sh'
+[37.358s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/bin'
+[37.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.ps1'
+[37.589s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.dsv'
+[37.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.sh'
+[37.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.bash'
+[37.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.zsh'
+[37.595s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/turtlesim/share/colcon-core/packages/turtlesim)
+[37.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/src/master': PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed
+[37.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/src/slam': PYTHONPATH=/home/pimpmobile/ros2_ws/build/slam/prefix_override:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/slam build --build-base /home/pimpmobile/ros2_ws/build/slam/build install --record /home/pimpmobile/ros2_ws/build/slam/install.log --install-scripts $base/lib/slam --single-version-externally-managed
+[37.631s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/src/odometry': PYTHONPATH=/home/pimpmobile/ros2_ws/build/odometry/prefix_override:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odometry build --build-base /home/pimpmobile/ros2_ws/build/odometry/build install --record /home/pimpmobile/ros2_ws/build/odometry/install.log --install-scripts $base/lib/odometry --single-version-externally-managed
+[37.639s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/src/gps_publisher': PYTHONPATH=/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/gps_publisher build --build-base /home/pimpmobile/ros2_ws/build/gps_publisher/build install --record /home/pimpmobile/ros2_ws/build/gps_publisher/install.log --install-scripts $base/lib/gps_publisher --single-version-externally-managed
+[37.653s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/src/lidar': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed
+[38.248s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlesim)
+[38.501s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim' for CMake module files
+[38.503s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim' for CMake config files
+[38.503s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'cmake_prefix_path')
+[38.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.ps1'
+[38.793s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.dsv'
+[38.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/cmake_prefix_path.sh'
+[38.796s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/lib'
+[38.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'ld_library_path_lib')
+[39.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.ps1'
+[39.042s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.dsv'
+[39.043s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/ld_library_path_lib.sh'
+[39.043s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/bin'
+[39.044s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/lib/pkgconfig/turtlesim.pc'
+[39.044s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages'
+[39.044s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlesim', 'pythonpath')
+[39.273s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/pythonpath.ps1'
+[39.275s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/pythonpath.dsv'
+[39.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/hook/pythonpath.sh'
+[39.276s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/turtlesim/bin'
+[39.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.ps1'
+[39.504s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.dsv'
+[39.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.sh'
+[39.506s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.bash'
+[39.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.zsh'
+[39.507s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/turtlesim/share/colcon-core/packages/turtlesim)
+[39.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/src/slam' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/slam/prefix_override:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/slam build --build-base /home/pimpmobile/ros2_ws/build/slam/build install --record /home/pimpmobile/ros2_ws/build/slam/install.log --install-scripts $base/lib/slam --single-version-externally-managed
+[39.743s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/slam' for CMake module files
+[39.744s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/slam' for CMake config files
+[39.745s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/slam/lib'
+[39.745s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/slam/bin'
+[39.745s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/slam/lib/pkgconfig/slam.pc'
+[39.746s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages'
+[39.746s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam', 'pythonpath')
+[39.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/slam/share/slam/hook/pythonpath.ps1'
+[39.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/slam/share/slam/hook/pythonpath.dsv'
+[39.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/slam/share/slam/hook/pythonpath.sh'
+[39.977s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/slam/bin'
+[39.977s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam)
+[40.205s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/slam/share/slam/package.ps1'
+[40.206s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/slam/share/slam/package.dsv'
+[40.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/slam/share/slam/package.sh'
+[40.208s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/slam/share/slam/package.bash'
+[40.208s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/slam/share/slam/package.zsh'
+[40.209s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/slam/share/colcon-core/packages/slam)
+[40.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/src/lidar' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed
+[40.443s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar' for CMake module files
+[40.445s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar' for CMake config files
+[40.446s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/lib'
+[40.446s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/bin'
+[40.446s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/lib/pkgconfig/lidar.pc'
+[40.447s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages'
+[40.447s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'pythonpath')
+[40.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/pythonpath.ps1'
+[40.676s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/pythonpath.dsv'
+[40.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/pythonpath.sh'
+[40.678s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/bin'
+[40.678s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar)
+[40.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.ps1'
+[40.912s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.dsv'
+[40.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.sh'
+[40.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.bash'
+[40.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.zsh'
+[40.915s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/lidar/share/colcon-core/packages/lidar)
+[40.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/src/master' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed
+[41.152s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/master' for CMake module files
+[41.153s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/master' for CMake config files
+[41.154s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/master/lib'
+[41.154s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/master/bin'
+[41.154s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/master/lib/pkgconfig/master.pc'
+[41.155s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages'
+[41.155s] Level 1:colcon.colcon_core.shell:create_environment_hook('master', 'pythonpath')
+[41.386s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/master/share/master/hook/pythonpath.ps1'
+[41.388s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/master/share/master/hook/pythonpath.dsv'
+[41.388s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/master/share/master/hook/pythonpath.sh'
+[41.389s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/master/bin'
+[41.389s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(master)
+[41.620s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/master/share/master/package.ps1'
+[41.622s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/master/share/master/package.dsv'
+[41.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/master/share/master/package.sh'
+[41.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/master/share/master/package.bash'
+[41.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/master/share/master/package.zsh'
+[41.625s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/master/share/colcon-core/packages/master)
+[41.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/src/odometry' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/odometry/prefix_override:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odometry build --build-base /home/pimpmobile/ros2_ws/build/odometry/build install --record /home/pimpmobile/ros2_ws/build/odometry/install.log --install-scripts $base/lib/odometry --single-version-externally-managed
+[41.861s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/odometry' for CMake module files
+[41.862s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/odometry' for CMake config files
+[41.863s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/odometry/lib'
+[41.863s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/odometry/bin'
+[41.863s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/odometry/lib/pkgconfig/odometry.pc'
+[41.864s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages'
+[41.864s] Level 1:colcon.colcon_core.shell:create_environment_hook('odometry', 'pythonpath')
+[42.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/hook/pythonpath.ps1'
+[42.096s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/hook/pythonpath.dsv'
+[42.096s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/hook/pythonpath.sh'
+[42.097s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/odometry/bin'
+[42.097s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odometry)
+[42.328s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/package.ps1'
+[42.329s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/package.dsv'
+[42.330s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/package.sh'
+[42.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/package.bash'
+[42.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/odometry/share/odometry/package.zsh'
+[42.332s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/odometry/share/colcon-core/packages/odometry)
+[42.333s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/teleop_pm' with build type 'ament_python'
+[42.334s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_pm', 'ament_prefix_path')
+[42.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/hook/ament_prefix_path.ps1'
+[42.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/hook/ament_prefix_path.dsv'
+[42.568s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/hook/ament_prefix_path.sh'
+[42.798s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[42.799s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[43.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/src/gps_publisher' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/gps_publisher build --build-base /home/pimpmobile/ros2_ws/build/gps_publisher/build install --record /home/pimpmobile/ros2_ws/build/gps_publisher/install.log --install-scripts $base/lib/gps_publisher --single-version-externally-managed
+[43.968s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/gps_publisher' for CMake module files
+[43.969s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/gps_publisher' for CMake config files
+[43.970s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/gps_publisher/lib'
+[43.970s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/gps_publisher/bin'
+[43.970s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/gps_publisher/lib/pkgconfig/gps_publisher.pc'
+[43.971s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages'
+[43.971s] Level 1:colcon.colcon_core.shell:create_environment_hook('gps_publisher', 'pythonpath')
+[44.201s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/hook/pythonpath.ps1'
+[44.202s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/hook/pythonpath.dsv'
+[44.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/hook/pythonpath.sh'
+[44.204s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/gps_publisher/bin'
+[44.204s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gps_publisher)
+[44.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/package.ps1'
+[44.434s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/package.dsv'
+[44.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/package.sh'
+[44.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/package.bash'
+[44.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher/package.zsh'
+[44.437s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/gps_publisher/share/colcon-core/packages/gps_publisher)
+[44.877s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pimpmobile/ros2_ws/src/teleop_pm'
+[45.110s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[45.110s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[47.440s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/src/teleop_pm': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed
+[48.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/src/teleop_pm' returned '0': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/teleop_pm build --build-base /home/pimpmobile/ros2_ws/build/teleop_pm/build install --record /home/pimpmobile/ros2_ws/build/teleop_pm/install.log --install-scripts $base/lib/teleop_pm --single-version-externally-managed
+[48.822s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/teleop_pm' for CMake module files
+[48.823s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/teleop_pm' for CMake config files
+[48.824s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/teleop_pm/lib'
+[48.824s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/teleop_pm/bin'
+[48.825s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/pkgconfig/teleop_pm.pc'
+[48.825s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages'
+[48.825s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_pm', 'pythonpath')
+[49.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/hook/pythonpath.ps1'
+[49.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/hook/pythonpath.dsv'
+[49.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/hook/pythonpath.sh'
+[49.058s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/teleop_pm/bin'
+[49.058s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(teleop_pm)
+[49.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/package.ps1'
+[49.289s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/package.dsv'
+[49.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/package.sh'
+[49.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/package.bash'
+[49.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm/package.zsh'
+[49.292s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/teleop_pm/share/colcon-core/packages/teleop_pm)
+[49.293s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[49.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[49.294s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[49.294s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[49.551s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[49.552s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[49.552s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[49.603s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[49.833s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.ps1'
+[49.835s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pimpmobile/ros2_ws/install/_local_setup_util_ps1.py'
+[49.838s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.ps1'
+[50.069s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.sh'
+[50.071s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pimpmobile/ros2_ws/install/_local_setup_util_sh.py'
+[50.072s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.sh'
+[50.302s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.bash'
+[50.303s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.bash'
+[50.534s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.zsh'
+[50.535s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.zsh'

@@ -1,0 +1,55 @@
+[11.340s] Invoking command in '/home/pimpmobile/ros2_ws/src/slam': PYTHONPATH=/home/pimpmobile/ros2_ws/build/slam/prefix_override:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/slam build --build-base /home/pimpmobile/ros2_ws/build/slam/build install --record /home/pimpmobile/ros2_ws/build/slam/install.log --install-scripts $base/lib/slam --single-version-externally-managed
+[11.631s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[11.631s] !!
+[11.632s] 
+[11.632s]         ********************************************************************************
+[11.632s]         Usage of dash-separated 'script-dir' will not be supported in future
+[11.632s]         versions. Please use the underscore name 'script_dir' instead.
+[11.632s] 
+[11.632s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[11.632s]         or your builds will no longer be supported.
+[11.632s] 
+[11.632s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[11.633s]         ********************************************************************************
+[11.633s] 
+[11.633s] !!
+[11.633s]   opt = self.warn_dash_deprecation(opt, section)
+[11.856s] running egg_info
+[11.892s] writing ../../build/slam/slam.egg-info/PKG-INFO
+[11.893s] writing dependency_links to ../../build/slam/slam.egg-info/dependency_links.txt
+[11.893s] writing entry points to ../../build/slam/slam.egg-info/entry_points.txt
+[11.894s] writing requirements to ../../build/slam/slam.egg-info/requires.txt
+[11.894s] writing top-level names to ../../build/slam/slam.egg-info/top_level.txt
+[12.181s] reading manifest file '../../build/slam/slam.egg-info/SOURCES.txt'
+[12.184s] writing manifest file '../../build/slam/slam.egg-info/SOURCES.txt'
+[12.186s] running build
+[12.186s] running build_py
+[12.187s] copying slam/__init__.py -> /home/pimpmobile/ros2_ws/build/slam/build/lib/slam
+[12.187s] copying slam/odometry.py -> /home/pimpmobile/ros2_ws/build/slam/build/lib/slam
+[12.188s] running install
+[12.188s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[12.189s] !!
+[12.190s] 
+[12.191s]         ********************************************************************************
+[12.191s]         Please avoid running ``setup.py`` directly.
+[12.192s]         Instead, use pypa/build, pypa/installer or other
+[12.192s]         standards-based tools.
+[12.192s] 
+[12.192s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[12.193s]         ********************************************************************************
+[12.193s] 
+[12.193s] !!
+[12.193s]   self.initialize_options()
+[12.214s] running install_lib
+[12.239s] byte-compiling /home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages/slam/odometry.py to odometry.cpython-38.pyc
+[12.239s] Sorry: IndentationError: expected an indented block (odometry.py, line 28)
+[12.240s] running install_data
+[12.275s] copying resource/slam -> /home/pimpmobile/ros2_ws/install/slam/share/ament_index/resource_index/packages
+[12.276s] copying package.xml -> /home/pimpmobile/ros2_ws/install/slam/share/slam
+[12.277s] running install_egg_info
+[12.311s] removing '/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages/slam-0.0.0-py3.8.egg-info' (and everything under it)
+[12.312s] Copying ../../build/slam/slam.egg-info to /home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages/slam-0.0.0-py3.8.egg-info
+[12.315s] running install_scripts
+[12.425s] Installing odometry script to /home/pimpmobile/ros2_ws/install/slam/lib/slam
+[12.426s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/slam/install.log'
+[13.867s] Invoked command in '/home/pimpmobile/ros2_ws/src/slam' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/slam/prefix_override:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/slam build --build-base /home/pimpmobile/ros2_ws/build/slam/build install --record /home/pimpmobile/ros2_ws/build/slam/install.log --install-scripts $base/lib/slam --single-version-externally-managed

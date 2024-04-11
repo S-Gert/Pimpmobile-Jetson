@@ -1,0 +1,964 @@
+[0.000000] (-) TimerEvent: {}
+[0.000831] (gps_publisher) JobQueued: {'identifier': 'gps_publisher', 'dependencies': OrderedDict()}
+[0.001542] (lidar) JobQueued: {'identifier': 'lidar', 'dependencies': OrderedDict()}
+[0.001897] (master) JobQueued: {'identifier': 'master', 'dependencies': OrderedDict()}
+[0.002056] (odometry) JobQueued: {'identifier': 'odometry', 'dependencies': OrderedDict()}
+[0.002147] (slam) JobQueued: {'identifier': 'slam', 'dependencies': OrderedDict()}
+[0.002228] (turtlesim) JobQueued: {'identifier': 'turtlesim', 'dependencies': OrderedDict()}
+[0.002348] (teleop_pm) JobQueued: {'identifier': 'teleop_pm', 'dependencies': OrderedDict([('lidar', '/home/pimpmobile/ros2_ws/install/lidar')])}
+[0.002470] (lidar) JobStarted: {'identifier': 'lidar'}
+[0.101082] (-) TimerEvent: {}
+[0.201960] (-) TimerEvent: {}
+[0.302956] (-) TimerEvent: {}
+[0.404444] (-) TimerEvent: {}
+[0.505630] (-) TimerEvent: {}
+[0.606924] (-) TimerEvent: {}
+[0.709436] (-) TimerEvent: {}
+[0.813791] (-) TimerEvent: {}
+[0.914773] (-) TimerEvent: {}
+[1.016622] (-) TimerEvent: {}
+[1.118157] (-) TimerEvent: {}
+[1.220118] (-) TimerEvent: {}
+[1.321523] (-) TimerEvent: {}
+[1.397807] (gps_publisher) JobStarted: {'identifier': 'gps_publisher'}
+[1.421932] (-) TimerEvent: {}
+[1.523071] (-) TimerEvent: {}
+[1.624246] (-) TimerEvent: {}
+[1.725934] (-) TimerEvent: {}
+[1.827760] (-) TimerEvent: {}
+[1.931192] (-) TimerEvent: {}
+[2.031978] (-) TimerEvent: {}
+[2.133376] (-) TimerEvent: {}
+[2.235005] (-) TimerEvent: {}
+[2.336049] (-) TimerEvent: {}
+[2.437255] (-) TimerEvent: {}
+[2.539006] (-) TimerEvent: {}
+[2.640306] (-) TimerEvent: {}
+[2.741701] (-) TimerEvent: {}
+[2.791131] (master) JobStarted: {'identifier': 'master'}
+[2.842058] (-) TimerEvent: {}
+[2.943664] (-) TimerEvent: {}
+[3.044830] (-) TimerEvent: {}
+[3.145808] (-) TimerEvent: {}
+[3.247326] (-) TimerEvent: {}
+[3.348786] (-) TimerEvent: {}
+[3.450115] (-) TimerEvent: {}
+[3.553748] (-) TimerEvent: {}
+[3.655467] (-) TimerEvent: {}
+[3.756776] (-) TimerEvent: {}
+[3.858881] (-) TimerEvent: {}
+[3.960007] (-) TimerEvent: {}
+[4.063429] (-) TimerEvent: {}
+[4.165034] (-) TimerEvent: {}
+[4.189339] (odometry) JobStarted: {'identifier': 'odometry'}
+[4.266652] (-) TimerEvent: {}
+[4.368141] (-) TimerEvent: {}
+[4.469876] (-) TimerEvent: {}
+[4.571882] (-) TimerEvent: {}
+[4.673189] (-) TimerEvent: {}
+[4.774708] (-) TimerEvent: {}
+[4.876663] (-) TimerEvent: {}
+[4.977511] (-) TimerEvent: {}
+[5.079715] (-) TimerEvent: {}
+[5.180737] (-) TimerEvent: {}
+[5.281891] (-) TimerEvent: {}
+[5.383751] (-) TimerEvent: {}
+[5.485907] (-) TimerEvent: {}
+[5.582499] (slam) JobStarted: {'identifier': 'slam'}
+[5.586025] (-) TimerEvent: {}
+[5.686931] (-) TimerEvent: {}
+[5.788245] (-) TimerEvent: {}
+[5.891804] (-) TimerEvent: {}
+[5.995283] (-) TimerEvent: {}
+[6.096668] (-) TimerEvent: {}
+[6.198270] (-) TimerEvent: {}
+[6.299771] (-) TimerEvent: {}
+[6.400932] (-) TimerEvent: {}
+[6.502571] (-) TimerEvent: {}
+[6.606651] (-) TimerEvent: {}
+[6.708231] (-) TimerEvent: {}
+[6.809579] (-) TimerEvent: {}
+[6.912777] (-) TimerEvent: {}
+[6.975045] (turtlesim) JobStarted: {'identifier': 'turtlesim'}
+[7.012969] (-) TimerEvent: {}
+[7.114834] (-) TimerEvent: {}
+[7.216482] (-) TimerEvent: {}
+[7.317674] (-) TimerEvent: {}
+[7.418851] (-) TimerEvent: {}
+[7.520870] (-) TimerEvent: {}
+[7.621822] (-) TimerEvent: {}
+[7.723225] (-) TimerEvent: {}
+[7.825400] (-) TimerEvent: {}
+[7.928588] (-) TimerEvent: {}
+[8.031094] (-) TimerEvent: {}
+[8.135920] (-) TimerEvent: {}
+[8.237051] (-) TimerEvent: {}
+[8.337884] (-) TimerEvent: {}
+[8.438494] (-) TimerEvent: {}
+[8.539075] (-) TimerEvent: {}
+[8.639724] (-) TimerEvent: {}
+[8.742382] (-) TimerEvent: {}
+[8.843799] (-) TimerEvent: {}
+[8.946516] (-) TimerEvent: {}
+[9.047884] (-) TimerEvent: {}
+[9.148735] (-) TimerEvent: {}
+[9.251959] (-) TimerEvent: {}
+[9.352914] (-) TimerEvent: {}
+[9.456759] (-) TimerEvent: {}
+[9.557597] (-) TimerEvent: {}
+[9.658366] (-) TimerEvent: {}
+[9.759602] (-) TimerEvent: {}
+[9.860359] (-) TimerEvent: {}
+[9.960976] (-) TimerEvent: {}
+[10.061603] (-) TimerEvent: {}
+[10.162257] (-) TimerEvent: {}
+[10.263423] (-) TimerEvent: {}
+[10.365085] (-) TimerEvent: {}
+[10.466649] (-) TimerEvent: {}
+[10.568751] (-) TimerEvent: {}
+[10.669598] (-) TimerEvent: {}
+[10.770444] (-) TimerEvent: {}
+[10.873259] (-) TimerEvent: {}
+[10.974987] (-) TimerEvent: {}
+[11.076652] (-) TimerEvent: {}
+[11.178225] (-) TimerEvent: {}
+[11.281648] (-) TimerEvent: {}
+[11.382898] (-) TimerEvent: {}
+[11.483679] (-) TimerEvent: {}
+[11.584294] (-) TimerEvent: {}
+[11.684820] (-) TimerEvent: {}
+[11.785610] (-) TimerEvent: {}
+[11.887072] (-) TimerEvent: {}
+[11.989061] (-) TimerEvent: {}
+[12.091017] (-) TimerEvent: {}
+[12.192782] (-) TimerEvent: {}
+[12.294292] (-) TimerEvent: {}
+[12.395444] (-) TimerEvent: {}
+[12.496580] (-) TimerEvent: {}
+[12.597798] (-) TimerEvent: {}
+[12.700345] (-) TimerEvent: {}
+[12.801610] (-) TimerEvent: {}
+[12.903256] (-) TimerEvent: {}
+[13.004472] (-) TimerEvent: {}
+[13.105251] (-) TimerEvent: {}
+[13.205857] (-) TimerEvent: {}
+[13.306492] (-) TimerEvent: {}
+[13.407813] (-) TimerEvent: {}
+[13.510926] (-) TimerEvent: {}
+[13.615593] (-) TimerEvent: {}
+[13.716519] (-) TimerEvent: {}
+[13.817911] (-) TimerEvent: {}
+[13.919396] (-) TimerEvent: {}
+[14.021125] (-) TimerEvent: {}
+[14.122305] (-) TimerEvent: {}
+[14.225518] (-) TimerEvent: {}
+[14.326581] (-) TimerEvent: {}
+[14.428656] (-) TimerEvent: {}
+[14.533676] (-) TimerEvent: {}
+[14.634706] (-) TimerEvent: {}
+[14.735868] (-) TimerEvent: {}
+[14.836740] (-) TimerEvent: {}
+[14.937645] (-) TimerEvent: {}
+[15.039207] (-) TimerEvent: {}
+[15.142118] (-) TimerEvent: {}
+[15.243334] (-) TimerEvent: {}
+[15.344880] (-) TimerEvent: {}
+[15.445906] (-) TimerEvent: {}
+[15.547288] (-) TimerEvent: {}
+[15.648347] (-) TimerEvent: {}
+[15.752700] (-) TimerEvent: {}
+[15.853731] (-) TimerEvent: {}
+[15.956090] (-) TimerEvent: {}
+[16.057397] (-) TimerEvent: {}
+[16.124933] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'cmake'}
+[16.126479] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'build'}
+[16.128034] (turtlesim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pimpmobile/ros2_ws/build/turtlesim', '--', '-j6', '-l6'], 'cwd': '/home/pimpmobile/ros2_ws/build/turtlesim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pimpmobile'), ('LC_TIME', 'et_EE.UTF-8'), ('SSH_AGENT_PID', '2569'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/pimpmobile'), ('OLDPWD', '/home/pimpmobile'), ('DESKTOP_SESSION', 'ubuntu'), ('JETSON_L4T', '35.4.1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('JETSON_MODEL', 'NVIDIA Orin Nano Developer Kit'), ('LC_MONETARY', 'et_EE.UTF-8'), ('MANAGERPID', '1786'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pimpmobile'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421823044971'), ('JOURNAL_STREAM', '8:61859'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'P3768'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pimpmobile'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608'), ('INVOCATION_ID', '46243912e8534dc1bab641e6b52683d5'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'et_EE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'et_EE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra23x'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'et_EE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'et_EE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'et_EE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/pimpmobile/ros2_ws/build/turtlesim'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'et_EE.UTF-8'), ('LC_PAPER', 'et_EE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '5.1.2'), ('CMAKE_PREFIX_PATH', '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[16.158859] (-) TimerEvent: {}
+[16.260229] (-) TimerEvent: {}
+[16.288065] (turtlesim) StdoutLine: {'line': b'[  3%] Built target turtlesim__cpp\n'}
+[16.291374] (turtlesim) StdoutLine: {'line': b'[ 11%] Built target turtlesim__rosidl_generator_c\n'}
+[16.360360] (-) TimerEvent: {}
+[16.364966] (turtlesim) StdoutLine: {'line': b'[ 21%] Built target turtlesim__rosidl_typesupport_cpp\n'}
+[16.444551] (turtlesim) StdoutLine: {'line': b'[ 31%] Built target turtlesim__rosidl_typesupport_fastrtps_cpp\n'}
+[16.455316] (turtlesim) StdoutLine: {'line': b'[ 41%] Built target turtlesim__rosidl_typesupport_introspection_cpp\n'}
+[16.460502] (-) TimerEvent: {}
+[16.471842] (turtlesim) StdoutLine: {'line': b'[ 51%] Built target turtlesim__rosidl_typesupport_c\n'}
+[16.477975] (turtlesim) StdoutLine: {'line': b'[ 61%] Built target turtlesim__rosidl_typesupport_introspection_c\n'}
+[16.532580] (turtlesim) StdoutLine: {'line': b'[ 71%] Built target turtlesim__rosidl_typesupport_fastrtps_c\n'}
+[16.560680] (-) TimerEvent: {}
+[16.580360] (turtlesim) StdoutLine: {'line': b'[ 71%] Built target turtlesim\n'}
+[16.660846] (-) TimerEvent: {}
+[16.696474] (turtlesim) StdoutLine: {'line': b'[ 72%] Built target turtlesim__py\n'}
+[16.759464] (turtlesim) StdoutLine: {'line': b'[ 74%] Built target mimic\n'}
+[16.760971] (-) TimerEvent: {}
+[16.777969] (turtlesim) StdoutLine: {'line': b'[ 80%] Built target turtlesim_node\n'}
+[16.784147] (turtlesim) StdoutLine: {'line': b'[ 82%] Built target turtle_teleop_key\n'}
+[16.801367] (turtlesim) StdoutLine: {'line': b'[ 84%] Built target draw_square\n'}
+[16.841366] (turtlesim) StdoutLine: {'line': b'[ 93%] Built target turtlesim__python\n'}
+[16.861153] (-) TimerEvent: {}
+[16.955872] (turtlesim) StdoutLine: {'line': b'[ 95%] Built target turtlesim__rosidl_typesupport_introspection_c__pyext\n'}
+[16.961302] (-) TimerEvent: {}
+[16.962191] (turtlesim) StdoutLine: {'line': b'[ 97%] Built target turtlesim__rosidl_typesupport_fastrtps_c__pyext\n'}
+[16.974768] (turtlesim) StdoutLine: {'line': b'[100%] Built target turtlesim__rosidl_typesupport_c__pyext\n'}
+[17.007643] (turtlesim) CommandEnded: {'returncode': 0}
+[17.061487] (-) TimerEvent: {}
+[17.162258] (-) TimerEvent: {}
+[17.262873] (-) TimerEvent: {}
+[17.363551] (-) TimerEvent: {}
+[17.406929] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'install'}
+[17.437431] (turtlesim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pimpmobile/ros2_ws/build/turtlesim'], 'cwd': '/home/pimpmobile/ros2_ws/build/turtlesim', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'pimpmobile'), ('LC_TIME', 'et_EE.UTF-8'), ('SSH_AGENT_PID', '2569'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('HOME', '/home/pimpmobile'), ('OLDPWD', '/home/pimpmobile'), ('DESKTOP_SESSION', 'ubuntu'), ('JETSON_L4T', '35.4.1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('JETSON_MODEL', 'NVIDIA Orin Nano Developer Kit'), ('LC_MONETARY', 'et_EE.UTF-8'), ('MANAGERPID', '1786'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'pimpmobile'), ('JETSON_MODULE', 'NVIDIA Jetson Orin Nano (Developer kit)'), ('JETSON_SERIAL_NUMBER', '1421823044971'), ('JOURNAL_STREAM', '8:61859'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'P3768'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'pimpmobile'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608'), ('INVOCATION_ID', '46243912e8534dc1bab641e6b52683d5'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'et_EE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'et_EE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra23x'), ('GNOME_TERMINAL_SERVICE', ':1.95'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'et_EE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'et_EE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'et_EE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/pimpmobile/ros2_ws/build/turtlesim'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'et_EE.UTF-8'), ('LC_PAPER', 'et_EE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '5.1.2'), ('CMAKE_PREFIX_PATH', '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy'), ('JETSON_P_NUMBER', 'p3767-0005')]), 'shell': False}
+[17.463745] (-) TimerEvent: {}
+[17.465177] (turtlesim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.466022] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/ament_index/resource_index/rosidl_interfaces/turtlesim\n'}
+[17.466613] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim\n'}
+[17.467092] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg\n'}
+[17.467567] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/rosidl_generator_c__visibility_control.h\n'}
+[17.468567] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/pose.h\n'}
+[17.468978] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/color.h\n'}
+[17.469367] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail\n'}
+[17.469805] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__struct.h\n'}
+[17.470203] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__type_support.h\n'}
+[17.470621] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__functions.c\n'}
+[17.471011] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__type_support.h\n'}
+[17.471386] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__functions.h\n'}
+[17.471800] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__struct.h\n'}
+[17.472202] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__functions.h\n'}
+[17.472615] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__functions.c\n'}
+[17.472995] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv\n'}
+[17.473470] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/kill.h\n'}
+[17.473885] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/teleport_relative.h\n'}
+[17.474269] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail\n'}
+[17.475126] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__type_support.h\n'}
+[17.475542] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__functions.h\n'}
+[17.475958] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__struct.h\n'}
+[17.476370] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__type_support.h\n'}
+[17.476759] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__functions.c\n'}
+[17.477164] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__functions.h\n'}
+[17.477558] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__type_support.h\n'}
+[17.477999] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__functions.c\n'}
+[17.478398] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__functions.c\n'}
+[17.478783] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__functions.h\n'}
+[17.479182] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__functions.c\n'}
+[17.479583] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__struct.h\n'}
+[17.480567] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__functions.c\n'}
+[17.480970] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__struct.h\n'}
+[17.481363] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__functions.h\n'}
+[17.481759] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__functions.h\n'}
+[17.482141] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__struct.h\n'}
+[17.482520] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__type_support.h\n'}
+[17.482878] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__struct.h\n'}
+[17.483235] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__type_support.h\n'}
+[17.483602] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/spawn.h\n'}
+[17.484003] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/teleport_absolute.h\n'}
+[17.484397] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/set_pen.h\n'}
+[17.484767] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action\n'}
+[17.485252] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/rotate_absolute.h\n'}
+[17.485638] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail\n'}
+[17.486064] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__functions.h\n'}
+[17.486460] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__functions.c\n'}
+[17.486845] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__struct.h\n'}
+[17.487227] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__type_support.h\n'}
+[17.487831] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/library_path.sh\n'}
+[17.488365] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/library_path.dsv\n'}
+[17.489294] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__rosidl_generator_c.so\n'}
+[17.491089] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim\n'}
+[17.491613] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg\n'}
+[17.492126] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[17.492410] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail\n'}
+[17.492789] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_c.h\n'}
+[17.493107] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_c.h\n'}
+[17.493493] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv\n'}
+[17.494142] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail\n'}
+[17.494705] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_c.h\n'}
+[17.495812] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_c.h\n'}
+[17.496041] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_c.h\n'}
+[17.496197] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_c.h\n'}
+[17.496341] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_c.h\n'}
+[17.496475] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action\n'}
+[17.496607] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail\n'}
+[17.496734] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_c.h\n'}
+[17.497829] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_c.so\n'}
+[17.498521] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim\n'}
+[17.498756] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg\n'}
+[17.498910] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[17.499048] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail\n'}
+[17.499177] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/dds_fastrtps\n'}
+[17.499479] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.500089] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.500795] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv\n'}
+[17.500985] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail\n'}
+[17.501348] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/dds_fastrtps\n'}
+[17.501510] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.501648] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.501779] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.502352] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.502557] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.502770] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action\n'}
+[17.502936] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail\n'}
+[17.503933] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[17.504197] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/dds_fastrtps\n'}
+[17.504461] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_cpp.so\n'}
+[17.505326] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim\n'}
+[17.505920] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg\n'}
+[17.506607] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[17.507146] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail\n'}
+[17.507871] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_introspection_c.h\n'}
+[17.508432] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__type_support.c\n'}
+[17.509010] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_c.h\n'}
+[17.509591] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__type_support.c\n'}
+[17.510124] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv\n'}
+[17.510683] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail\n'}
+[17.511823] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_c.h\n'}
+[17.512040] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_c.h\n'}
+[17.512194] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_c.h\n'}
+[17.512358] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__type_support.c\n'}
+[17.512493] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__type_support.c\n'}
+[17.512623] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__type_support.c\n'}
+[17.512751] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_c.h\n'}
+[17.512909] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__type_support.c\n'}
+[17.513038] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_c.h\n'}
+[17.513163] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__type_support.c\n'}
+[17.513287] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action\n'}
+[17.513411] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail\n'}
+[17.513530] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__type_support.c\n'}
+[17.513650] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_c.h\n'}
+[17.513769] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_c.so\n'}
+[17.515210] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__rosidl_typesupport_c.so\n'}
+[17.515796] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim\n'}
+[17.516707] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg\n'}
+[17.517377] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/color.hpp\n'}
+[17.518189] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail\n'}
+[17.518921] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__struct.hpp\n'}
+[17.519522] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__traits.hpp\n'}
+[17.520195] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__builder.hpp\n'}
+[17.520652] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__type_support.hpp\n'}
+[17.520839] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__type_support.hpp\n'}
+[17.521929] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__struct.hpp\n'}
+[17.522712] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__builder.hpp\n'}
+[17.523301] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__traits.hpp\n'}
+[17.524188] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[17.524423] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/pose.hpp\n'}
+[17.524575] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv\n'}
+[17.524712] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/set_pen.hpp\n'}
+[17.524845] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/kill.hpp\n'}
+[17.524972] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/spawn.hpp\n'}
+[17.525096] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/teleport_relative.hpp\n'}
+[17.525218] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail\n'}
+[17.525342] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__struct.hpp\n'}
+[17.525468] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__traits.hpp\n'}
+[17.525592] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__traits.hpp\n'}
+[17.525716] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__builder.hpp\n'}
+[17.525837] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__builder.hpp\n'}
+[17.525956] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__struct.hpp\n'}
+[17.526079] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__type_support.hpp\n'}
+[17.526202] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__struct.hpp\n'}
+[17.526320] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__type_support.hpp\n'}
+[17.526440] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__builder.hpp\n'}
+[17.526560] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__traits.hpp\n'}
+[17.526715] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__struct.hpp\n'}
+[17.526841] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__traits.hpp\n'}
+[17.526962] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__type_support.hpp\n'}
+[17.527081] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__struct.hpp\n'}
+[17.527201] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__type_support.hpp\n'}
+[17.527320] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__builder.hpp\n'}
+[17.527440] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__traits.hpp\n'}
+[17.527559] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__builder.hpp\n'}
+[17.527692] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__type_support.hpp\n'}
+[17.527877] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/teleport_absolute.hpp\n'}
+[17.528007] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action\n'}
+[17.528133] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/rotate_absolute.hpp\n'}
+[17.528256] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail\n'}
+[17.528379] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__traits.hpp\n'}
+[17.528502] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__builder.hpp\n'}
+[17.528622] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__type_support.hpp\n'}
+[17.528745] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__struct.hpp\n'}
+[17.528868] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim\n'}
+[17.533375] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg\n'}
+[17.533675] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail\n'}
+[17.533843] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.533995] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/color__type_support.cpp\n'}
+[17.534138] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.534275] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/msg/detail/pose__type_support.cpp\n'}
+[17.534405] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv\n'}
+[17.534532] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail\n'}
+[17.534655] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__type_support.cpp\n'}
+[17.534780] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.534904] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.535026] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.535150] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.535301] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__type_support.cpp\n'}
+[17.535432] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/set_pen__type_support.cpp\n'}
+[17.535557] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/kill__type_support.cpp\n'}
+[17.535741] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/spawn__type_support.cpp\n'}
+[17.535883] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.536042] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action\n'}
+[17.536173] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail\n'}
+[17.536299] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__type_support.cpp\n'}
+[17.536422] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_cpp.hpp\n'}
+[17.536546] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_cpp.so\n'}
+[17.536669] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__rosidl_typesupport_cpp.so\n'}
+[17.536800] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/pythonpath.sh\n'}
+[17.536921] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/pythonpath.dsv\n'}
+[17.537042] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/__init__.py\n'}
+[17.563845] (-) TimerEvent: {}
+[17.620607] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/action\n'}
+[17.627943] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/action/_rotate_absolute_s.c\n'}
+[17.628334] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/action/__init__.py\n'}
+[17.628507] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/action/_rotate_absolute.py\n'}
+[17.628660] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg\n'}
+[17.628804] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_pose.py\n'}
+[17.628941] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/__init__.py\n'}
+[17.629074] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_color.py\n'}
+[17.629204] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_pose_s.c\n'}
+[17.629333] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_color_s.c\n'}
+[17.629456] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv\n'}
+[17.629579] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_set_pen_s.c\n'}
+[17.629699] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_absolute_s.c\n'}
+[17.629822] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_relative.py\n'}
+[17.629980] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_set_pen.py\n'}
+[17.630105] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/__init__.py\n'}
+[17.630226] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_kill.py\n'}
+[17.630346] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_spawn.py\n'}
+[17.630464] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_kill_s.c\n'}
+[17.630581] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_spawn_s.c\n'}
+[17.630699] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_absolute.py\n'}
+[17.630818] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_relative_s.c\n'}
+[17.630937] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/turtlesim_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[17.631413] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/turtlesim_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[17.631924] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages/turtlesim/turtlesim_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[17.632077] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/libturtlesim__python.so\n'}
+[17.632258] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/action/RotateAbsolute.idl\n'}
+[17.632386] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/msg/Color.idl\n'}
+[17.632510] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/msg/Pose.idl\n'}
+[17.632631] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Kill.idl\n'}
+[17.632774] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/SetPen.idl\n'}
+[17.632897] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Spawn.idl\n'}
+[17.633017] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.idl\n'}
+[17.633135] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportRelative.idl\n'}
+[17.633252] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/action/RotateAbsolute.action\n'}
+[17.639815] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/msg/Color.msg\n'}
+[17.640318] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/msg/Pose.msg\n'}
+[17.640500] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Kill.srv\n'}
+[17.640652] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Kill_Request.msg\n'}
+[17.640836] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Kill_Response.msg\n'}
+[17.640975] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/SetPen.srv\n'}
+[17.641105] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/SetPen_Request.msg\n'}
+[17.641233] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/SetPen_Response.msg\n'}
+[17.641360] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Spawn.srv\n'}
+[17.641483] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Spawn_Request.msg\n'}
+[17.641606] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/Spawn_Response.msg\n'}
+[17.641726] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.srv\n'}
+[17.641844] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Request.msg\n'}
+[17.641966] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Response.msg\n'}
+[17.642082] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportRelative.srv\n'}
+[17.642199] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportRelative_Request.msg\n'}
+[17.642316] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/srv/TeleportRelative_Response.msg\n'}
+[17.642433] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/turtlesim/turtlesim_node\n'}
+[17.642552] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/turtlesim/turtle_teleop_key\n'}
+[17.642668] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/turtlesim/draw_square\n'}
+[17.642785] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/lib/turtlesim/mimic\n'}
+[17.642901] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/images\n'}
+[17.643016] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/images/eloquent.png\n'}
+[17.643133] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/images/ardent.png\n'}
+[17.643249] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/images/dashing.png\n'}
+[17.643364] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/images/crystal.png\n'}
+[17.643483] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/images/foxy.png\n'}
+[17.643600] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/images/bouncy.png\n'}
+[17.643751] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/launch\n'}
+[17.643884] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/launch/multisim.launch.py\n'}
+[17.644006] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/ament_index/resource_index/package_run_dependencies/turtlesim\n'}
+[17.644127] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/ament_index/resource_index/parent_prefix_path/turtlesim\n'}
+[17.644284] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/ament_prefix_path.sh\n'}
+[17.644405] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/ament_prefix_path.dsv\n'}
+[17.644564] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/path.sh\n'}
+[17.644687] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/environment/path.dsv\n'}
+[17.644806] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/local_setup.bash\n'}
+[17.644923] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/local_setup.sh\n'}
+[17.645587] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/local_setup.zsh\n'}
+[17.646254] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/local_setup.dsv\n'}
+[17.646850] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.dsv\n'}
+[17.647997] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/ament_index/resource_index/packages/turtlesim\n'}
+[17.648950] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_generator_cExport.cmake\n'}
+[17.649578] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_generator_cExport-noconfig.cmake\n'}
+[17.650455] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport.cmake\n'}
+[17.651057] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[17.651918] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport.cmake\n'}
+[17.652515] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[17.653345] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_generator_cppExport.cmake\n'}
+[17.654191] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[17.654792] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[17.655598] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport.cmake\n'}
+[17.656205] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[17.656750] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/rosidl_cmake-extras.cmake\n'}
+[17.657277] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[17.657785] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[17.658354] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[17.658901] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[17.659417] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[17.659950] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[17.660487] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesimConfig.cmake\n'}
+[17.660891] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/cmake/turtlesimConfig-version.cmake\n'}
+[17.661454] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/pimpmobile/ros2_ws/install/turtlesim/share/turtlesim/package.xml\n'}
+[17.663949] (-) TimerEvent: {}
+[17.679937] (turtlesim) CommandEnded: {'returncode': 0}
+[17.764273] (-) TimerEvent: {}
+[17.865353] (-) TimerEvent: {}
+[17.966447] (-) TimerEvent: {}
+[18.069161] (-) TimerEvent: {}
+[18.169852] (-) TimerEvent: {}
+[18.270436] (-) TimerEvent: {}
+[18.371661] (-) TimerEvent: {}
+[18.473237] (-) TimerEvent: {}
+[18.574012] (-) TimerEvent: {}
+[18.674764] (-) TimerEvent: {}
+[18.776398] (-) TimerEvent: {}
+[18.877674] (master) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/master', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/master/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/master/install.log', '--install-scripts', '$base/lib/master', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/master', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2569', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1786', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:61859', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608', 'INVOCATION_ID': '46243912e8534dc1bab641e6b52683d5', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.95', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/master', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[18.882951] (-) TimerEvent: {}
+[18.885726] (odometry) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/odometry', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/odometry/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/odometry/install.log', '--install-scripts', '$base/lib/odometry', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/odometry', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2569', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1786', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:61859', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608', 'INVOCATION_ID': '46243912e8534dc1bab641e6b52683d5', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.95', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/odometry', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/odometry/prefix_override:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[18.893511] (gps_publisher) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/gps_publisher', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/gps_publisher/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/gps_publisher/install.log', '--install-scripts', '$base/lib/gps_publisher', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/gps_publisher', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2569', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1786', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:61859', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608', 'INVOCATION_ID': '46243912e8534dc1bab641e6b52683d5', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.95', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/gps_publisher', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[18.902777] (slam) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/slam', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/slam/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/slam/install.log', '--install-scripts', '$base/lib/slam', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/slam', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2569', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1786', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:61859', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608', 'INVOCATION_ID': '46243912e8534dc1bab641e6b52683d5', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.95', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/slam', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/slam/prefix_override:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[18.914654] (lidar) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/lidar', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/lidar/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/lidar/install.log', '--install-scripts', '$base/lib/lidar', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/lidar', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2569', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1786', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:61859', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608', 'INVOCATION_ID': '46243912e8534dc1bab641e6b52683d5', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.95', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/lidar', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[18.983129] (-) TimerEvent: {}
+[19.083852] (-) TimerEvent: {}
+[19.184470] (-) TimerEvent: {}
+[19.189997] (gps_publisher) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[19.190980] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[19.191217] (gps_publisher) StderrLine: {'line': b'\n'}
+[19.191375] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.191516] (gps_publisher) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[19.191648] (gps_publisher) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[19.191861] (gps_publisher) StderrLine: {'line': b'\n'}
+[19.192322] (gps_publisher) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[19.192873] (gps_publisher) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[19.193056] (gps_publisher) StderrLine: {'line': b'\n'}
+[19.193207] (gps_publisher) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[19.193347] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.193478] (gps_publisher) StderrLine: {'line': b'\n'}
+[19.193603] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[19.193726] (gps_publisher) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[19.193847] (odometry) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[19.194064] (odometry) StderrLine: {'line': b'!!\n'}
+[19.194202] (odometry) StderrLine: {'line': b'\n'}
+[19.194326] (odometry) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.194449] (odometry) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[19.194566] (odometry) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[19.194684] (odometry) StderrLine: {'line': b'\n'}
+[19.194800] (odometry) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[19.194916] (odometry) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[19.195032] (odometry) StderrLine: {'line': b'\n'}
+[19.195147] (odometry) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[19.195260] (odometry) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.195371] (odometry) StderrLine: {'line': b'\n'}
+[19.195483] (odometry) StderrLine: {'line': b'!!\n'}
+[19.195595] (odometry) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[19.201786] (master) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[19.202279] (master) StderrLine: {'line': b'!!\n'}
+[19.202456] (master) StderrLine: {'line': b'\n'}
+[19.202598] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.202733] (master) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[19.202861] (master) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[19.202987] (master) StderrLine: {'line': b'\n'}
+[19.203106] (master) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[19.203228] (master) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[19.203346] (master) StderrLine: {'line': b'\n'}
+[19.203463] (master) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[19.203580] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.204252] (master) StderrLine: {'line': b'\n'}
+[19.204425] (master) StderrLine: {'line': b'!!\n'}
+[19.204555] (master) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[19.224140] (lidar) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[19.224640] (lidar) StderrLine: {'line': b'!!\n'}
+[19.224809] (lidar) StderrLine: {'line': b'\n'}
+[19.224954] (lidar) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.225111] (lidar) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[19.225246] (lidar) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[19.225378] (lidar) StderrLine: {'line': b'\n'}
+[19.225498] (lidar) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[19.225621] (lidar) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[19.225742] (lidar) StderrLine: {'line': b'\n'}
+[19.225860] (lidar) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[19.225981] (lidar) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.226099] (lidar) StderrLine: {'line': b'\n'}
+[19.226214] (lidar) StderrLine: {'line': b'!!\n'}
+[19.226326] (lidar) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[19.237973] (slam) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[19.238802] (slam) StderrLine: {'line': b'!!\n'}
+[19.238990] (slam) StderrLine: {'line': b'\n'}
+[19.239139] (slam) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.239280] (slam) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[19.239414] (slam) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[19.239540] (slam) StderrLine: {'line': b'\n'}
+[19.239661] (slam) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[19.239822] (slam) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[19.239949] (slam) StderrLine: {'line': b'\n'}
+[19.240069] (slam) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[19.240189] (slam) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.240307] (slam) StderrLine: {'line': b'\n'}
+[19.240426] (slam) StderrLine: {'line': b'!!\n'}
+[19.240542] (slam) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[19.284725] (-) TimerEvent: {}
+[19.385563] (-) TimerEvent: {}
+[19.424088] (gps_publisher) StdoutLine: {'line': b'running egg_info\n'}
+[19.431768] (odometry) StdoutLine: {'line': b'running egg_info\n'}
+[19.455445] (master) StdoutLine: {'line': b'running egg_info\n'}
+[19.461179] (gps_publisher) StdoutLine: {'line': b'writing ../../build/gps_publisher/gps_publisher.egg-info/PKG-INFO\n'}
+[19.462115] (gps_publisher) StdoutLine: {'line': b'writing dependency_links to ../../build/gps_publisher/gps_publisher.egg-info/dependency_links.txt\n'}
+[19.463258] (gps_publisher) StdoutLine: {'line': b'writing entry points to ../../build/gps_publisher/gps_publisher.egg-info/entry_points.txt\n'}
+[19.463540] (gps_publisher) StdoutLine: {'line': b'writing requirements to ../../build/gps_publisher/gps_publisher.egg-info/requires.txt\n'}
+[19.463882] (lidar) StdoutLine: {'line': b'running egg_info\n'}
+[19.464086] (gps_publisher) StdoutLine: {'line': b'writing top-level names to ../../build/gps_publisher/gps_publisher.egg-info/top_level.txt\n'}
+[19.469116] (odometry) StdoutLine: {'line': b'writing ../../build/odometry/odometry.egg-info/PKG-INFO\n'}
+[19.470568] (odometry) StdoutLine: {'line': b'writing dependency_links to ../../build/odometry/odometry.egg-info/dependency_links.txt\n'}
+[19.471574] (odometry) StdoutLine: {'line': b'writing entry points to ../../build/odometry/odometry.egg-info/entry_points.txt\n'}
+[19.472020] (odometry) StdoutLine: {'line': b'writing requirements to ../../build/odometry/odometry.egg-info/requires.txt\n'}
+[19.472425] (odometry) StdoutLine: {'line': b'writing top-level names to ../../build/odometry/odometry.egg-info/top_level.txt\n'}
+[19.486925] (-) TimerEvent: {}
+[19.487412] (slam) StdoutLine: {'line': b'running egg_info\n'}
+[19.494006] (master) StdoutLine: {'line': b'writing ../../build/master/master.egg-info/PKG-INFO\n'}
+[19.496060] (master) StdoutLine: {'line': b'writing dependency_links to ../../build/master/master.egg-info/dependency_links.txt\n'}
+[19.496489] (master) StdoutLine: {'line': b'writing entry points to ../../build/master/master.egg-info/entry_points.txt\n'}
+[19.497229] (master) StdoutLine: {'line': b'writing requirements to ../../build/master/master.egg-info/requires.txt\n'}
+[19.497589] (master) StdoutLine: {'line': b'writing top-level names to ../../build/master/master.egg-info/top_level.txt\n'}
+[19.502049] (lidar) StdoutLine: {'line': b'writing ../../build/lidar/lidar.egg-info/PKG-INFO\n'}
+[19.502559] (lidar) StdoutLine: {'line': b'writing dependency_links to ../../build/lidar/lidar.egg-info/dependency_links.txt\n'}
+[19.503610] (lidar) StdoutLine: {'line': b'writing entry points to ../../build/lidar/lidar.egg-info/entry_points.txt\n'}
+[19.504032] (lidar) StdoutLine: {'line': b'writing requirements to ../../build/lidar/lidar.egg-info/requires.txt\n'}
+[19.504644] (lidar) StdoutLine: {'line': b'writing top-level names to ../../build/lidar/lidar.egg-info/top_level.txt\n'}
+[19.529603] (slam) StdoutLine: {'line': b'writing ../../build/slam/slam.egg-info/PKG-INFO\n'}
+[19.530733] (slam) StdoutLine: {'line': b'writing dependency_links to ../../build/slam/slam.egg-info/dependency_links.txt\n'}
+[19.531524] (slam) StdoutLine: {'line': b'writing entry points to ../../build/slam/slam.egg-info/entry_points.txt\n'}
+[19.532119] (slam) StdoutLine: {'line': b'writing requirements to ../../build/slam/slam.egg-info/requires.txt\n'}
+[19.532625] (slam) StdoutLine: {'line': b'writing top-level names to ../../build/slam/slam.egg-info/top_level.txt\n'}
+[19.587381] (-) TimerEvent: {}
+[19.688223] (-) TimerEvent: {}
+[19.758714] (gps_publisher) StdoutLine: {'line': b"reading manifest file '../../build/gps_publisher/gps_publisher.egg-info/SOURCES.txt'\n"}
+[19.760967] (gps_publisher) StdoutLine: {'line': b"writing manifest file '../../build/gps_publisher/gps_publisher.egg-info/SOURCES.txt'\n"}
+[19.761298] (gps_publisher) StdoutLine: {'line': b'running build\n'}
+[19.761468] (gps_publisher) StdoutLine: {'line': b'running build_py\n'}
+[19.761790] (gps_publisher) StdoutLine: {'line': b'copying gps_publisher/__init__.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher\n'}
+[19.763082] (gps_publisher) StdoutLine: {'line': b'copying gps_publisher/gps.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher\n'}
+[19.763272] (gps_publisher) StdoutLine: {'line': b'running install\n'}
+[19.763544] (gps_publisher) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[19.764000] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[19.764150] (gps_publisher) StderrLine: {'line': b'\n'}
+[19.764282] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.764407] (gps_publisher) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[19.764529] (gps_publisher) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[19.764649] (gps_publisher) StderrLine: {'line': b'        standards-based tools.\n'}
+[19.764766] (gps_publisher) StderrLine: {'line': b'\n'}
+[19.764879] (gps_publisher) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[19.764995] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.765110] (gps_publisher) StderrLine: {'line': b'\n'}
+[19.765224] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[19.765337] (gps_publisher) StderrLine: {'line': b'  self.initialize_options()\n'}
+[19.775560] (gps_publisher) StdoutLine: {'line': b'running install_lib\n'}
+[19.785085] (odometry) StdoutLine: {'line': b"reading manifest file '../../build/odometry/odometry.egg-info/SOURCES.txt'\n"}
+[19.787236] (odometry) StdoutLine: {'line': b"writing manifest file '../../build/odometry/odometry.egg-info/SOURCES.txt'\n"}
+[19.787944] (odometry) StdoutLine: {'line': b'running build\n'}
+[19.788146] (odometry) StdoutLine: {'line': b'running build_py\n'}
+[19.788299] (-) TimerEvent: {}
+[19.788877] (odometry) StdoutLine: {'line': b'copying odometry/__init__.py -> /home/pimpmobile/ros2_ws/build/odometry/build/lib/odometry\n'}
+[19.789262] (odometry) StdoutLine: {'line': b'copying odometry/odometry.py -> /home/pimpmobile/ros2_ws/build/odometry/build/lib/odometry\n'}
+[19.790172] (odometry) StdoutLine: {'line': b'running install\n'}
+[19.790921] (odometry) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[19.791116] (odometry) StderrLine: {'line': b'!!\n'}
+[19.791260] (odometry) StderrLine: {'line': b'\n'}
+[19.791393] (odometry) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.791523] (odometry) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[19.791647] (odometry) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[19.791831] (odometry) StderrLine: {'line': b'        standards-based tools.\n'}
+[19.791958] (odometry) StderrLine: {'line': b'\n'}
+[19.792077] (odometry) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[19.792195] (odometry) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.792310] (odometry) StderrLine: {'line': b'\n'}
+[19.792424] (odometry) StderrLine: {'line': b'!!\n'}
+[19.792537] (odometry) StderrLine: {'line': b'  self.initialize_options()\n'}
+[19.803143] (odometry) StdoutLine: {'line': b'running install_lib\n'}
+[19.810995] (lidar) StdoutLine: {'line': b"reading manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'\n"}
+[19.813024] (lidar) StdoutLine: {'line': b"writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'\n"}
+[19.813364] (gps_publisher) StdoutLine: {'line': b'running install_data\n'}
+[19.813720] (lidar) StdoutLine: {'line': b'running build\n'}
+[19.814069] (lidar) StdoutLine: {'line': b'running build_py\n'}
+[19.815308] (lidar) StdoutLine: {'line': b'copying lidar/__init__.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar\n'}
+[19.815589] (lidar) StdoutLine: {'line': b'copying lidar/lidarsubscriber.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar\n'}
+[19.816021] (lidar) StdoutLine: {'line': b'copying lidar/publisher_member_function.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar\n'}
+[19.816426] (master) StdoutLine: {'line': b"reading manifest file '../../build/master/master.egg-info/SOURCES.txt'\n"}
+[19.816718] (lidar) StdoutLine: {'line': b'running install\n'}
+[19.818067] (lidar) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[19.818271] (lidar) StderrLine: {'line': b'!!\n'}
+[19.818413] (lidar) StderrLine: {'line': b'\n'}
+[19.818542] (lidar) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.818670] (lidar) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[19.818792] (lidar) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[19.818912] (lidar) StderrLine: {'line': b'        standards-based tools.\n'}
+[19.819032] (lidar) StderrLine: {'line': b'\n'}
+[19.819148] (lidar) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[19.819299] (lidar) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.819419] (lidar) StderrLine: {'line': b'\n'}
+[19.819550] (lidar) StderrLine: {'line': b'!!\n'}
+[19.819672] (lidar) StderrLine: {'line': b'  self.initialize_options()\n'}
+[19.819921] (master) StdoutLine: {'line': b"writing manifest file '../../build/master/master.egg-info/SOURCES.txt'\n"}
+[19.820900] (master) StdoutLine: {'line': b'running build\n'}
+[19.821226] (master) StdoutLine: {'line': b'running build_py\n'}
+[19.822090] (master) StdoutLine: {'line': b'copying master/__init__.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master\n'}
+[19.822839] (master) StdoutLine: {'line': b'copying master/master_code.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master\n'}
+[19.823183] (master) StdoutLine: {'line': b'copying master/odometry.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master\n'}
+[19.824290] (master) StdoutLine: {'line': b'running install\n'}
+[19.825318] (master) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[19.825505] (master) StderrLine: {'line': b'!!\n'}
+[19.825647] (master) StderrLine: {'line': b'\n'}
+[19.825774] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.825897] (master) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[19.826016] (master) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[19.826135] (master) StderrLine: {'line': b'        standards-based tools.\n'}
+[19.826254] (master) StderrLine: {'line': b'\n'}
+[19.826372] (master) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[19.826490] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.826608] (master) StderrLine: {'line': b'\n'}
+[19.826723] (master) StderrLine: {'line': b'!!\n'}
+[19.826838] (master) StderrLine: {'line': b'  self.initialize_options()\n'}
+[19.829967] (lidar) StdoutLine: {'line': b'running install_lib\n'}
+[19.837418] (master) StdoutLine: {'line': b'running install_lib\n'}
+[19.842793] (odometry) StdoutLine: {'line': b'running install_data\n'}
+[19.849405] (slam) StdoutLine: {'line': b"reading manifest file '../../build/slam/slam.egg-info/SOURCES.txt'\n"}
+[19.850368] (gps_publisher) StdoutLine: {'line': b'copying resource/gps_publisher -> /home/pimpmobile/ros2_ws/install/gps_publisher/share/ament_index/resource_index/packages\n'}
+[19.850683] (gps_publisher) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher\n'}
+[19.851933] (slam) StdoutLine: {'line': b"writing manifest file '../../build/slam/slam.egg-info/SOURCES.txt'\n"}
+[19.852488] (gps_publisher) StdoutLine: {'line': b'running install_egg_info\n'}
+[19.852770] (slam) StdoutLine: {'line': b'running build\n'}
+[19.853048] (slam) StdoutLine: {'line': b'running build_py\n'}
+[19.853193] (slam) StdoutLine: {'line': b'copying slam/__init__.py -> /home/pimpmobile/ros2_ws/build/slam/build/lib/slam\n'}
+[19.853329] (slam) StdoutLine: {'line': b'copying slam/odometry.py -> /home/pimpmobile/ros2_ws/build/slam/build/lib/slam\n'}
+[19.854034] (slam) StdoutLine: {'line': b'running install\n'}
+[19.854441] (slam) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[19.854710] (slam) StderrLine: {'line': b'!!\n'}
+[19.854846] (slam) StderrLine: {'line': b'\n'}
+[19.854973] (slam) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.855098] (slam) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[19.855220] (slam) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[19.855370] (slam) StderrLine: {'line': b'        standards-based tools.\n'}
+[19.855489] (slam) StderrLine: {'line': b'\n'}
+[19.855607] (slam) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[19.855762] (slam) StderrLine: {'line': b'        ********************************************************************************\n'}
+[19.855896] (slam) StderrLine: {'line': b'\n'}
+[19.856015] (slam) StderrLine: {'line': b'!!\n'}
+[19.856132] (slam) StderrLine: {'line': b'  self.initialize_options()\n'}
+[19.866952] (slam) StdoutLine: {'line': b'running install_lib\n'}
+[19.871337] (lidar) StdoutLine: {'line': b'running install_data\n'}
+[19.876321] (master) StdoutLine: {'line': b'copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/master_code.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master\n'}
+[19.878026] (master) StdoutLine: {'line': b'byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master/master_code.py to master_code.cpython-38.pyc\n'}
+[19.880092] (master) StdoutLine: {'line': b'running install_data\n'}
+[19.880531] (odometry) StdoutLine: {'line': b'copying resource/odometry -> /home/pimpmobile/ros2_ws/install/odometry/share/ament_index/resource_index/packages\n'}
+[19.880994] (odometry) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/odometry/share/odometry\n'}
+[19.882026] (odometry) StdoutLine: {'line': b'running install_egg_info\n'}
+[19.888608] (-) TimerEvent: {}
+[19.890294] (gps_publisher) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[19.890666] (gps_publisher) StdoutLine: {'line': b'Copying ../../build/gps_publisher/gps_publisher.egg-info to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info\n'}
+[19.893675] (gps_publisher) StdoutLine: {'line': b'running install_scripts\n'}
+[19.906317] (slam) StdoutLine: {'line': b'byte-compiling /home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages/slam/odometry.py to odometry.cpython-38.pyc\n'}
+[19.906808] (slam) StderrLine: {'line': b'Sorry: IndentationError: expected an indented block (odometry.py, line 28)\n'}
+[19.907144] (slam) StdoutLine: {'line': b'running install_data\n'}
+[19.907495] (lidar) StdoutLine: {'line': b'copying resource/lidar -> /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index/packages\n'}
+[19.908078] (lidar) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/lidar/share/lidar\n'}
+[19.908463] (lidar) StdoutLine: {'line': b'running install_egg_info\n'}
+[19.923124] (master) StdoutLine: {'line': b'copying resource/master -> /home/pimpmobile/ros2_ws/install/master/share/ament_index/resource_index/packages\n'}
+[19.923442] (master) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/master/share/master\n'}
+[19.923612] (master) StdoutLine: {'line': b'running install_egg_info\n'}
+[19.924015] (odometry) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages/odometry-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[19.924191] (odometry) StdoutLine: {'line': b'Copying ../../build/odometry/odometry.egg-info to /home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages/odometry-0.0.0-py3.8.egg-info\n'}
+[19.926436] (odometry) StdoutLine: {'line': b'running install_scripts\n'}
+[19.950203] (slam) StdoutLine: {'line': b'copying resource/slam -> /home/pimpmobile/ros2_ws/install/slam/share/ament_index/resource_index/packages\n'}
+[19.950593] (slam) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/slam/share/slam\n'}
+[19.950772] (slam) StdoutLine: {'line': b'running install_egg_info\n'}
+[19.950921] (lidar) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[19.951111] (lidar) StdoutLine: {'line': b'Copying ../../build/lidar/lidar.egg-info to /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info\n'}
+[19.952054] (lidar) StdoutLine: {'line': b'running install_scripts\n'}
+[19.963793] (master) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[19.966249] (master) StdoutLine: {'line': b'Copying ../../build/master/master.egg-info to /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info\n'}
+[19.967458] (master) StdoutLine: {'line': b'running install_scripts\n'}
+[19.989539] (-) TimerEvent: {}
+[19.990148] (slam) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages/slam-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[19.991123] (slam) StdoutLine: {'line': b'Copying ../../build/slam/slam.egg-info to /home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages/slam-0.0.0-py3.8.egg-info\n'}
+[19.993334] (slam) StdoutLine: {'line': b'running install_scripts\n'}
+[20.005385] (gps_publisher) StdoutLine: {'line': b'Installing gps script to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/gps_publisher\n'}
+[20.006026] (gps_publisher) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/gps_publisher/install.log'\n"}
+[20.046280] (odometry) StdoutLine: {'line': b'Installing odometry script to /home/pimpmobile/ros2_ws/install/odometry/lib/odometry\n'}
+[20.047793] (odometry) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/odometry/install.log'\n"}
+[20.070907] (lidar) StdoutLine: {'line': b'Installing lidar_listener script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar\n'}
+[20.071760] (lidar) StdoutLine: {'line': b'Installing lidar_talker script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar\n'}
+[20.073132] (lidar) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/lidar/install.log'\n"}
+[20.089807] (-) TimerEvent: {}
+[20.092732] (master) StdoutLine: {'line': b'Installing master script to /home/pimpmobile/ros2_ws/install/master/lib/master\n'}
+[20.093078] (master) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/master/install.log'\n"}
+[20.128334] (slam) StdoutLine: {'line': b'Installing odometry script to /home/pimpmobile/ros2_ws/install/slam/lib/slam\n'}
+[20.129525] (slam) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/slam/install.log'\n"}
+[20.190038] (-) TimerEvent: {}
+[20.291164] (-) TimerEvent: {}
+[20.394606] (-) TimerEvent: {}
+[20.498414] (-) TimerEvent: {}
+[20.601793] (-) TimerEvent: {}
+[20.703747] (-) TimerEvent: {}
+[20.770809] (turtlesim) JobEnded: {'identifier': 'turtlesim', 'rc': 0}
+[20.775324] (odometry) CommandEnded: {'returncode': 0}
+[20.803968] (-) TimerEvent: {}
+[20.905036] (-) TimerEvent: {}
+[21.006712] (-) TimerEvent: {}
+[21.110149] (-) TimerEvent: {}
+[21.211767] (-) TimerEvent: {}
+[21.314009] (-) TimerEvent: {}
+[21.417016] (-) TimerEvent: {}
+[21.477994] (odometry) JobEnded: {'identifier': 'odometry', 'rc': 0}
+[21.480943] (gps_publisher) CommandEnded: {'returncode': 0}
+[21.517248] (-) TimerEvent: {}
+[21.620298] (-) TimerEvent: {}
+[21.721096] (-) TimerEvent: {}
+[21.822237] (-) TimerEvent: {}
+[21.924104] (-) TimerEvent: {}
+[22.027378] (-) TimerEvent: {}
+[22.128655] (-) TimerEvent: {}
+[22.188798] (gps_publisher) JobEnded: {'identifier': 'gps_publisher', 'rc': 0}
+[22.191415] (lidar) CommandEnded: {'returncode': 0}
+[22.229259] (-) TimerEvent: {}
+[22.330767] (-) TimerEvent: {}
+[22.431517] (-) TimerEvent: {}
+[22.532759] (-) TimerEvent: {}
+[22.635408] (-) TimerEvent: {}
+[22.738221] (-) TimerEvent: {}
+[22.839306] (-) TimerEvent: {}
+[22.899079] (lidar) JobEnded: {'identifier': 'lidar', 'rc': 0}
+[22.902226] (master) CommandEnded: {'returncode': 0}
+[22.939950] (-) TimerEvent: {}
+[23.040713] (-) TimerEvent: {}
+[23.142100] (-) TimerEvent: {}
+[23.243078] (-) TimerEvent: {}
+[23.344506] (-) TimerEvent: {}
+[23.445518] (-) TimerEvent: {}
+[23.546693] (-) TimerEvent: {}
+[23.601617] (master) JobEnded: {'identifier': 'master', 'rc': 0}
+[23.604269] (slam) CommandEnded: {'returncode': 0}
+[23.647368] (-) TimerEvent: {}
+[23.748037] (-) TimerEvent: {}
+[23.849021] (-) TimerEvent: {}
+[23.951508] (-) TimerEvent: {}
+[24.052703] (-) TimerEvent: {}
+[24.154157] (-) TimerEvent: {}
+[24.255016] (-) TimerEvent: {}
+[24.303330] (slam) JobEnded: {'identifier': 'slam', 'rc': 0}
+[24.306544] (teleop_pm) JobStarted: {'identifier': 'teleop_pm'}
+[24.355496] (-) TimerEvent: {}
+[24.456832] (-) TimerEvent: {}
+[24.557734] (-) TimerEvent: {}
+[24.658661] (-) TimerEvent: {}
+[24.759494] (-) TimerEvent: {}
+[24.861361] (-) TimerEvent: {}
+[24.964830] (-) TimerEvent: {}
+[25.065741] (-) TimerEvent: {}
+[25.167104] (-) TimerEvent: {}
+[25.268623] (-) TimerEvent: {}
+[25.370193] (-) TimerEvent: {}
+[25.471351] (-) TimerEvent: {}
+[25.572560] (-) TimerEvent: {}
+[25.673755] (-) TimerEvent: {}
+[25.774956] (-) TimerEvent: {}
+[25.875716] (-) TimerEvent: {}
+[25.976276] (-) TimerEvent: {}
+[26.076816] (-) TimerEvent: {}
+[26.177794] (-) TimerEvent: {}
+[26.279499] (-) TimerEvent: {}
+[26.380823] (-) TimerEvent: {}
+[26.482121] (-) TimerEvent: {}
+[26.583284] (-) TimerEvent: {}
+[26.685517] (-) TimerEvent: {}
+[26.787358] (-) TimerEvent: {}
+[26.890071] (-) TimerEvent: {}
+[26.992815] (-) TimerEvent: {}
+[27.093847] (-) TimerEvent: {}
+[27.195295] (-) TimerEvent: {}
+[27.296410] (-) TimerEvent: {}
+[27.397401] (-) TimerEvent: {}
+[27.497950] (-) TimerEvent: {}
+[27.598481] (-) TimerEvent: {}
+[27.699041] (-) TimerEvent: {}
+[27.799609] (-) TimerEvent: {}
+[27.900202] (-) TimerEvent: {}
+[28.000770] (-) TimerEvent: {}
+[28.101334] (-) TimerEvent: {}
+[28.201947] (-) TimerEvent: {}
+[28.302558] (-) TimerEvent: {}
+[28.403086] (-) TimerEvent: {}
+[28.503636] (-) TimerEvent: {}
+[28.604244] (-) TimerEvent: {}
+[28.676198] (teleop_pm) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/teleop_pm', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/teleop_pm/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log', '--install-scripts', '$base/lib/teleop_pm', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/teleop_pm', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2569', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1786', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:61859', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/usr/local/cuda-11.4/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2608,unix/pimpmobile-desktop:/tmp/.ICE-unix/2608', 'INVOCATION_ID': '46243912e8534dc1bab641e6b52683d5', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c8ef0a93_e482_4783_9b29_e44ba2d1592d', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.95', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/teleop_pm', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/teleop_pm/prefix_override:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[28.704386] (-) TimerEvent: {}
+[28.804982] (-) TimerEvent: {}
+[28.905531] (-) TimerEvent: {}
+[28.950016] (teleop_pm) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[28.950508] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[28.950666] (teleop_pm) StderrLine: {'line': b'\n'}
+[28.950800] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[28.950931] (teleop_pm) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[28.951056] (teleop_pm) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[28.951178] (teleop_pm) StderrLine: {'line': b'\n'}
+[28.951294] (teleop_pm) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[28.951412] (teleop_pm) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[28.951528] (teleop_pm) StderrLine: {'line': b'\n'}
+[28.951643] (teleop_pm) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[28.951807] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[28.951932] (teleop_pm) StderrLine: {'line': b'\n'}
+[28.952049] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[28.952163] (teleop_pm) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[29.005621] (-) TimerEvent: {}
+[29.106090] (-) TimerEvent: {}
+[29.172999] (teleop_pm) StdoutLine: {'line': b'running egg_info\n'}
+[29.206185] (-) TimerEvent: {}
+[29.208015] (teleop_pm) StdoutLine: {'line': b'writing ../../build/teleop_pm/teleop_pm.egg-info/PKG-INFO\n'}
+[29.209144] (teleop_pm) StdoutLine: {'line': b'writing dependency_links to ../../build/teleop_pm/teleop_pm.egg-info/dependency_links.txt\n'}
+[29.209649] (teleop_pm) StdoutLine: {'line': b'writing entry points to ../../build/teleop_pm/teleop_pm.egg-info/entry_points.txt\n'}
+[29.210054] (teleop_pm) StdoutLine: {'line': b'writing requirements to ../../build/teleop_pm/teleop_pm.egg-info/requires.txt\n'}
+[29.210344] (teleop_pm) StdoutLine: {'line': b'writing top-level names to ../../build/teleop_pm/teleop_pm.egg-info/top_level.txt\n'}
+[29.306313] (-) TimerEvent: {}
+[29.406849] (-) TimerEvent: {}
+[29.494428] (teleop_pm) StdoutLine: {'line': b"reading manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'\n"}
+[29.496054] (teleop_pm) StdoutLine: {'line': b"writing manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'\n"}
+[29.496434] (teleop_pm) StdoutLine: {'line': b'running build\n'}
+[29.496673] (teleop_pm) StdoutLine: {'line': b'running build_py\n'}
+[29.496889] (teleop_pm) StdoutLine: {'line': b'copying teleop_pm/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm\n'}
+[29.497265] (teleop_pm) StdoutLine: {'line': b'copying teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm\n'}
+[29.497885] (teleop_pm) StdoutLine: {'line': b'running install\n'}
+[29.498405] (teleop_pm) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[29.498561] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[29.498683] (teleop_pm) StderrLine: {'line': b'\n'}
+[29.498801] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[29.498920] (teleop_pm) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[29.499036] (teleop_pm) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[29.499149] (teleop_pm) StderrLine: {'line': b'        standards-based tools.\n'}
+[29.499262] (teleop_pm) StderrLine: {'line': b'\n'}
+[29.499374] (teleop_pm) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[29.499486] (teleop_pm) StderrLine: {'line': b'        ********************************************************************************\n'}
+[29.499625] (teleop_pm) StderrLine: {'line': b'\n'}
+[29.499780] (teleop_pm) StderrLine: {'line': b'!!\n'}
+[29.499907] (teleop_pm) StderrLine: {'line': b'  self.initialize_options()\n'}
+[29.506905] (-) TimerEvent: {}
+[29.509558] (teleop_pm) StdoutLine: {'line': b'running install_lib\n'}
+[29.546825] (teleop_pm) StdoutLine: {'line': b'running install_data\n'}
+[29.582422] (teleop_pm) StdoutLine: {'line': b'copying resource/teleop_pm -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/ament_index/resource_index/packages\n'}
+[29.582778] (teleop_pm) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/teleop_pm/share/teleop_pm\n'}
+[29.583054] (teleop_pm) StdoutLine: {'line': b'running install_egg_info\n'}
+[29.606998] (-) TimerEvent: {}
+[29.619575] (teleop_pm) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[29.620333] (teleop_pm) StdoutLine: {'line': b'Copying ../../build/teleop_pm/teleop_pm.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages/teleop_pm-0.0.0-py3.8.egg-info\n'}
+[29.622254] (teleop_pm) StdoutLine: {'line': b'running install_scripts\n'}
+[29.707118] (-) TimerEvent: {}
+[29.730012] (teleop_pm) StdoutLine: {'line': b'Installing tops script to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/teleop_pm\n'}
+[29.730646] (teleop_pm) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log'\n"}
+[29.802312] (teleop_pm) CommandEnded: {'returncode': 0}
+[29.807238] (-) TimerEvent: {}
+[29.907858] (-) TimerEvent: {}
+[30.008797] (-) TimerEvent: {}
+[30.110543] (-) TimerEvent: {}
+[30.211617] (-) TimerEvent: {}
+[30.312875] (-) TimerEvent: {}
+[30.413887] (-) TimerEvent: {}
+[30.514743] (-) TimerEvent: {}
+[30.525132] (teleop_pm) JobEnded: {'identifier': 'teleop_pm', 'rc': 0}
+[30.528063] (-) EventReactorShutdown: {}

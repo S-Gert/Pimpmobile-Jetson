@@ -8,6 +8,7 @@ setup.py
 ../../build/gps_publisher/gps_publisher.egg-info/requires.txt
 ../../build/gps_publisher/gps_publisher.egg-info/top_level.txt
 ../../build/gps_publisher/gps_publisher.egg-info/zip-safe
+gps_publisher/GPS_log.py
 gps_publisher/__init__.py
 gps_publisher/gps.py
 resource/gps_publisher

@@ -1,0 +1,53 @@
+[14.655s] Invoking command in '/home/pimpmobile/ros2_ws/src/odometry': PYTHONPATH=/home/pimpmobile/ros2_ws/build/odometry/prefix_override:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odometry build --build-base /home/pimpmobile/ros2_ws/build/odometry/build install --record /home/pimpmobile/ros2_ws/build/odometry/install.log --install-scripts $base/lib/odometry --single-version-externally-managed
+[14.964s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[14.964s] !!
+[14.964s] 
+[14.964s]         ********************************************************************************
+[14.965s]         Usage of dash-separated 'script-dir' will not be supported in future
+[14.965s]         versions. Please use the underscore name 'script_dir' instead.
+[14.965s] 
+[14.965s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[14.965s]         or your builds will no longer be supported.
+[14.965s] 
+[14.965s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[14.965s]         ********************************************************************************
+[14.965s] 
+[14.966s] !!
+[14.966s]   opt = self.warn_dash_deprecation(opt, section)
+[15.211s] running egg_info
+[15.251s] writing ../../build/odometry/odometry.egg-info/PKG-INFO
+[15.252s] writing dependency_links to ../../build/odometry/odometry.egg-info/dependency_links.txt
+[15.252s] writing entry points to ../../build/odometry/odometry.egg-info/entry_points.txt
+[15.253s] writing requirements to ../../build/odometry/odometry.egg-info/requires.txt
+[15.253s] writing top-level names to ../../build/odometry/odometry.egg-info/top_level.txt
+[15.569s] reading manifest file '../../build/odometry/odometry.egg-info/SOURCES.txt'
+[15.571s] writing manifest file '../../build/odometry/odometry.egg-info/SOURCES.txt'
+[15.573s] running build
+[15.573s] running build_py
+[15.574s] copying odometry/__init__.py -> /home/pimpmobile/ros2_ws/build/odometry/build/lib/odometry
+[15.574s] copying odometry/odometry.py -> /home/pimpmobile/ros2_ws/build/odometry/build/lib/odometry
+[15.574s] running install
+[15.575s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[15.575s] !!
+[15.575s] 
+[15.575s]         ********************************************************************************
+[15.575s]         Please avoid running ``setup.py`` directly.
+[15.576s]         Instead, use pypa/build, pypa/installer or other
+[15.576s]         standards-based tools.
+[15.576s] 
+[15.576s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[15.576s]         ********************************************************************************
+[15.576s] 
+[15.576s] !!
+[15.576s]   self.initialize_options()
+[15.588s] running install_lib
+[15.629s] running install_data
+[15.667s] copying resource/odometry -> /home/pimpmobile/ros2_ws/install/odometry/share/ament_index/resource_index/packages
+[15.667s] copying package.xml -> /home/pimpmobile/ros2_ws/install/odometry/share/odometry
+[15.668s] running install_egg_info
+[15.713s] removing '/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages/odometry-0.0.0-py3.8.egg-info' (and everything under it)
+[15.713s] Copying ../../build/odometry/odometry.egg-info to /home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages/odometry-0.0.0-py3.8.egg-info
+[15.716s] running install_scripts
+[15.840s] Installing odometry script to /home/pimpmobile/ros2_ws/install/odometry/lib/odometry
+[15.842s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/odometry/install.log'
+[20.681s] Invoked command in '/home/pimpmobile/ros2_ws/src/odometry' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/odometry/prefix_override:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/odometry build --build-base /home/pimpmobile/ros2_ws/build/odometry/build install --record /home/pimpmobile/ros2_ws/build/odometry/install.log --install-scripts $base/lib/odometry --single-version-externally-managed

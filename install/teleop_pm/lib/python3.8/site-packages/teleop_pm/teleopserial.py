@@ -48,7 +48,7 @@ class TeleopSerial(Node):
             self.arduino_nano_open = True
         while self.running:
             self.encoders = arduino_nano.readline().decode().strip()
-            print(self.encoders)
+            #print(self.encoders)
 
     def write_data(self, x):
         x_str = str(x)

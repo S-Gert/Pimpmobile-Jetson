@@ -6,7 +6,9 @@
   <description>TODO: Package description</description>
   <maintainer email="pimpmobile@todo.todo">pimpmobile</maintainer>
   <license>TODO: License declaration</license>
-
+  
+  <exec_depend>pandas</exec_depend>
+  <exec_depend>pymap3d</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>rclpy</exec_depend>
   <exec_depend>pynmea2</exec_depend>

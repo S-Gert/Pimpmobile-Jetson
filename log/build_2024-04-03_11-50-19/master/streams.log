@@ -1,0 +1,54 @@
+[8.242s] Invoking command in '/home/pimpmobile/ros2_ws/src/master': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed
+[8.521s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[8.522s] !!
+[8.522s] 
+[8.522s]         ********************************************************************************
+[8.522s]         Usage of dash-separated 'script-dir' will not be supported in future
+[8.522s]         versions. Please use the underscore name 'script_dir' instead.
+[8.522s] 
+[8.522s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[8.523s]         or your builds will no longer be supported.
+[8.523s] 
+[8.523s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[8.523s]         ********************************************************************************
+[8.523s] 
+[8.523s] !!
+[8.523s]   opt = self.warn_dash_deprecation(opt, section)
+[8.747s] running egg_info
+[8.782s] writing ../../build/master/master.egg-info/PKG-INFO
+[8.783s] writing dependency_links to ../../build/master/master.egg-info/dependency_links.txt
+[8.784s] writing entry points to ../../build/master/master.egg-info/entry_points.txt
+[8.784s] writing requirements to ../../build/master/master.egg-info/requires.txt
+[8.784s] writing top-level names to ../../build/master/master.egg-info/top_level.txt
+[9.074s] reading manifest file '../../build/master/master.egg-info/SOURCES.txt'
+[9.075s] writing manifest file '../../build/master/master.egg-info/SOURCES.txt'
+[9.076s] running build
+[9.076s] running build_py
+[9.076s] copying master/__init__.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[9.076s] copying master/master_code.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[9.077s] copying master/odometry.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[9.078s] running install
+[9.078s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[9.078s] !!
+[9.079s] 
+[9.079s]         ********************************************************************************
+[9.079s]         Please avoid running ``setup.py`` directly.
+[9.079s]         Instead, use pypa/build, pypa/installer or other
+[9.079s]         standards-based tools.
+[9.079s] 
+[9.079s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[9.080s]         ********************************************************************************
+[9.080s] 
+[9.080s] !!
+[9.080s]   self.initialize_options()
+[9.090s] running install_lib
+[9.127s] running install_data
+[9.163s] copying resource/master -> /home/pimpmobile/ros2_ws/install/master/share/ament_index/resource_index/packages
+[9.163s] copying package.xml -> /home/pimpmobile/ros2_ws/install/master/share/master
+[9.164s] running install_egg_info
+[9.201s] removing '/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info' (and everything under it)
+[9.201s] Copying ../../build/master/master.egg-info to /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info
+[9.203s] running install_scripts
+[9.314s] Installing master script to /home/pimpmobile/ros2_ws/install/master/lib/master
+[9.315s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/master/install.log'
+[9.401s] Invoked command in '/home/pimpmobile/ros2_ws/src/master' returned '0': AMENT_PREFIX_PATH=/home/pimpmobile/ros2_ws/install/odometry:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/odometry/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed

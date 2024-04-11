@@ -1,0 +1,54 @@
+[15.971s] Invoking command in '/home/pimpmobile/ros2_ws/src/master': PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed
+[16.293s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[16.293s] !!
+[16.294s] 
+[16.294s]         ********************************************************************************
+[16.294s]         Usage of dash-separated 'script-dir' will not be supported in future
+[16.294s]         versions. Please use the underscore name 'script_dir' instead.
+[16.294s] 
+[16.294s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[16.295s]         or your builds will no longer be supported.
+[16.295s] 
+[16.295s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[16.295s]         ********************************************************************************
+[16.295s] 
+[16.295s] !!
+[16.295s]   opt = self.warn_dash_deprecation(opt, section)
+[16.537s] running egg_info
+[16.575s] writing ../../build/master/master.egg-info/PKG-INFO
+[16.576s] writing dependency_links to ../../build/master/master.egg-info/dependency_links.txt
+[16.577s] writing entry points to ../../build/master/master.egg-info/entry_points.txt
+[16.578s] writing requirements to ../../build/master/master.egg-info/requires.txt
+[16.579s] writing top-level names to ../../build/master/master.egg-info/top_level.txt
+[16.883s] reading manifest file '../../build/master/master.egg-info/SOURCES.txt'
+[16.884s] writing manifest file '../../build/master/master.egg-info/SOURCES.txt'
+[16.884s] running build
+[16.884s] running build_py
+[16.885s] copying master/__init__.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[16.885s] copying master/master_code.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[16.887s] copying master/odometry.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[16.887s] running install
+[16.887s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[16.888s] !!
+[16.888s] 
+[16.888s]         ********************************************************************************
+[16.888s]         Please avoid running ``setup.py`` directly.
+[16.888s]         Instead, use pypa/build, pypa/installer or other
+[16.888s]         standards-based tools.
+[16.888s] 
+[16.888s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[16.889s]         ********************************************************************************
+[16.889s] 
+[16.889s] !!
+[16.889s]   self.initialize_options()
+[16.898s] running install_lib
+[16.937s] running install_data
+[16.976s] copying resource/master -> /home/pimpmobile/ros2_ws/install/master/share/ament_index/resource_index/packages
+[16.976s] copying package.xml -> /home/pimpmobile/ros2_ws/install/master/share/master
+[16.976s] running install_egg_info
+[17.016s] removing '/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info' (and everything under it)
+[17.016s] Copying ../../build/master/master.egg-info to /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info
+[17.019s] running install_scripts
+[17.138s] Installing master script to /home/pimpmobile/ros2_ws/install/master/lib/master
+[17.139s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/master/install.log'
+[21.388s] Invoked command in '/home/pimpmobile/ros2_ws/src/master' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed

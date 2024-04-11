@@ -1,0 +1,62 @@
+[4.408s] Invoking command in '/home/pimpmobile/ros2_ws/src/gps_publisher': PYTHONPATH=/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/gps_publisher build --build-base /home/pimpmobile/ros2_ws/build/gps_publisher/build install --record /home/pimpmobile/ros2_ws/build/gps_publisher/install.log --install-scripts $base/lib/gps_publisher --single-version-externally-managed
+[4.679s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[4.679s] !!
+[4.679s] 
+[4.679s]         ********************************************************************************
+[4.680s]         Usage of dash-separated 'script-dir' will not be supported in future
+[4.680s]         versions. Please use the underscore name 'script_dir' instead.
+[4.680s] 
+[4.680s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[4.680s]         or your builds will no longer be supported.
+[4.680s] 
+[4.680s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[4.680s]         ********************************************************************************
+[4.680s] 
+[4.681s] !!
+[4.681s]   opt = self.warn_dash_deprecation(opt, section)
+[4.899s] running egg_info
+[4.934s] writing ../../build/gps_publisher/gps_publisher.egg-info/PKG-INFO
+[4.935s] writing dependency_links to ../../build/gps_publisher/gps_publisher.egg-info/dependency_links.txt
+[4.935s] writing entry points to ../../build/gps_publisher/gps_publisher.egg-info/entry_points.txt
+[4.936s] writing requirements to ../../build/gps_publisher/gps_publisher.egg-info/requires.txt
+[4.936s] writing top-level names to ../../build/gps_publisher/gps_publisher.egg-info/top_level.txt
+[5.217s] reading manifest file '../../build/gps_publisher/gps_publisher.egg-info/SOURCES.txt'
+[5.219s] writing manifest file '../../build/gps_publisher/gps_publisher.egg-info/SOURCES.txt'
+[5.219s] running build
+[5.219s] running build_py
+[5.220s] copying gps_publisher/__init__.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher
+[5.220s] copying gps_publisher/gps.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher
+[5.220s] copying gps_publisher/GPS_log.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher
+[5.221s] running install
+[5.221s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[5.222s] !!
+[5.222s] 
+[5.222s]         ********************************************************************************
+[5.222s]         Please avoid running ``setup.py`` directly.
+[5.222s]         Instead, use pypa/build, pypa/installer or other
+[5.222s]         standards-based tools.
+[5.222s] 
+[5.223s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[5.223s]         ********************************************************************************
+[5.223s] 
+[5.223s] !!
+[5.223s]   self.initialize_options()
+[5.233s] running install_lib
+[5.268s] copying /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher/GPS_log.py -> /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher
+[5.269s] byte-compiling /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher/GPS_log.py to GPS_log.cpython-38.pyc
+[5.270s]   File "/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher/GPS_log.py", line 21
+[5.270s]     10)
+[5.270s]     ^
+[5.271s] SyntaxError: invalid syntax
+[5.271s] 
+[5.271s] running install_data
+[5.305s] copying resource/gps_publisher -> /home/pimpmobile/ros2_ws/install/gps_publisher/share/ament_index/resource_index/packages
+[5.305s] copying package.xml -> /home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher
+[5.305s] running install_egg_info
+[5.342s] removing '/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info' (and everything under it)
+[5.342s] Copying ../../build/gps_publisher/gps_publisher.egg-info to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info
+[5.344s] running install_scripts
+[5.451s] Installing gps script to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/gps_publisher
+[5.451s] Installing gps_log script to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/gps_publisher
+[5.452s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/gps_publisher/install.log'
+[5.523s] Invoked command in '/home/pimpmobile/ros2_ws/src/gps_publisher' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/gps_publisher build --build-base /home/pimpmobile/ros2_ws/build/gps_publisher/build install --record /home/pimpmobile/ros2_ws/build/gps_publisher/install.log --install-scripts $base/lib/gps_publisher --single-version-externally-managed

@@ -1,0 +1,2 @@
+[console_scripts]
+odometry = slam.odometry:main

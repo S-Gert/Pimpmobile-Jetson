@@ -1,0 +1,127 @@
+[0.000000] (-) TimerEvent: {}
+[0.000747] (-) JobUnselected: {'identifier': 'gps_publisher'}
+[0.000957] (-) JobUnselected: {'identifier': 'lidar'}
+[0.001360] (-) JobUnselected: {'identifier': 'slam'}
+[0.001704] (-) JobUnselected: {'identifier': 'teleop_pm'}
+[0.001855] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.001953] (master) JobQueued: {'identifier': 'master', 'dependencies': OrderedDict()}
+[0.002038] (master) JobStarted: {'identifier': 'master'}
+[0.099950] (-) TimerEvent: {}
+[0.201139] (-) TimerEvent: {}
+[0.302011] (-) TimerEvent: {}
+[0.403139] (-) TimerEvent: {}
+[0.504179] (-) TimerEvent: {}
+[0.605237] (-) TimerEvent: {}
+[0.707508] (-) TimerEvent: {}
+[0.808707] (-) TimerEvent: {}
+[0.910356] (-) TimerEvent: {}
+[1.012030] (-) TimerEvent: {}
+[1.115091] (-) TimerEvent: {}
+[1.219239] (-) TimerEvent: {}
+[1.322654] (-) TimerEvent: {}
+[1.423474] (-) TimerEvent: {}
+[1.524203] (-) TimerEvent: {}
+[1.624803] (-) TimerEvent: {}
+[1.725361] (-) TimerEvent: {}
+[1.825962] (-) TimerEvent: {}
+[1.926855] (-) TimerEvent: {}
+[2.029076] (-) TimerEvent: {}
+[2.130745] (-) TimerEvent: {}
+[2.233697] (-) TimerEvent: {}
+[2.334814] (-) TimerEvent: {}
+[2.436362] (-) TimerEvent: {}
+[2.537759] (-) TimerEvent: {}
+[2.638966] (-) TimerEvent: {}
+[2.741308] (-) TimerEvent: {}
+[2.842158] (-) TimerEvent: {}
+[2.944142] (-) TimerEvent: {}
+[3.045666] (-) TimerEvent: {}
+[3.146623] (-) TimerEvent: {}
+[3.247331] (-) TimerEvent: {}
+[3.347995] (-) TimerEvent: {}
+[3.448629] (-) TimerEvent: {}
+[3.549234] (-) TimerEvent: {}
+[3.649868] (-) TimerEvent: {}
+[3.750501] (-) TimerEvent: {}
+[3.851148] (-) TimerEvent: {}
+[3.951791] (-) TimerEvent: {}
+[4.052430] (-) TimerEvent: {}
+[4.153018] (-) TimerEvent: {}
+[4.253611] (-) TimerEvent: {}
+[4.354333] (-) TimerEvent: {}
+[4.366517] (master) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/master', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/master/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/master/install.log', '--install-scripts', '$base/lib/master', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/master', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'LC_TIME': 'et_EE.UTF-8', 'SSH_AGENT_PID': '2538', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile/ros2_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'MANAGERPID': '1771', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', 'JOURNAL_STREAM': '8:61790', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pimpmobile', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/pimpmobile-desktop:@/tmp/.ICE-unix/2575,unix/pimpmobile-desktop:/tmp/.ICE-unix/2575', 'INVOCATION_ID': '33201da86d3a494d8bec7fa657eef307', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'et_EE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/8725ff13_a3b9_4687_88bd_42d9232d0a37', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'et_EE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'GNOME_TERMINAL_SERVICE': ':1.87', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'QT_IM_MODULE': 'ibus', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/master', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/master/prefix_override:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[4.454525] (-) TimerEvent: {}
+[4.555189] (-) TimerEvent: {}
+[4.639506] (master) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[4.640420] (master) StderrLine: {'line': b'!!\n'}
+[4.640789] (master) StderrLine: {'line': b'\n'}
+[4.641073] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.641336] (master) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[4.641615] (master) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[4.641858] (master) StderrLine: {'line': b'\n'}
+[4.642092] (master) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[4.642323] (master) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[4.642546] (master) StderrLine: {'line': b'\n'}
+[4.642763] (master) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[4.642980] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.643197] (master) StderrLine: {'line': b'\n'}
+[4.643411] (master) StderrLine: {'line': b'!!\n'}
+[4.643626] (master) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[4.655294] (-) TimerEvent: {}
+[4.755799] (-) TimerEvent: {}
+[4.856239] (-) TimerEvent: {}
+[4.857823] (master) StdoutLine: {'line': b'running egg_info\n'}
+[4.892370] (master) StdoutLine: {'line': b'writing ../../build/master/master.egg-info/PKG-INFO\n'}
+[4.893425] (master) StdoutLine: {'line': b'writing dependency_links to ../../build/master/master.egg-info/dependency_links.txt\n'}
+[4.894010] (master) StdoutLine: {'line': b'writing entry points to ../../build/master/master.egg-info/entry_points.txt\n'}
+[4.894456] (master) StdoutLine: {'line': b'writing requirements to ../../build/master/master.egg-info/requires.txt\n'}
+[4.894820] (master) StdoutLine: {'line': b'writing top-level names to ../../build/master/master.egg-info/top_level.txt\n'}
+[4.956614] (-) TimerEvent: {}
+[5.057159] (-) TimerEvent: {}
+[5.157768] (-) TimerEvent: {}
+[5.173879] (master) StdoutLine: {'line': b"reading manifest file '../../build/master/master.egg-info/SOURCES.txt'\n"}
+[5.175546] (master) StdoutLine: {'line': b"writing manifest file '../../build/master/master.egg-info/SOURCES.txt'\n"}
+[5.176003] (master) StdoutLine: {'line': b'running build\n'}
+[5.176314] (master) StdoutLine: {'line': b'running build_py\n'}
+[5.176679] (master) StdoutLine: {'line': b'copying master/__init__.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master\n'}
+[5.177022] (master) StdoutLine: {'line': b'copying master/master_code.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master\n'}
+[5.177330] (master) StdoutLine: {'line': b'copying master/odometry.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master\n'}
+[5.177832] (master) StdoutLine: {'line': b'running install\n'}
+[5.178320] (master) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[5.178607] (master) StderrLine: {'line': b'!!\n'}
+[5.178860] (master) StderrLine: {'line': b'\n'}
+[5.179100] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.179331] (master) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[5.179556] (master) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[5.179810] (master) StderrLine: {'line': b'        standards-based tools.\n'}
+[5.180036] (master) StderrLine: {'line': b'\n'}
+[5.180257] (master) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[5.180478] (master) StderrLine: {'line': b'        ********************************************************************************\n'}
+[5.180739] (master) StderrLine: {'line': b'\n'}
+[5.180965] (master) StderrLine: {'line': b'!!\n'}
+[5.181185] (master) StderrLine: {'line': b'  self.initialize_options()\n'}
+[5.189547] (master) StdoutLine: {'line': b'running install_lib\n'}
+[5.224946] (master) StdoutLine: {'line': b'copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/master_code.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master\n'}
+[5.226247] (master) StdoutLine: {'line': b'byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master/master_code.py to master_code.cpython-38.pyc\n'}
+[5.228177] (master) StdoutLine: {'line': b'running install_data\n'}
+[5.257851] (-) TimerEvent: {}
+[5.262436] (master) StdoutLine: {'line': b'copying resource/master -> /home/pimpmobile/ros2_ws/install/master/share/ament_index/resource_index/packages\n'}
+[5.262859] (master) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/master/share/master\n'}
+[5.263205] (master) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.299508] (master) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[5.300151] (master) StdoutLine: {'line': b'Copying ../../build/master/master.egg-info to /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info\n'}
+[5.302146] (master) StdoutLine: {'line': b'running install_scripts\n'}
+[5.357953] (-) TimerEvent: {}
+[5.407509] (master) StdoutLine: {'line': b'Installing master script to /home/pimpmobile/ros2_ws/install/master/lib/master\n'}
+[5.408425] (master) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/master/install.log'\n"}
+[5.458120] (-) TimerEvent: {}
+[5.478897] (master) CommandEnded: {'returncode': 0}
+[5.558632] (-) TimerEvent: {}
+[5.659329] (-) TimerEvent: {}
+[5.759945] (-) TimerEvent: {}
+[5.861211] (-) TimerEvent: {}
+[5.961763] (-) TimerEvent: {}
+[6.065194] (-) TimerEvent: {}
+[6.166153] (-) TimerEvent: {}
+[6.202444] (master) JobEnded: {'identifier': 'master', 'rc': 0}
+[6.204506] (-) EventReactorShutdown: {}
