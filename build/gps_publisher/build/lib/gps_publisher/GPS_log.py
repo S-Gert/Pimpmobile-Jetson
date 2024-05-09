@@ -29,8 +29,8 @@ class GPS_log(Node):
         x = msg.pose.position.x
         y = msg.pose.position.y
         z = msg.pose.position.z
-        t = msg.pose.orientation.x#time.Time()
-        self.get_logger().info(f"{x = }, {y = }, {z = }")
+        t = msg.pose.orientation.x #time
+        self.get_logger().info(f"{x = }, {y = }, {z = }, {t = }")
         self.write_to_csv(self.gps_df, x, y, z, t)
 
     def write_to_csv(self, df:pd.DataFrame, X:float, Y:float, Z:float, T:float) -> None:

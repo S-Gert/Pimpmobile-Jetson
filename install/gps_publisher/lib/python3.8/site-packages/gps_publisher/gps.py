@@ -14,6 +14,9 @@ baudrate = 9600
 
 try:
     ser = serial.Serial(gps_port, baudrate, timeout=1)
+    tcp_socket = socket.socket()
+    port = 8002
+    tcp_socket.connect(('213.168.5.170', port))
 except serial.SerialException as e:
     print("Error:", e)
 
@@ -26,22 +29,20 @@ class GpsPublisher(Node):
 
         self.publisher_enu_ = self.create_publisher(PoseWithCovariance, 'gps_enu_pimp', 11)
         self.timer_enu = self.create_timer(timer_period, self.enu_callback)
+        
+        #clock start
+        self.start_clock = 0
+        self.status_clock = 0
 
         # Baasjaam
         self.lock_zero_point = False
         self.lat0 = 58.3428685594
         self.lon0 = 25.5692475361
         self.alt0 = 91.357      
-
-    def gps_base_tcp(self):
-        s = socket.socket()
-        port = 8002
-        s.connect(('213.168.5.170', port))
-        return s.recv(1024)
     
     def status_fix(self):
         try:
-            socket_info = self.gps_base_tcp()
+            socket_info = tcp_socket.recv(1024)
             ser.write(socket_info)
         except Exception as e:
             self.get_logger().error(f"Error writing to u-blox device: {e}")
@@ -65,12 +66,16 @@ class GpsPublisher(Node):
                 self.lat0 = self.convert(float(line_split[2]))
                 self.lon0 = self.convert(float(line_split[4]))
                 self.alt0 = float(line_split[9])
+                clock = self.get_clock().now()
+                self.start_clock = float(clock.nanoseconds) / 1e9
                 self.lock_zero_point = True
             enu = PoseWithCovariance()
             x, y, z = self.transform_to_enu(self.convert(float(line_split[2])), self.convert(float(line_split[4])), float(line_split[9]))
-            enu.pose.position.x = x
-            enu.pose.position.y = y
-            enu.pose.position.z = z
+            clock = self.get_clock().now()
+            enu.pose.orientation.x = round((float(clock.nanoseconds) / 1e9 - self.start_clock), 2)
+            enu.pose.position.x = round(x, 2)
+            enu.pose.position.y = round(y, 2)
+            enu.pose.position.z = round(z, 2)
             self.publisher_enu_.publish(enu)
             #self.get_logger().info(f"{x}, {y}, {z}")
         
@@ -85,8 +90,9 @@ class GpsPublisher(Node):
             msg.longitude = float(line_split[4])
             msg.altitude = float(line_split[9])
             msg.status.status = int(line_split[6])
-            if msg.status.status < 4:
+            if msg.header.stamp.sec >= (self.status_clock+2):
                 self.status_fix()
+                self.status_clock = msg.header.stamp.sec
             self.publisher_raw_.publish(msg)
             #self.get_logger().info(f"{line_split}")
         except:
