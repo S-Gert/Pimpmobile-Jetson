@@ -11,6 +11,7 @@ setup.py
 gps_publisher/GPS_log.py
 gps_publisher/__init__.py
 gps_publisher/gps.py
+gps_publisher/gps_log_data.csv
 resource/gps_publisher
 test/test_copyright.py
 test/test_flake8.py

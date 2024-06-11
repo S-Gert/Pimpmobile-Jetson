@@ -3,41 +3,60 @@ from rclpy.node import Node
 from sensor_msgs.msg import NavSatFix
 from std_msgs.msg import String, Int32MultiArray
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy 
+from geometry_msgs.msg import PoseWithCovariance
 
+import struct
+import numpy as np
 import pandas as pd
 import threading
 import serial
 import time
 from master.odometry import Odometry
 import atexit
+import pyudev
 
-arduino_nano_port = '/dev/ttyUSB0' # '/dev/ttyUSB1'
-arduino_port = '/dev/ttyACM0'
+from master.stanley_controller import stanley_controller, calculate_path_yaw
 
-arduino = serial.Serial(port=arduino_port, baudrate=9600, timeout=.2)
-print("Opening arduino port...")
-time.sleep(3)
+# arduino_ports = ['/dev/ttyACM0', '/dev/ttyACM1', '/dev/ttyAMA0', '/dev/ttyUSB0']
+# arduino_id = '7583033343835170C132'
+
+# def find_usb_device_by_port(ports:list):
+#     context = pyudev.Context()
+#     for device in context.list_devices(subsystem='tty'):
+#         if device.get('ID_USB_INTERFACE_NUM'):
+#             if device.device_node == port:
+#                 id = device.properties.get('ID_SERIAL_SHORT')
+#                 if id == arduino_id:
+#                     return "arduino"
+#                 return id
+
+# def try_ports(ports):
+#     for port in ports:
+#         try:
+#             usb_device = find_usb_device_by_port(port)
+#             #valid_port = serial.Serial(port=port, baudrate=115200)
+#             if usb_device == "arduino":
+#                 arduino = serial.Serial(port=port, baudrate=115200)
+#                 print(f"valid port: {port}")
+#                 print(f"device: {usb_device}")
+#                 print("Opening port...")
+#                 time.sleep(2)
+#                 return arduino
+#         except:
+#             print(f"{port} not valid")
+#     raise RuntimeError("No valid ports exist") 
+
+#arduino_nano_port = '/dev/ttyUSB0' # '/dev/ttyUSB1'
+arduino_port = '/dev/ttyACM0'#'/dev/ttyACM0'
+arduino = serial.Serial(port=arduino_port, baudrate=115200, timeout=1)
+print("Opening port...")
+time.sleep(2)
+#arduino = try_ports(arduino_ports)
 
 class Master(Node):
 
     def __init__(self, odometry_object):
         super().__init__('Master_Code')
-
-        # qos_profile = QoSProfile(
-        #     reliability = ReliabilityPolicy.RELIABLE,
-        #     history = HistoryPolicy.KEEP_ALL,
-        #     depth = 1
-        # )
-
-        # qos_profile = QoSProfile(
-        #     reliability = QoSReliabilityPolicy.RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT, 
-        #     history = QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
-        #     depth = 1
-        # )
-
-        self.publisher_ = self.create_publisher(String, 'pimp_odo', 1)
-        time_period = 0.1
-        self.timer = self.create_timer(time_period, self.pub_callback)
 
         self.sub_lidar = self.create_subscription(
             Int32MultiArray,
@@ -45,34 +64,31 @@ class Master(Node):
             self.lidar_callback,
             10)
         
-        self.sub_lidar = self.create_subscription(
+        self.sub_gps = self.create_subscription(
             PoseWithCovariance,
             'gps_enu_pimp',
             self.gps_callback,
             10)
-
-        self.sub_lidar 
         
-        self.msg = String() #ros publish message type
+        self.sub_lidar 
+        self.sub_gps
 
         # Arduino mega serial
-        #self.arduino_message = ""
-        
-        # Odometry variables
-        self.nano_running = True
-        self.arduino_nano_open = False
-        self.encoders = '0, 0'
-        self.odometry_object = odometry_object
-        self.odometry_message = ""
-        self.wheels_travel = 0
-        self.orientation = 0
+        self.arduino_line = 0
+        self.arduino_running = False
+
+        # LIDAR
+        self.obstacle = False
 
         # GPS variables
-        self.gps_logic_running = True
+        self.stanley_running = True
         self.file_path: str = '/home/pimpmobile/ros2_ws/src/gps_publisher/gps_publisher/gps_log_data.csv'
         self.gps_df: pd.DataFrame = pd.read_csv(self.file_path)
-        self.first_row_read = False
-        self.itterate_start_row = 0
+        #self.gps_x_col = self.gps_df.loc[1:, "X"] 
+        #self.gps_y_col = self.gps_df.loc[1:, "Y"]
+        self.gps_x_col = self.gps_df["X"].values 
+        self.gps_y_col = self.gps_df["Y"].values
+        self.path_yaw = calculate_path_yaw(self.gps_x_col, self.gps_y_col) 
 
         self.gps_robot_x = 0
         self.gps_robot_y = 0
@@ -80,167 +96,72 @@ class Master(Node):
         
         self.gps_robot_last_x = 0
         self.gps_robot_last_y = 0
-        self.gps_robot_last_z = 0
 
-        self.gps_destination_x = 0
-        self.gps_destination_y = 0
-        self.gps_destination_z = 0
-        self.gps_time = 0
-        self.gps_orientation = 0
+        self.k = 1.0
+        self.v = 0.4
+        self.k_s = 0.1
+        self.target_index = 0
 
-        self.at_destination_point = False
-        self.path_complete = False
-
-    def pub_callback(self):
-        self.msg.data = self.odometry_message
-        self.publisher_.publish(self.msg)
+        self.distance_tolerance = 0.15
+        self.max_steering_control = np.radians(45)
 
     def lidar_callback(self, msg):
         lid_arr = msg.data
         if lid_arr[1] == 1 or lid_arr[2] == 1 or lid_arr[3] == 1:
-            self.obstacle = 1
+            self.obstacle = True
         else:
-            self.obstacle = 0
+            self.obstacle = False
     
     def gps_callback(self, msg) -> None:    
         self.gps_robot_x = msg.pose.position.x
         self.gps_robot_y = msg.pose.position.y
         self.gps_robot_z = msg.pose.position.z
-        #self.get_logger().info(f"{x = }, {y = }, {z = }")
 
-    #Arduino mega serial:
-    def write_to_arduino(self, arduino_message:str):
-        # Message formating has to look like this: f"{motors}, {servo}, {brakes}"
-        # Motors: -255 to 255
-        # Servo: -255 to 255
-        # Brakes 0 or 1
-        arduino.write(bytes(str(arduino_message), 'utf-8'))
+    def write_arduino(self, motors:int, servo:int, brake:int) -> None:
+        arduino.write(struct.pack("3f", motors, servo, brake))
+        time.sleep(0.05)
         
     def read_arduino(self):
-        # Read arduino:
-        arduino_line = arduino.readline().strip().decode()
-        self.get_logger().info(arduino_line)
+        #while self.arduino_running:
+        try:
+            (self.arduino_line, ) = struct.unpack("f",arduino.read(struct.calcsize("f")))
+        except:
+            pass
 
-    def read_arduino_nano_data(self):
-        if self.arduino_nano_open == False:
-            try:
-                arduino_nano = serial.Serial(port=arduino_nano_port, baudrate=9600, timeout=.2)
-                print("Opening arduino nano port...")
-                time.sleep(3)
-                self.arduino_nano_open = True
-            except Exception:
-                print("Couldn't open nano port")
-        while self.nano_running:
-            try:
-                self.encoders = arduino_nano.readline().decode().strip()
-                #self.get_logger().info(self.encoders)
-                #print(self.encoders)
-                self.odometry_stuff()
-            except:
-                print("Arduino Nano: cant decode data.")
 
-    ########### Odometry calculus #############
-
-    def odometry_stuff(self):
-        encoders_str_array = self.encoders.split(', ')
-        encoder_ticks_left = int(encoders_str_array[1])
-        encoder_ticks_right = int(encoders_str_array[0])
-        
-        self.odometry_object.update(encoder_ticks_left, encoder_ticks_right)
-        self.wheels_travel = self.odometry_object.get_travel()
-        self.orientation = self.odometry_object.get_orientation('deg')
-
-        self.odometry_message = f"{self.wheels_travel = }, {self.orientation = }"
-        
-        #print(f"Distance travelled (m): {self.wheels_travel}")
-        #print(f"Orientation (deg): {self.orientation}")
-
-        ########### GPS calculus ##########
-
-    def bearing_from_gps_coords(self, lat1, lat2, lon1, lon2) -> float:
+    def stanley(self):
         """
-        returns bearing/orientation in degrees -180 to 180
-        :param lat1: current x coordinate
-        :param lat2: last x coordinate
-        :param lon1: current y coordinate
-        :param lon2: last y coordinate
-        :return: float value in degrees
-        """
-
-        # convert to radians:
-        g2r = math.pi/180
-
-        lat1r = lat1 * g2r
-        lat2r = lat2 * g2r
-        lon1r = lon1 * g2r
-        lon2r = lon2 * g2r
-        dlonr = lon2r - lon1r
-
-        y = math.sin(dlonr) * math.cos(lat2r)
-        x = math.cos(lat1r) * math.sin(lat2r) - math.sin(lat1r) * math.cos(lat2r)*math.cos(dlonr)
-
-        # compute bearning and convert back to degrees:
-        bearing = math.atan2(y, x) / g2r
-        return bearing
-
-    def robot_movement_to_destination(self, robot_x: float, robot_y: float, dest_x: float, dest_y: float, orientation: float):
-        # if robot_x < dest_x:
-            # self.write_to_arduino("255, 0, 0")
-        pass
-
-    def read_gps_log_file(self) -> None:
-        if self.gps_df.shape[0] > self.itterate_start_row: # checks if theres enough rows to even read
-            row = list(self.gps_df.iloc[self.itterate_start_row])
-            self.itterate_start_row += 1
-            self.gps_destination_x = row[0]
-            self.gps_destination_y = row[1]
-            self.gps_destination_z = row[2]
-            self.gps_time = row[3] # not used anywhere
-            print(f'x: {self.gps_destination_x}, y: {self.gps_destination_y}, z: {self.gps_destination_z}, time: {self.gps_time}')
-        else:
-            print('No more rows to read')
-            self.path_complete == True
-
-    # GPS LOGIC RUNNING ON SEPERATE THREAD:
-    def gps_logic(self) -> None:
-        """
-        returns nothing, runs on seperate thread, doing all the gps logic
+        Runs on seperate thread, doing all the gps logic
         which includes reading the log file and sending commands to the robot.
+        Normal = 1000
+        GPS driving = 1500
+        GPS save = 2000
         """
-        while self.gps_logic_running:
-            # read the first row once
-            if self.first_row_read == False:
-                self.read_gps_log_file()
-                self.first_row_read = True
-            #GPS logic:
-            self.gps_orientation = self.bearing_from_gps_coords(self.gps_robot_x, self.gps_robot_last_x, self.gps_robot_y, self.gps_robot_last_y)
 
-            # assume we are not at the destination
-            self.at_destination_point = False
+        while self.stanley_running:
+            self.read_arduino()
+            self.write_arduino(0, 0, 1)
 
-            # Destination check with tolerance:
-            while not self.at_destination_point and not self.path_complete:
-                distance_tolerance = 0.5
-                at_x = False
-                at_y = False
-                if self.gps_destination_x - distance_tolerance < self.gps_robot_x < self.gps_destination_x + distance_tolerance:
-                    at_x = True
-                if self.gps_destination_y - distance_tolerance < self.gps_robot_y < self.gps_destination_y + distance_tolerance:
-                    at_y = True
+            while self.target_index < len(self.gps_x_col) - 1 and not self.obstacle and self.arduino_line == 1500.0:
+                
+                yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
+                distance_threshold = 0.2
+                if abs(abs(self.gps_robot_last_x) - abs(self.gps_robot_x)) > distance_threshold and abs(abs(self.gps_robot_last_y) - abs(self.gps_robot_y)) > distance_threshold:  
+                    self.gps_robot_last_x, self.gps_robot_last_y = self.gps_robot_x, self.gps_robot_y
 
-            # condition to read next row of coordinates:
-            if at_x == True and at_y == True:
-                self.read_gps_log_file()
+                #limited_steering_angle, target_index, crosstrack_error = stanley_controller(self.gps_robot_x, self.gps_robot_y, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
+                limited_steering_angle, target_index, crosstrack_error = stanley_controller(10, 10, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
 
-            # if log file out of rows, set brakes and motor, servo to 0:
-            if self.path_complete:
-                self.write_to_arduino("0, 0, 1")
-            elif not self.path_complete:
-                self.robot_movement_to_destination(self.gps_robot_x, self.gps_robot_y, self.gps_destination_x, self.gps_destination_y, self.gps_orientation)
+                limited_steering_angle = int(limited_steering_angle * (255 / self.max_steering_control))
 
+                #motor_speed = int() ...
 
-            self.gps_robot_last_x = self.gps_robot_x
-            self.gps_robot_last_y = self.gps_robot_y
+                self.read_arduino()
+                self.write_arduino(60, limited_steering_angle, 0)
+
+                print(f"inside: {limited_steering_angle}, x: {self.gps_robot_x}, y: {self.gps_robot_y}, yaw: {yaw}")
+                # -247
+        
 
 @atexit.register
 def exit_handler() -> None:
@@ -254,21 +175,29 @@ def main(args=None):
 
 
     ##### Multithreading arduino nano ###
-    encoder_read_thread = threading.Thread(target = m.read_arduino_nano_data)
-    encoder_read_thread.start()
+    #encoder_read_thread = threading.Thread(target = m.read_arduino_nano_data)
+    #encoder_read_thread.start()
 
     ##### Multithreading gps log file reading and logic #####
-    gps_logic_thread = threading.Thread(target = m.gps_logic)
-    gps_logic_thread.start()
+    stanley_thread = threading.Thread(target = m.stanley)
+    stanley_thread.start()
     #####
+
+    ##### Multithreading arduino reading ###
+    # m.arduino_running = True
+    # arduino_thread = threading.Thread(target = m.read_arduino)
+    # arduino_thread.start()
+    ####
 
     rclpy.spin(m)
 
     ##### Multithreading close ###
-    m.nano_running = False
-    m.gps_logic_running = False
-    encoder_read_thread.join()
-    gps_logic_thread.join()
+    #m.nano_running = False
+    m.stanley_running = False
+    # m.arduino_running = False
+    #encoder_read_thread.join()
+    stanley_thread.join()
+    arduino_thread.join()
     #####
 
     m.destroy_node()

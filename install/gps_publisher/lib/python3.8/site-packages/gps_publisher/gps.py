@@ -9,7 +9,7 @@ import socket
 import serial
 import time
 
-gps_port = '/dev/ttyACM0'
+gps_port = '/dev/ttyACM1'
 baudrate = 9600
 
 try:
@@ -18,7 +18,7 @@ try:
     port = 8002
     tcp_socket.connect(('213.168.5.170', port))
 except serial.SerialException as e:
-    print("Error:", e)
+    print("GPS Error:", e)
 
 class GpsPublisher(Node):
     def __init__(self):
@@ -34,11 +34,11 @@ class GpsPublisher(Node):
         self.start_clock = 0
         self.status_clock = 0
 
-        # Baasjaam
+        # Start point
         self.lock_zero_point = False
-        self.lat0 = 58.3428685594
-        self.lon0 = 25.5692475361
-        self.alt0 = 91.357      
+        self.lat0 = 58.341905
+        self.lon0 = 25.568214
+        self.alt0 = 60.0
     
     def status_fix(self):
         try:
@@ -61,23 +61,22 @@ class GpsPublisher(Node):
     def enu_callback(self):
         line = ser.readline().decode('utf-8')
         line_split = line.split(",")
-        if float(line_split[6]) > 3:
-            if not self.lock_zero_point:
-                self.lat0 = self.convert(float(line_split[2]))
-                self.lon0 = self.convert(float(line_split[4]))
-                self.alt0 = float(line_split[9])
+        try:
+            if float(line_split[6]) > 1:
+                if not self.lock_zero_point:
+                    clock = self.get_clock().now()
+                    self.start_clock = float(clock.nanoseconds) / 1e9
+                    self.lock_zero_point = True
+                enu = PoseWithCovariance()
+                x, y, z = self.transform_to_enu(self.convert(float(line_split[2])), self.convert(float(line_split[4])), float(line_split[9]))
                 clock = self.get_clock().now()
-                self.start_clock = float(clock.nanoseconds) / 1e9
-                self.lock_zero_point = True
-            enu = PoseWithCovariance()
-            x, y, z = self.transform_to_enu(self.convert(float(line_split[2])), self.convert(float(line_split[4])), float(line_split[9]))
-            clock = self.get_clock().now()
-            enu.pose.orientation.x = round((float(clock.nanoseconds) / 1e9 - self.start_clock), 2)
-            enu.pose.position.x = round(x, 2)
-            enu.pose.position.y = round(y, 2)
-            enu.pose.position.z = round(z, 2)
-            self.publisher_enu_.publish(enu)
-            #self.get_logger().info(f"{x}, {y}, {z}")
+                enu.pose.orientation.x = round((float(clock.nanoseconds) / 1e9 - self.start_clock), 2)
+                enu.pose.position.x = round(x, 2)
+                enu.pose.position.y = round(y, 2)
+                enu.pose.position.z = round(z, 2)
+                self.publisher_enu_.publish(enu)
+        except:
+            self.get_logger().error(f"Error (enu data)")
         
     def gps_callback(self):
         try:
@@ -94,7 +93,6 @@ class GpsPublisher(Node):
                 self.status_fix()
                 self.status_clock = msg.header.stamp.sec
             self.publisher_raw_.publish(msg)
-            #self.get_logger().info(f"{line_split}")
         except:
             self.get_logger().error(f"Error (no GPS signal)")
 
