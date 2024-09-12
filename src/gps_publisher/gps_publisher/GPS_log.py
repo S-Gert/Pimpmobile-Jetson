@@ -22,18 +22,23 @@ class GPS_log(Node):
         self.file_path: str = '/home/pimpmobile/ros2_ws/src/gps_publisher/gps_publisher/gps_log_data.csv'
         self.gps_df: pd.DataFrame = pd.read_csv(self.file_path) 
         self.enu_callback
-
+        self.threshold = 0.02
         self.gps_df = self.gps_df.iloc[0:0]
 
     def enu_callback(self, msg) -> None:    
         x = msg.pose.position.x
         y = msg.pose.position.y
         z = msg.pose.position.z
-        t = msg.pose.orientation.x #time
+        #t = msg.pose.orientation.x #time
+        t = 1
         self.get_logger().info(f"{x = }, {y = }, {z = }, {t = }")
         self.write_to_csv(self.gps_df, x, y, z, t)
 
     def write_to_csv(self, df:pd.DataFrame, X:float, Y:float, Z:float, T:float) -> None:
+        if len(df.iloc[1:]) > 1:
+            last_row = df.iloc[-1]
+            if abs(abs(last_row[0]) - abs(X)) < self.threshold and abs(abs(last_row[1]) - abs(Y)) < self.threshold:
+                return
         new_row = {'X': X, 'Y': Y, 'Z': Z, 'TIME': T}
         df.loc[len(df)] = new_row
         df.to_csv(self.file_path, index=False)

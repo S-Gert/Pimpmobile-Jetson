@@ -14,37 +14,9 @@ import time
 from master.odometry import Odometry
 import atexit
 import pyudev
+import time
 
 from master.stanley_controller import stanley_controller, calculate_path_yaw
-
-# arduino_ports = ['/dev/ttyACM0', '/dev/ttyACM1', '/dev/ttyAMA0', '/dev/ttyUSB0']
-# arduino_id = '7583033343835170C132'
-
-# def find_usb_device_by_port(ports:list):
-#     context = pyudev.Context()
-#     for device in context.list_devices(subsystem='tty'):
-#         if device.get('ID_USB_INTERFACE_NUM'):
-#             if device.device_node == port:
-#                 id = device.properties.get('ID_SERIAL_SHORT')
-#                 if id == arduino_id:
-#                     return "arduino"
-#                 return id
-
-# def try_ports(ports):
-#     for port in ports:
-#         try:
-#             usb_device = find_usb_device_by_port(port)
-#             #valid_port = serial.Serial(port=port, baudrate=115200)
-#             if usb_device == "arduino":
-#                 arduino = serial.Serial(port=port, baudrate=115200)
-#                 print(f"valid port: {port}")
-#                 print(f"device: {usb_device}")
-#                 print("Opening port...")
-#                 time.sleep(2)
-#                 return arduino
-#         except:
-#             print(f"{port} not valid")
-#     raise RuntimeError("No valid ports exist") 
 
 #arduino_nano_port = '/dev/ttyUSB0' # '/dev/ttyUSB1'
 arduino_port = '/dev/ttyACM0'#'/dev/ttyACM0'
@@ -84,8 +56,6 @@ class Master(Node):
         self.stanley_running = True
         self.file_path: str = '/home/pimpmobile/ros2_ws/src/gps_publisher/gps_publisher/gps_log_data.csv'
         self.gps_df: pd.DataFrame = pd.read_csv(self.file_path)
-        #self.gps_x_col = self.gps_df.loc[1:, "X"] 
-        #self.gps_y_col = self.gps_df.loc[1:, "Y"]
         self.gps_x_col = self.gps_df["X"].values 
         self.gps_y_col = self.gps_df["Y"].values
         self.path_yaw = calculate_path_yaw(self.gps_x_col, self.gps_y_col) 
@@ -97,10 +67,11 @@ class Master(Node):
         self.gps_robot_last_x = 0
         self.gps_robot_last_y = 0
 
-        self.k = 1.0
-        self.v = 0.4
+        self.k = 0.5
+        self.v = 0.9 # 110 11.1ms
         self.k_s = 0.1
         self.target_index = 0
+        self.previous_time = 0
 
         self.distance_tolerance = 0.15
         self.max_steering_control = np.radians(45)
@@ -116,51 +87,56 @@ class Master(Node):
         self.gps_robot_x = msg.pose.position.x
         self.gps_robot_y = msg.pose.position.y
         self.gps_robot_z = msg.pose.position.z
+        #print(f"x/y: {[self.gps_robot_x, self.gps_robot_y]}")
 
-    def write_arduino(self, motors:int, servo:int, brake:int) -> None:
-        arduino.write(struct.pack("3f", motors, servo, brake))
-        time.sleep(0.05)
+    def write_arduino(self, values: list) -> None:
+        if len(values) != 3:
+            raise ValueError("Arduino write list must be of 3 values")
+        data = struct.pack('<3h', *values)
+        arduino.write(data)
         
     def read_arduino(self):
-        #while self.arduino_running:
         try:
-            (self.arduino_line, ) = struct.unpack("f",arduino.read(struct.calcsize("f")))
+            data = arduino.read(2)
+            return struct.unpack('<h', data)[0]
         except:
             pass
-
 
     def stanley(self):
         """
         Runs on seperate thread, doing all the gps logic
         which includes reading the log file and sending commands to the robot.
         Normal = 1000
-        GPS driving = 1500
+        GPS driving = 1500  
         GPS save = 2000
         """
+        print(f"{self.path_yaw}")
 
         while self.stanley_running:
-            self.read_arduino()
-            self.write_arduino(0, 0, 1)
+            yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
+            self.write_arduino([0, 0, 1])
+            self.arduino_line = self.read_arduino()
 
-            while self.target_index < len(self.gps_x_col) - 1 and not self.obstacle and self.arduino_line == 1500.0:
+            while self.target_index < len(self.gps_x_col) - 1 and not self.obstacle and self.arduino_line == 1500:
                 
                 yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
-                distance_threshold = 0.2
-                if abs(abs(self.gps_robot_last_x) - abs(self.gps_robot_x)) > distance_threshold and abs(abs(self.gps_robot_last_y) - abs(self.gps_robot_y)) > distance_threshold:  
+                distance_threshold = 0.05
+                if time.time() > self.previous_time + 0.2:
+                    self.previous_time = time.time()
                     self.gps_robot_last_x, self.gps_robot_last_y = self.gps_robot_x, self.gps_robot_y
 
-                #limited_steering_angle, target_index, crosstrack_error = stanley_controller(self.gps_robot_x, self.gps_robot_y, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
-                limited_steering_angle, target_index, crosstrack_error = stanley_controller(10, 10, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
-
+                limited_steering_angle, _, _ = stanley_controller(self.gps_robot_x, self.gps_robot_y, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
+                #limited_steering_angle, target_index, crosstrack_error = stanley_controller(10, 10, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
+                #print(f"no limit: {limited_steering_angle}")
                 limited_steering_angle = int(limited_steering_angle * (255 / self.max_steering_control))
 
                 #motor_speed = int() ...
 
-                self.read_arduino()
-                self.write_arduino(60, limited_steering_angle, 0)
+                # self.read_arduino()
+                self.write_arduino([90, -limited_steering_angle, 0])
+                self.arduino_line = self.read_arduino()
+                #print(f"inside: {limited_steering_angle}, x/y: {[self.gps_robot_x, self.gps_robot_y]}, closest point: {[self.gps_x_col[target_index]], self.gps_y_col[target_index]}, steering: {limited_steering_angle}")
 
-                print(f"inside: {limited_steering_angle}, x: {self.gps_robot_x}, y: {self.gps_robot_y}, yaw: {yaw}")
-                # -247
         
 
 @atexit.register
@@ -197,7 +173,7 @@ def main(args=None):
     # m.arduino_running = False
     #encoder_read_thread.join()
     stanley_thread.join()
-    arduino_thread.join()
+    #arduino_thread.join()
     #####
 
     m.destroy_node()

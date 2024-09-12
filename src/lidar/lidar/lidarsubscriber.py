@@ -21,8 +21,8 @@ class LidarSubscriber(Node):
         self.i = 0
 
         self.subscription  # prevent unused variable warning
-        self.tolerance = 0.0872*24 # 5 kraadi * 24, 120 deg
-        self.target_angle = 0
+        self.tolerance = 0.0872*12 # 5 kraadi * 24, 120 deg
+        self.target_angle = 1.571 # (pi/2)
         self.obstacle_array = 0
         # 180 -- 2.5222 per deg
 
@@ -31,7 +31,7 @@ class LidarSubscriber(Node):
         for sector in arr:
             count = 0
             for point in sector:
-                if point < 0.15:
+                if point < 0.30:
                     count += 1
             if count >= 3:
                 all_sectors.append(True)

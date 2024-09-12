@@ -64,6 +64,7 @@ class TeleopSerial(Node):
         else:
             self.obstacle = 0
 
+# (wheel 255,gas -150,brake 0)
     def get_wheel_int_values(self, incoming_str):
         steering_wheel_arr = incoming_str.split(",")
         steering_wheel = int(steering_wheel_arr[0].strip("wheel"))

@@ -1,0 +1,56 @@
+[4.610s] Invoking command in '/home/pimpmobile/ros2_ws/src/lidar': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed
+[4.886s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[4.887s] !!
+[4.887s] 
+[4.887s]         ********************************************************************************
+[4.887s]         Usage of dash-separated 'script-dir' will not be supported in future
+[4.887s]         versions. Please use the underscore name 'script_dir' instead.
+[4.887s] 
+[4.887s]         By 2024-Sep-26, you need to update your project and remove deprecated calls
+[4.888s]         or your builds will no longer be supported.
+[4.888s] 
+[4.888s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[4.888s]         ********************************************************************************
+[4.888s] 
+[4.888s] !!
+[4.888s]   opt = self.warn_dash_deprecation(opt, section)
+[5.134s] running egg_info
+[5.170s] writing ../../build/lidar/lidar.egg-info/PKG-INFO
+[5.171s] writing dependency_links to ../../build/lidar/lidar.egg-info/dependency_links.txt
+[5.171s] writing entry points to ../../build/lidar/lidar.egg-info/entry_points.txt
+[5.172s] writing requirements to ../../build/lidar/lidar.egg-info/requires.txt
+[5.172s] writing top-level names to ../../build/lidar/lidar.egg-info/top_level.txt
+[6.827s] writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+[6.827s] running build
+[6.828s] running build_py
+[6.829s] copying lidar/__init__.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+[6.829s] copying lidar/lidarsubscriber.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+[6.829s] copying lidar/publisher_member_function.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+[6.830s] running install
+[6.831s] /home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[6.831s] !!
+[6.831s] 
+[6.831s]         ********************************************************************************
+[6.832s]         Please avoid running ``setup.py`` directly.
+[6.832s]         Instead, use pypa/build, pypa/installer or other
+[6.832s]         standards-based tools.
+[6.832s] 
+[6.832s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[6.832s]         ********************************************************************************
+[6.832s] 
+[6.833s] !!
+[6.833s]   self.initialize_options()
+[6.844s] running install_lib
+[6.884s] copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/lidarsubscriber.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar
+[6.885s] byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar/lidarsubscriber.py to lidarsubscriber.cpython-38.pyc
+[6.887s] running install_data
+[6.924s] copying resource/lidar -> /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index/packages
+[6.925s] copying package.xml -> /home/pimpmobile/ros2_ws/install/lidar/share/lidar
+[6.925s] running install_egg_info
+[6.963s] removing '/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info' (and everything under it)
+[6.964s] Copying ../../build/lidar/lidar.egg-info to /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info
+[6.966s] running install_scripts
+[7.101s] Installing lidar_listener script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+[7.102s] Installing lidar_talker script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+[7.102s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/lidar/install.log'
+[7.184s] Invoked command in '/home/pimpmobile/ros2_ws/src/lidar' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed

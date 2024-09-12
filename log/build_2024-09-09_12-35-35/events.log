@@ -1,0 +1,143 @@
+[0.000000] (-) TimerEvent: {}
+[0.000676] (-) JobUnselected: {'identifier': 'lidar'}
+[0.000873] (-) JobUnselected: {'identifier': 'master'}
+[0.001265] (-) JobUnselected: {'identifier': 'slam'}
+[0.001600] (-) JobUnselected: {'identifier': 'teleop_pm'}
+[0.001742] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.001827] (gps_publisher) JobQueued: {'identifier': 'gps_publisher', 'dependencies': OrderedDict()}
+[0.001903] (gps_publisher) JobStarted: {'identifier': 'gps_publisher'}
+[0.099662] (-) TimerEvent: {}
+[0.200235] (-) TimerEvent: {}
+[0.300840] (-) TimerEvent: {}
+[0.401318] (-) TimerEvent: {}
+[0.501778] (-) TimerEvent: {}
+[0.602460] (-) TimerEvent: {}
+[0.702947] (-) TimerEvent: {}
+[0.804883] (-) TimerEvent: {}
+[0.905263] (-) TimerEvent: {}
+[1.005840] (-) TimerEvent: {}
+[1.107279] (-) TimerEvent: {}
+[1.207788] (-) TimerEvent: {}
+[1.308281] (-) TimerEvent: {}
+[1.409416] (-) TimerEvent: {}
+[1.510016] (-) TimerEvent: {}
+[1.610763] (-) TimerEvent: {}
+[1.711212] (-) TimerEvent: {}
+[1.811614] (-) TimerEvent: {}
+[1.912081] (-) TimerEvent: {}
+[2.013129] (-) TimerEvent: {}
+[2.113914] (-) TimerEvent: {}
+[2.214411] (-) TimerEvent: {}
+[2.316488] (-) TimerEvent: {}
+[2.417008] (-) TimerEvent: {}
+[2.517673] (-) TimerEvent: {}
+[2.618663] (-) TimerEvent: {}
+[2.719332] (-) TimerEvent: {}
+[2.820244] (-) TimerEvent: {}
+[2.921039] (-) TimerEvent: {}
+[3.022584] (-) TimerEvent: {}
+[3.125627] (-) TimerEvent: {}
+[3.226565] (-) TimerEvent: {}
+[3.327141] (-) TimerEvent: {}
+[3.427685] (-) TimerEvent: {}
+[3.528243] (-) TimerEvent: {}
+[3.628802] (-) TimerEvent: {}
+[3.729366] (-) TimerEvent: {}
+[3.829914] (-) TimerEvent: {}
+[3.930471] (-) TimerEvent: {}
+[4.031118] (-) TimerEvent: {}
+[4.131544] (-) TimerEvent: {}
+[4.231975] (-) TimerEvent: {}
+[4.332361] (-) TimerEvent: {}
+[4.432751] (-) TimerEvent: {}
+[4.533158] (-) TimerEvent: {}
+[4.597960] (gps_publisher) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/gps_publisher', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/gps_publisher/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/gps_publisher/install.log', '--install-scripts', '$base/lib/gps_publisher', '--single-version-externally-managed'], 'cwd': '/home/pimpmobile/ros2_ws/src/gps_publisher', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'SSH_CLIENT': '10.0.3.97 41610 22', 'LC_TIME': 'et_EE.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'MOTD_SHOWN': 'pam', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile', 'SSH_TTY': '/dev/pts/1', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'LC_MONETARY': 'et_EE.UTF-8', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '9', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'et_EE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'et_EE.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/gps_publisher', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.0.3.97 41610 10.0.3.210 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/gps_publisher/prefix_override:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[4.633333] (-) TimerEvent: {}
+[4.733899] (-) TimerEvent: {}
+[4.834458] (-) TimerEvent: {}
+[4.878670] (gps_publisher) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[4.879432] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[4.879723] (gps_publisher) StderrLine: {'line': b'\n'}
+[4.880030] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.880309] (gps_publisher) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[4.880552] (gps_publisher) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[4.880780] (gps_publisher) StderrLine: {'line': b'\n'}
+[4.880999] (gps_publisher) StderrLine: {'line': b'        By 2024-Sep-26, you need to update your project and remove deprecated calls\n'}
+[4.881216] (gps_publisher) StderrLine: {'line': b'        or your builds will no longer be supported.\n'}
+[4.881430] (gps_publisher) StderrLine: {'line': b'\n'}
+[4.881644] (gps_publisher) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[4.881859] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.882103] (gps_publisher) StderrLine: {'line': b'\n'}
+[4.882319] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[4.882533] (gps_publisher) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[4.934555] (-) TimerEvent: {}
+[5.034949] (-) TimerEvent: {}
+[5.130203] (gps_publisher) StdoutLine: {'line': b'running egg_info\n'}
+[5.135048] (-) TimerEvent: {}
+[5.167016] (gps_publisher) StdoutLine: {'line': b'writing ../../build/gps_publisher/gps_publisher.egg-info/PKG-INFO\n'}
+[5.168318] (gps_publisher) StdoutLine: {'line': b'writing dependency_links to ../../build/gps_publisher/gps_publisher.egg-info/dependency_links.txt\n'}
+[5.168821] (gps_publisher) StdoutLine: {'line': b'writing entry points to ../../build/gps_publisher/gps_publisher.egg-info/entry_points.txt\n'}
+[5.169234] (gps_publisher) StdoutLine: {'line': b'writing requirements to ../../build/gps_publisher/gps_publisher.egg-info/requires.txt\n'}
+[5.169542] (gps_publisher) StdoutLine: {'line': b'writing top-level names to ../../build/gps_publisher/gps_publisher.egg-info/top_level.txt\n'}
+[5.235150] (-) TimerEvent: {}
+[5.335503] (-) TimerEvent: {}
+[5.435871] (-) TimerEvent: {}
+[5.536360] (-) TimerEvent: {}
+[5.636888] (-) TimerEvent: {}
+[5.737487] (-) TimerEvent: {}
+[5.837874] (-) TimerEvent: {}
+[5.938218] (-) TimerEvent: {}
+[6.038548] (-) TimerEvent: {}
+[6.138884] (-) TimerEvent: {}
+[6.239239] (-) TimerEvent: {}
+[6.339561] (-) TimerEvent: {}
+[6.439892] (-) TimerEvent: {}
+[6.540295] (-) TimerEvent: {}
+[6.640616] (-) TimerEvent: {}
+[6.706385] (gps_publisher) StdoutLine: {'line': b"writing manifest file '../../build/gps_publisher/gps_publisher.egg-info/SOURCES.txt'\n"}
+[6.707022] (gps_publisher) StdoutLine: {'line': b'running build\n'}
+[6.707320] (gps_publisher) StdoutLine: {'line': b'running build_py\n'}
+[6.707866] (gps_publisher) StdoutLine: {'line': b'copying gps_publisher/__init__.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher\n'}
+[6.708300] (gps_publisher) StdoutLine: {'line': b'copying gps_publisher/gps.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher\n'}
+[6.708690] (gps_publisher) StdoutLine: {'line': b'copying gps_publisher/GPS_log.py -> /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher\n'}
+[6.709424] (gps_publisher) StdoutLine: {'line': b'running install\n'}
+[6.710539] (gps_publisher) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[6.710823] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[6.711065] (gps_publisher) StderrLine: {'line': b'\n'}
+[6.711294] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[6.711517] (gps_publisher) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[6.711735] (gps_publisher) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[6.711997] (gps_publisher) StderrLine: {'line': b'        standards-based tools.\n'}
+[6.712242] (gps_publisher) StderrLine: {'line': b'\n'}
+[6.712466] (gps_publisher) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[6.712684] (gps_publisher) StderrLine: {'line': b'        ********************************************************************************\n'}
+[6.712900] (gps_publisher) StderrLine: {'line': b'\n'}
+[6.713114] (gps_publisher) StderrLine: {'line': b'!!\n'}
+[6.713326] (gps_publisher) StderrLine: {'line': b'  self.initialize_options()\n'}
+[6.721701] (gps_publisher) StdoutLine: {'line': b'running install_lib\n'}
+[6.740706] (-) TimerEvent: {}
+[6.761315] (gps_publisher) StdoutLine: {'line': b'copying /home/pimpmobile/ros2_ws/build/gps_publisher/build/lib/gps_publisher/gps.py -> /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher\n'}
+[6.762748] (gps_publisher) StdoutLine: {'line': b'byte-compiling /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher/gps.py to gps.cpython-38.pyc\n'}
+[6.764925] (gps_publisher) StdoutLine: {'line': b'running install_data\n'}
+[6.801981] (gps_publisher) StdoutLine: {'line': b'copying resource/gps_publisher -> /home/pimpmobile/ros2_ws/install/gps_publisher/share/ament_index/resource_index/packages\n'}
+[6.802362] (gps_publisher) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/gps_publisher/share/gps_publisher\n'}
+[6.802699] (gps_publisher) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.839755] (gps_publisher) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[6.840798] (-) TimerEvent: {}
+[6.841108] (gps_publisher) StdoutLine: {'line': b'Copying ../../build/gps_publisher/gps_publisher.egg-info to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages/gps_publisher-0.0.0-py3.8.egg-info\n'}
+[6.842914] (gps_publisher) StdoutLine: {'line': b'running install_scripts\n'}
+[6.940892] (-) TimerEvent: {}
+[6.971706] (gps_publisher) StdoutLine: {'line': b'Installing gps script to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/gps_publisher\n'}
+[6.972216] (gps_publisher) StdoutLine: {'line': b'Installing gps_log script to /home/pimpmobile/ros2_ws/install/gps_publisher/lib/gps_publisher\n'}
+[6.973030] (gps_publisher) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/gps_publisher/install.log'\n"}
+[7.040982] (-) TimerEvent: {}
+[7.044572] (gps_publisher) CommandEnded: {'returncode': 0}
+[7.141120] (-) TimerEvent: {}
+[7.242264] (-) TimerEvent: {}
+[7.342973] (-) TimerEvent: {}
+[7.444059] (-) TimerEvent: {}
+[7.545973] (-) TimerEvent: {}
+[7.646967] (-) TimerEvent: {}
+[7.748291] (-) TimerEvent: {}
+[7.806788] (gps_publisher) JobEnded: {'identifier': 'gps_publisher', 'rc': 0}
+[7.808981] (-) EventReactorShutdown: {}

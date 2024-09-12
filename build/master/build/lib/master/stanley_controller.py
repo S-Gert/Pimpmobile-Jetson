@@ -1,6 +1,13 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import time
+
+global prev_target_index
+prev_target_index = 0
+
+global prev_t
+prev_t = 0
 
 def calculate_path_yaw(x, y):
     # Calculate yaws for all the points in the saved file
@@ -14,6 +21,7 @@ def calculate_path_yaw(x, y):
     return np.array(yaws)
 
 def find_target_path_id(robot_x, robot_y, x, y, yaw):  
+    global prev_target_index, prev_t
     # This is for finding the nearest point
 
     # Calculate position of the front axle
@@ -29,6 +37,11 @@ def find_target_path_id(robot_x, robot_y, x, y, yaw):
 
     # The shortest distance
     target_index = np.argmin(d)
+
+    if target_index < prev_target_index:
+        return prev_target_index, dx[prev_target_index], dy[prev_target_index], d[prev_target_index]
+    
+    prev_target_index = target_index
 
     return target_index, dx[target_index], dy[target_index], d[target_index]
     
@@ -58,6 +71,7 @@ def calculate_crosstrack_term(k, k_s, v, yaw, dx, dy, abs_distance):
     return crosstrack_steering_error, crosstrack_error
 
 def stanley_controller(robot_x, robot_y, dfX, dfY, yaw, path_yaw, v, max_steering_control, k, k_s):
+    global prev_t, prev_target_index
 
     """
     robot_x and robot_y = robot x and y coordinates
@@ -79,9 +93,14 @@ def stanley_controller(robot_x, robot_y, dfX, dfY, yaw, path_yaw, v, max_steerin
     desired_steering_angle = yaw_error + crosstrack_steering_error
 
     # Constrains steering angle to the vehicle limits
+    if time.time() > (prev_t+0.5):
+        prev_t = time.time()
+        print(f"target indx: {target_index}, prev_index: {prev_target_index}, robot_x: {robot_x}, robot_y: {robot_y}, x: {dx}, y: {dy}")
+        print(f"robot yaw: {yaw}, path yaw: {path_yaw[target_index]}")
+        print(f"desired steering: {desired_steering_angle}, yaw error: {yaw_error}, crosst_error: {crosstrack_steering_error}")
+        print("---------------------------------------------------------------------------------------------------------------")
     limited_steering_angle = np.clip(desired_steering_angle, -max_steering_control, max_steering_control)
 
-    #print("Steering command at waypoint", target_index, ":", limited_steering_angle)
     return limited_steering_angle, target_index, crosstrack_error
     
 

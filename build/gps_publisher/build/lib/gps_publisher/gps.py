@@ -23,13 +23,13 @@ except serial.SerialException as e:
 class GpsPublisher(Node):
     def __init__(self):
         super().__init__('gps_publisher')
-        self.publisher_raw_ = self.create_publisher(NavSatFix, 'gps_raw_data_pimp', 10)
+        #self.publisher_raw_ = self.create_publisher(NavSatFix, 'gps_raw_data_pimp', 10)
         timer_period = 0.05  # seconds
-        self.timer_raw = self.create_timer(timer_period, self.gps_callback)
+        #self.timer_raw = self.create_timer(timer_period, self.gps_callback)
 
-        self.publisher_enu_ = self.create_publisher(PoseWithCovariance, 'gps_enu_pimp', 11)
+        self.publisher_enu_ = self.create_publisher(PoseWithCovariance, 'gps_enu_pimp', 10)
         self.timer_enu = self.create_timer(timer_period, self.enu_callback)
-        
+            
         #clock start
         self.start_clock = 0
         self.status_clock = 0
@@ -39,6 +39,8 @@ class GpsPublisher(Node):
         self.lat0 = 58.341905
         self.lon0 = 25.568214
         self.alt0 = 60.0
+        self.readlinedata = None
+        self.line_split = None
     
     def status_fix(self):
         try:
@@ -59,43 +61,52 @@ class GpsPublisher(Node):
         return result
     
     def enu_callback(self):
-        line = ser.readline().decode('utf-8')
-        line_split = line.split(",")
+        #line = ser.readline().decode('utf-8')
+        #line_split = line.split(",")
+        self.get_logger().info(f"In GPS ENU callback")
+        self.readlinedata = ser.readline().decode('utf-8')
+        self.line_split = self.readlinedata.split(",")
         try:
-            if float(line_split[6]) > 1:
+            #if self.get_clock().now().nanoseconds >= (self.status_clock+2000000000):
+            if time.time() >= (self.status_clock + 2):
+                self.get_logger().info(f"nanosec: {time.time()}")  
+                self.status_fix()
+                #self.status_clock = self.get_clock().now().nanoseconds
+                self.status_clock = time.time()
+            if float(self.line_split[6]) > 3:
+                self.get_logger().info(f"In ENU")
                 if not self.lock_zero_point:
-                    clock = self.get_clock().now()
-                    self.start_clock = float(clock.nanoseconds) / 1e9
+                    #clock = self.get_clock().now()
+                    #self.start_clock = float(clock.nanoseconds) / 1e9
                     self.lock_zero_point = True
                 enu = PoseWithCovariance()
-                x, y, z = self.transform_to_enu(self.convert(float(line_split[2])), self.convert(float(line_split[4])), float(line_split[9]))
-                clock = self.get_clock().now()
-                enu.pose.orientation.x = round((float(clock.nanoseconds) / 1e9 - self.start_clock), 2)
+                x, y, z = self.transform_to_enu(self.convert(float(self.line_split[2])), self.convert(float(self.line_split[4])), float(self.line_split[9]))
+                #clock = self.get_clock().now()
+                #enu.pose.orientation.x = round((float(clock.nanoseconds) / 1e9 - self.start_clock), 2)
                 enu.pose.position.x = round(x, 2)
                 enu.pose.position.y = round(y, 2)
                 enu.pose.position.z = round(z, 2)
                 self.publisher_enu_.publish(enu)
-        except:
-            self.get_logger().error(f"Error (enu data)")
+        except Exception as e:
+            self.get_logger().error(f"Error (enu data): {e}")
         
     def gps_callback(self):
         try:
-            line = ser.readline().decode('utf-8')
-            line_split = line.split(",")
+            self.readlinedata = ser.readline().decode('utf-8')
+            self.line_split = self.readlinedata.split(",")
             msg = NavSatFix()
             msg.header.stamp = self.get_clock().now().to_msg()
             msg.header.frame_id = "gps"
-            msg.latitude = float(line_split[2])
-            msg.longitude = float(line_split[4])
-            msg.altitude = float(line_split[9])
-            msg.status.status = int(line_split[6])
+            msg.latitude = float(self.line_split[2])
+            msg.longitude = float(self.line_split[4])
+            msg.altitude = float(self.line_split[9])
+            msg.status.status = int(self.line_split[6])
             if msg.header.stamp.sec >= (self.status_clock+2):
                 self.status_fix()
                 self.status_clock = msg.header.stamp.sec
             self.publisher_raw_.publish(msg)
         except:
             self.get_logger().error(f"Error (no GPS signal)")
-
 
 def main(args=None):
     rclpy.init(args=args)
