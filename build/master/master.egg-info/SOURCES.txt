@@ -9,6 +9,7 @@ setup.py
 ../../build/master/master.egg-info/top_level.txt
 ../../build/master/master.egg-info/zip-safe
 master/__init__.py
+master/gstreamer_host.py
 master/master_code.py
 master/odometry.py
 master/stanley_controller.py

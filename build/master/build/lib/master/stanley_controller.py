@@ -101,7 +101,7 @@ def stanley_controller(robot_x, robot_y, dfX, dfY, yaw, path_yaw, v, max_steerin
         print("---------------------------------------------------------------------------------------------------------------")
     limited_steering_angle = np.clip(desired_steering_angle, -max_steering_control, max_steering_control)
 
-    return limited_steering_angle, target_index, crosstrack_error
+    return limited_steering_angle, target_index, crosstrack_error, absolute_distance
     
 
 # Example usage
@@ -135,10 +135,3 @@ if __name__ == "__main__":
         robot_gps[0] += v * np.cos(yaw) # Update x position
         robot_gps[1] += v * np.sin(yaw)  # Update y position
         yaw += v / 0.5 * np.tan(limited_steering_angle)  # Update yaw
-
-
-"""
-TO:DO
-
-Salvestatud faili vaja timmida. Kohad kus nt gps maha pandi ajavad controlleri segadusse. Need vaja ära eemaldada või luua filter, mis teeb seda automaatselt.
-"""

@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/lidar/lidar.egg-info/PKG-INFO
+writing dependency_links to ../../build/lidar/lidar.egg-info/dependency_links.txt
+writing entry points to ../../build/lidar/lidar.egg-info/entry_points.txt
+writing requirements to ../../build/lidar/lidar.egg-info/requires.txt
+writing top-level names to ../../build/lidar/lidar.egg-info/top_level.txt
+writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+running build
+running build_py
+copying lidar/__init__.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+copying lidar/lidarsubscriber.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+copying lidar/publisher_member_function.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+running install
+running install_lib
+running install_data
+copying resource/lidar -> /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index/packages
+copying package.xml -> /home/pimpmobile/ros2_ws/install/lidar/share/lidar
+running install_egg_info
+removing '/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/lidar/lidar.egg-info to /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info
+running install_scripts
+Installing lidar_listener script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+Installing lidar_talker script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/lidar/install.log'

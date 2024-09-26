@@ -16,7 +16,9 @@ try:
     ser = serial.Serial(gps_port, baudrate, timeout=1)
     tcp_socket = socket.socket()
     port = 8002
+    print(f"connecting before")
     tcp_socket.connect(('213.168.5.170', port))
+    print("connected!")
 except serial.SerialException as e:
     print("GPS Error:", e)
 
@@ -63,18 +65,16 @@ class GpsPublisher(Node):
     def enu_callback(self):
         #line = ser.readline().decode('utf-8')
         #line_split = line.split(",")
-        self.get_logger().info(f"In GPS ENU callback")
         self.readlinedata = ser.readline().decode('utf-8')
         self.line_split = self.readlinedata.split(",")
         try:
             #if self.get_clock().now().nanoseconds >= (self.status_clock+2000000000):
             if time.time() >= (self.status_clock + 2):
-                self.get_logger().info(f"nanosec: {time.time()}")  
                 self.status_fix()
                 #self.status_clock = self.get_clock().now().nanoseconds
                 self.status_clock = time.time()
             if float(self.line_split[6]) > 3:
-                self.get_logger().info(f"In ENU")
+                self.get_logger().info(f"ENU: Running")
                 if not self.lock_zero_point:
                     #clock = self.get_clock().now()
                     #self.start_clock = float(clock.nanoseconds) / 1e9
@@ -82,11 +82,13 @@ class GpsPublisher(Node):
                 enu = PoseWithCovariance()
                 x, y, z = self.transform_to_enu(self.convert(float(self.line_split[2])), self.convert(float(self.line_split[4])), float(self.line_split[9]))
                 #clock = self.get_clock().now()
-                #enu.pose.orientation.x = round((float(clock.nanoseconds) / 1e9 - self.start_clock), 2)
+                # enu.pose.orientation.x = round((float(clock.nanoseconds) / 1e9 - self.start_clock), 2)
                 enu.pose.position.x = round(x, 2)
                 enu.pose.position.y = round(y, 2)
                 enu.pose.position.z = round(z, 2)
                 self.publisher_enu_.publish(enu)
+            else:
+                self.get_logger().info(f"ENU: No data")
         except Exception as e:
             self.get_logger().error(f"Error (enu data): {e}")
         

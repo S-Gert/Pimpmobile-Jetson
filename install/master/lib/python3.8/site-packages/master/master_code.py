@@ -4,6 +4,7 @@ from sensor_msgs.msg import NavSatFix
 from std_msgs.msg import String, Int32MultiArray
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy 
 from geometry_msgs.msg import PoseWithCovariance
+from master.gstreamer_host import Gstream
 
 import struct
 import numpy as np
@@ -13,8 +14,7 @@ import serial
 import time
 from master.odometry import Odometry
 import atexit
-import pyudev
-import time
+import math
 
 from master.stanley_controller import stanley_controller, calculate_path_yaw
 
@@ -23,12 +23,15 @@ arduino_port = '/dev/ttyACM0'#'/dev/ttyACM0'
 arduino = serial.Serial(port=arduino_port, baudrate=115200, timeout=1)
 print("Opening port...")
 time.sleep(2)
-#arduino = try_ports(arduino_ports)
 
 class Master(Node):
 
     def __init__(self, odometry_object):
         super().__init__('Master_Code')
+
+        # Start gstreamer pipeline
+        self.gstream_obj = Gstream()
+        self.gstream_obj.start_stream()
 
         self.sub_lidar = self.create_subscription(
             Int32MultiArray,
@@ -42,18 +45,36 @@ class Master(Node):
             self.gps_callback,
             10)
         
+        self.sub_to = self.create_subscription(
+            Int32MultiArray,
+            'pimpmobile_teleop',
+            self.teleop_callback,
+            10)
+        
         self.sub_lidar 
         self.sub_gps
 
         # Arduino mega serial
         self.arduino_line = 0
-        self.arduino_running = False
 
         # LIDAR
         self.obstacle = False
 
+        # Teleop variables
+        self.to_motors = 0
+        self.to_servo = 0
+        self.to_brakes = 0
+        self.to_reverse = 0
+        self.to_speed_limiter = 100
+        self.to_handbrake_toggle = 0
+        self.to_gps_saving_toggle = 0
+        self.to_stanley_reset = 0
+        self.to_stanley_drive_toggle = 0
+
+        # Camera UI variables
+        self.last_update_time = 0
+
         # GPS variables
-        self.stanley_running = True
         self.file_path: str = '/home/pimpmobile/ros2_ws/src/gps_publisher/gps_publisher/gps_log_data.csv'
         self.gps_df: pd.DataFrame = pd.read_csv(self.file_path)
         self.gps_x_col = self.gps_df["X"].values 
@@ -64,13 +85,18 @@ class Master(Node):
         self.gps_robot_y = 0
         self.gps_robot_z = 0
         
-        self.gps_robot_last_x = 0
-        self.gps_robot_last_y = 0
+        self.gps_robot_last_x, self.gps_robot_last_y = 0, 0
+        self.gps_speed_last_x, self.gps_speed_last_y = 0, 0
 
-        self.k = 0.5
-        self.v = 0.9 # 110 11.1ms
+        # Stanley variables
+        self.at_final_point = False
+        self.yaw = 0
+        self.mainloop_running = True
+        self.k = 0.7
+        self.v = 1.5 # 110 11.1ms
         self.k_s = 0.1
         self.target_index = 0
+        self.absolute_distance = 0
         self.previous_time = 0
 
         self.distance_tolerance = 0.15
@@ -87,7 +113,6 @@ class Master(Node):
         self.gps_robot_x = msg.pose.position.x
         self.gps_robot_y = msg.pose.position.y
         self.gps_robot_z = msg.pose.position.z
-        #print(f"x/y: {[self.gps_robot_x, self.gps_robot_y]}")
 
     def write_arduino(self, values: list) -> None:
         if len(values) != 3:
@@ -102,7 +127,67 @@ class Master(Node):
         except:
             pass
 
-    def stanley(self):
+    def teleop_callback(self, msg):
+        self.to_motors = msg.data[0]
+        self.to_servo = msg.data[1]
+        self.to_brakes = msg.data[2]
+        self.to_reverse = msg.data[3]
+        if self.to_reverse == 1:
+            self.to_motors = -self.to_motors
+        self.to_speed_limiter = msg.data[4]
+        self.to_handbrake_toggle = msg.data[5]
+        if self.to_handbrake_toggle == 1:
+            self.to_motors = 0
+            self.to_brakes = 1
+        self.to_gps_saving_toggle = msg.data[6]
+        self.to_stanley_reset = msg.data[7]
+        if self.to_stanley_reset == 1:
+            self.at_final_point = False
+            self.target_index = 0
+        self.to_stanley_drive_toggle = msg.data[8]
+
+    def check_if_at_final_point(self):
+        if self.target_index > len(self.gps_x_col) - 4:
+            if self.absolute_distance < 0.8:
+                self.at_final_point = True
+        self.at_final_point = False
+
+    def update_camera_ui(self):
+        ui_update_rate = 0.5 # seconds
+        self.gstream_obj.speed_limiter_text = self.to_speed_limiter
+        self.gstream_obj.gps_status_text = f"X:{self.gps_robot_x}, Y:{self.gps_robot_y}"
+
+        if self.at_final_point == True:
+            self.gstream_obj.stanley_at_final_point_text = "Path complete"
+        else:
+            self.gstream_obj.stanley_at_final_point_text = "Not complete"
+
+        if self.to_stanley_drive_toggle == 1:
+            self.gstream_obj.stanley_running_text = "Running"
+        else:
+            self.gstream_obj.stanley_running_text = "Not running"
+
+        if self.to_handbrake_toggle == 1:
+            self.gstream_obj.current_gear_text = "HB"
+        elif self.to_reverse == 1:
+            self.gstream_obj.current_gear_text = "R"
+        else:
+            self.gstream_obj.current_gear_text = "D"
+
+        if time.time() > self.last_update_time + ui_update_rate:
+            distance = 0
+            if self.gps_robot_x - self.gps_speed_last_x != 0 and self.gps_robot_y - self.gps_speed_last_y != 0:
+                squared_difference = abs((self.gps_speed_last_x - self.gps_robot_x)**2 - (self.gps_speed_last_y - self.gps_robot_y)**2)
+                distance = math.sqrt(squared_difference)
+            
+            speed = (distance / ui_update_rate) * (1 / ui_update_rate)
+            self.gstream_obj.speed_text = round(speed, 2)
+            self.gps_speed_last_x, self.gps_speed_last_y = self.gps_robot_x, self.gps_robot_y
+            self.last_update_time = time.time()
+            #print(f"distance: {distance}, speed: {speed}")
+
+
+    def mainloop(self):
         """
         Runs on seperate thread, doing all the gps logic
         which includes reading the log file and sending commands to the robot.
@@ -110,35 +195,29 @@ class Master(Node):
         GPS driving = 1500  
         GPS save = 2000
         """
-        print(f"{self.path_yaw}")
 
-        while self.stanley_running:
-            yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
-            self.write_arduino([0, 0, 1])
+        while self.mainloop_running:
             self.arduino_line = self.read_arduino()
+            
+            self.write_arduino([int(self.to_motors*self.to_speed_limiter / 100), self.to_servo, self.to_brakes])
+            self.update_camera_ui()
 
-            while self.target_index < len(self.gps_x_col) - 1 and not self.obstacle and self.arduino_line == 1500:
-                
-                yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
-                distance_threshold = 0.05
+            # Stanley
+            while not self.at_final_point and not self.obstacle and self.arduino_line == 1500 or self.to_stanley_drive_toggle == 1:
+                self.yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
+
+                self.update_camera_ui()
                 if time.time() > self.previous_time + 0.2:
                     self.previous_time = time.time()
                     self.gps_robot_last_x, self.gps_robot_last_y = self.gps_robot_x, self.gps_robot_y
 
-                limited_steering_angle, _, _ = stanley_controller(self.gps_robot_x, self.gps_robot_y, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
-                #limited_steering_angle, target_index, crosstrack_error = stanley_controller(10, 10, self.gps_x_col, self.gps_y_col, yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
-                #print(f"no limit: {limited_steering_angle}")
+                limited_steering_angle, self.target_index, _, self.absolute_distance = stanley_controller(self.gps_robot_x, self.gps_robot_y, self.gps_x_col, self.gps_y_col, self.yaw, self.path_yaw, self.v, self.max_steering_control, self.k, self.k_s)
                 limited_steering_angle = int(limited_steering_angle * (255 / self.max_steering_control))
 
-                #motor_speed = int() ...
-
-                # self.read_arduino()
-                self.write_arduino([90, -limited_steering_angle, 0])
+                self.write_arduino([int((self.v*100) * self.to_speed_limiter / 100), -limited_steering_angle, 0])
                 self.arduino_line = self.read_arduino()
-                #print(f"inside: {limited_steering_angle}, x/y: {[self.gps_robot_x, self.gps_robot_y]}, closest point: {[self.gps_x_col[target_index]], self.gps_y_col[target_index]}, steering: {limited_steering_angle}")
 
         
-
 @atexit.register
 def exit_handler() -> None:
     arduino.close()
@@ -155,25 +234,17 @@ def main(args=None):
     #encoder_read_thread.start()
 
     ##### Multithreading gps log file reading and logic #####
-    stanley_thread = threading.Thread(target = m.stanley)
-    stanley_thread.start()
+    mainloop_thread = threading.Thread(target = m.mainloop)
+    mainloop_thread.start()
     #####
-
-    ##### Multithreading arduino reading ###
-    # m.arduino_running = True
-    # arduino_thread = threading.Thread(target = m.read_arduino)
-    # arduino_thread.start()
-    ####
 
     rclpy.spin(m)
 
     ##### Multithreading close ###
     #m.nano_running = False
-    m.stanley_running = False
-    # m.arduino_running = False
+    m.mainloop_running = False
     #encoder_read_thread.join()
-    stanley_thread.join()
-    #arduino_thread.join()
+    mainloop_thread.join()
     #####
 
     m.destroy_node()
