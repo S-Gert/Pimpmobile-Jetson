@@ -8,6 +8,7 @@ setup.py
 ../../build/master/master.egg-info/requires.txt
 ../../build/master/master.egg-info/top_level.txt
 ../../build/master/master.egg-info/zip-safe
+icons/pimpmyride.png
 master/__init__.py
 master/gstreamer_host.py
 master/master_code.py

@@ -24,6 +24,7 @@ class LidarSubscriber(Node):
         self.tolerance = 0.0872*12 # 5 kraadi * 24, 120 deg
         self.target_angle = 1.571 # (pi/2)
         self.obstacle_array = 0
+        self.stopping_distance = 1.5
         # 180 -- 2.5222 per deg
 
     def obstacles(self, arr):
@@ -31,7 +32,7 @@ class LidarSubscriber(Node):
         for sector in arr:
             count = 0
             for point in sector:
-                if point < 0.30:
+                if point < self.stopping_distance:
                     count += 1
             if count >= 3:
                 all_sectors.append(True)

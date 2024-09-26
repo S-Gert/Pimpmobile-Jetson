@@ -108,6 +108,7 @@ class Master(Node):
             self.obstacle = True
         else:
             self.obstacle = False
+        #print(f"{self.obstacle}, {lid_arr}")
     
     def gps_callback(self, msg) -> None:    
         self.gps_robot_x = msg.pose.position.x
@@ -143,7 +144,7 @@ class Master(Node):
         self.to_stanley_reset = msg.data[7]
         if self.to_stanley_reset == 1:
             self.at_final_point = False
-            self.target_index = 0
+            #TODO: previous target index = 0
         self.to_stanley_drive_toggle = msg.data[8]
 
     def check_if_at_final_point(self):
@@ -173,7 +174,6 @@ class Master(Node):
             self.gstream_obj.current_gear_text = "R"
         else:
             self.gstream_obj.current_gear_text = "D"
-
         if time.time() > self.last_update_time + ui_update_rate:
             distance = 0
             if self.gps_robot_x - self.gps_speed_last_x != 0 and self.gps_robot_y - self.gps_speed_last_y != 0:
@@ -202,8 +202,8 @@ class Master(Node):
             self.write_arduino([int(self.to_motors*self.to_speed_limiter / 100), self.to_servo, self.to_brakes])
             self.update_camera_ui()
 
-            # Stanley
-            while not self.at_final_point and not self.obstacle and self.arduino_line == 1500 or self.to_stanley_drive_toggle == 1:
+            # Stanley #### and not self.obstacle
+            while not self.at_final_point and (self.arduino_line == 1500 or self.to_stanley_drive_toggle == 1):
                 self.yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
 
                 self.update_camera_ui()
