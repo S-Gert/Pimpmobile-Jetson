@@ -1,0 +1,45 @@
+/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options
+!!
+
+        ********************************************************************************
+        Usage of dash-separated 'script-dir' will not be supported in future
+        versions. Please use the underscore name 'script_dir' instead.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+        ********************************************************************************
+
+!!
+  opt = self.warn_dash_deprecation(opt, section)
+running egg_info
+writing ../../build/master/master.egg-info/PKG-INFO
+writing dependency_links to ../../build/master/master.egg-info/dependency_links.txt
+writing entry points to ../../build/master/master.egg-info/entry_points.txt
+writing requirements to ../../build/master/master.egg-info/requires.txt
+writing top-level names to ../../build/master/master.egg-info/top_level.txt
+writing manifest file '../../build/master/master.egg-info/SOURCES.txt'
+running build
+running build_py
+copying master/stanley_controller.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/pid.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/__init__.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/gstreamer_host.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/master_code.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/odometry.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+running install
+running install_lib
+copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/stanley_controller.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master
+copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/gstreamer_host.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master
+byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master/stanley_controller.py to stanley_controller.cpython-38.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master/gstreamer_host.py to gstreamer_host.cpython-38.pyc
+running install_data
+copying resource/master -> /home/pimpmobile/ros2_ws/install/master/share/ament_index/resource_index/packages
+copying package.xml -> /home/pimpmobile/ros2_ws/install/master/share/master
+running install_egg_info
+removing '/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/master/master.egg-info to /home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages/master-0.0.0-py3.8.egg-info
+running install_scripts
+Installing master script to /home/pimpmobile/ros2_ws/install/master/lib/master
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/master/install.log'

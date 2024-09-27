@@ -3,106 +3,103 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-global prev_target_index
-prev_target_index = 0
+class Stanley():
 
-global prev_t
-prev_t = 0
+    def __init__(self) -> None:
+        self.prev_target_index = 0
+        self.prev_t = 0
+        
+    def calculate_path_yaw(self, x, y):
+        # Calculate yaws for all the points in the saved file
+        yaws = []
+        for i in range(len(x) - 1):
+            delta_x = x[i + 1] - x[i]
+            delta_y = y[i + 1] - y[i]
+            yaw = np.arctan2(delta_y, delta_x)
+            yaws.append(yaw)
+        yaws.append(yaws[-1])
+        return np.array(yaws)
 
-def calculate_path_yaw(x, y):
-    # Calculate yaws for all the points in the saved file
-    yaws = []
-    for i in range(len(x) - 1):
-        delta_x = x[i + 1] - x[i]
-        delta_y = y[i + 1] - y[i]
-        yaw = np.arctan2(delta_y, delta_x)
-        yaws.append(yaw)
-    yaws.append(yaws[-1])
-    return np.array(yaws)
+    def find_target_path_id(self, robot_x, robot_y, x, y, yaw):  
+        # This is for finding the nearest point
 
-def find_target_path_id(robot_x, robot_y, x, y, yaw):  
-    global prev_target_index, prev_t
-    # This is for finding the nearest point
+        # Calculate position of the front axle
+        fx = robot_x + 0.44 * np.cos(yaw)
+        fy = robot_y + 0.44 * np.sin(yaw)
 
-    # Calculate position of the front axle
-    fx = robot_x + 0.44 * np.cos(yaw)
-    fy = robot_y + 0.44 * np.sin(yaw)
+        # Calculate the difference between front axle and path points
+        dx = fx - x
+        dy = fy - y
 
-    # Calculate the difference between front axle and path points
-    dx = fx - x
-    dy = fy - y
+        # Distance from the front axle to each point on the path
+        d = np.hypot(dx, dy)
 
-    # Distance from the front axle to each point on the path
-    d = np.hypot(dx, dy)
+        # The shortest distance
+        target_index = np.argmin(d)
 
-    # The shortest distance
-    target_index = np.argmin(d)
+        if target_index < self.prev_target_index:
+            return self.prev_target_index, dx[self.prev_target_index], dy[self.prev_target_index], d[self.prev_target_index]
+        
+        self.prev_target_index = target_index
 
-    if target_index < prev_target_index:
-        return prev_target_index, dx[prev_target_index], dy[prev_target_index], d[prev_target_index]
-    
-    prev_target_index = target_index
+        return target_index, dx[target_index], dy[target_index], d[target_index]
+        
+    def calculate_yaw_term(self, target_index, yaw, path_yaw):
+        # yaw error between robot and path
+        # Return normalized angle between [-pi, pi]
+        error = np.arctan2(np.sin(path_yaw[target_index] - yaw), np.cos(path_yaw[target_index] - yaw))
+        return error
 
-    return target_index, dx[target_index], dy[target_index], d[target_index]
-    
-def calculate_yaw_term(target_index, yaw, path_yaw):
-    # yaw error between robot and path
-    # Return normalized angle between [-pi, pi]
-    error = np.arctan2(np.sin(path_yaw[target_index] - yaw), np.cos(path_yaw[target_index] - yaw))
-    return error
+    def calculate_crosstrack_term(self, k, k_s, v, yaw, dx, dy, abs_distance):
+        # Calculates cross-track steering error (lateral error)
 
-def calculate_crosstrack_term(k, k_s, v, yaw, dx, dy, abs_distance):
-    # Calculates cross-track steering error (lateral error)
+        # Direction of robots front axle
+        front_axle_vector = np.array([np.sin(yaw), -np.cos(yaw)])
 
-    # Direction of robots front axle
-    front_axle_vector = np.array([np.sin(yaw), -np.cos(yaw)])
+        # Vector from robots front axle to nearest point
+        nearest_path_vector = np.array([dx, dy])
 
-    # Vector from robots front axle to nearest point
-    nearest_path_vector = np.array([dx, dy])
+        # Firstly finds the sign of the dot product
+        # Sign value (1 or -1) indicates if the robot is going left or right from the path
+        # Lastly we multiply the sign value with the absolute distance 
+        crosstrack_error = np.sign(nearest_path_vector @ front_axle_vector) * abs_distance
 
-    # Firstly finds the sign of the dot product
-    # Sign value (1 or -1) indicates if the robot is going left or right from the path
-    # Lastly we multiply the sign value with the absolute distance 
-    crosstrack_error = np.sign(nearest_path_vector @ front_axle_vector) * abs_distance
+        # Calculate the steering angle error (scaled by speed and coefficient)
+        crosstrack_steering_error = np.arctan2((k * crosstrack_error), (v + k_s))
 
-    # Calculate the steering angle error (scaled by speed and coefficient)
-    crosstrack_steering_error = np.arctan2((k * crosstrack_error), (v + k_s))
+        return crosstrack_steering_error, crosstrack_error
 
-    return crosstrack_steering_error, crosstrack_error
+    def stanley_controller(self, robot_x, robot_y, x, y, yaw, path_yaw, v, max_steering_control, k, k_s):
+        """
+        robot_x and robot_y = robot x and y coordinates
+        dfX and dfY = saved path x and y waypoints
+        yaw = robot heading direction
+        v = speed
+        steering_angle = angle of robots front wheels
+        max_steering_control = maximum steering angle of the robot
+        k = cross-track error coefficient
+        k_s = speed damping
+        dx and dy = x and y coordinate difference between robot front axle and nearest point
+        abs_distance = absolute distance between robot front axle and nearest point
+        """
 
-def stanley_controller(robot_x, robot_y, dfX, dfY, yaw, path_yaw, v, max_steering_control, k, k_s):
-    global prev_t, prev_target_index
+        target_index, dx, dy, absolute_distance = self.find_target_path_id(robot_x, robot_y, x, y, yaw)
+        yaw_error = self.calculate_yaw_term(target_index, yaw, path_yaw)
+        crosstrack_steering_error, crosstrack_error = self.calculate_crosstrack_term(k, k_s, v, yaw, dx, dy, absolute_distance)
 
-    """
-    robot_x and robot_y = robot x and y coordinates
-    dfX and dfY = saved path x and y waypoints
-    yaw = robot heading direction
-    v = speed
-    steering_angle = angle of robots front wheels
-    max_steering_control = maximum steering angle of the robot
-    k = cross-track error coefficient
-    k_s = speed damping
-    dx and dy = x and y coordinate difference between robot front axle and nearest point
-    abs_distance = absolute distance between robot front axle and nearest point
-    """
+        desired_steering_angle = yaw_error + crosstrack_steering_error
 
-    target_index, dx, dy, absolute_distance = find_target_path_id(robot_x, robot_y, dfX, dfY, yaw)
-    yaw_error = calculate_yaw_term(target_index, yaw, path_yaw)
-    crosstrack_steering_error, crosstrack_error = calculate_crosstrack_term(k, k_s, v, yaw, dx, dy, absolute_distance)
+        # Constrains steering angle to the vehicle limits
+        if time.time() > (self.prev_t+0.5):
+            self.prev_t = time.time()
+            print(f"target indx: {target_index}, prev_index: {self.prev_target_index}, robot_x: {robot_x}, robot_y: {robot_y}, x: {dx}, y: {dy}")
+            print(f"robot yaw: {yaw}, path yaw: {path_yaw[target_index]}")
+            print(f"desired steering: {desired_steering_angle}, yaw error: {yaw_error}, crosst_steering_error: {crosstrack_steering_error}, crosstrack error: {crosstrack_error}")
+            print("---------------------------------------------------------------------------------------------------------------")
+        limited_steering_angle = np.clip(desired_steering_angle, -max_steering_control, max_steering_control)
 
-    desired_steering_angle = yaw_error + crosstrack_steering_error
-
-    # Constrains steering angle to the vehicle limits
-    if time.time() > (prev_t+0.5):
-        prev_t = time.time()
-        print(f"target indx: {target_index}, prev_index: {prev_target_index}, robot_x: {robot_x}, robot_y: {robot_y}, x: {dx}, y: {dy}")
-        print(f"robot yaw: {yaw}, path yaw: {path_yaw[target_index]}")
-        print(f"desired steering: {desired_steering_angle}, yaw error: {yaw_error}, crosst_error: {crosstrack_steering_error}")
-        print("---------------------------------------------------------------------------------------------------------------")
-    limited_steering_angle = np.clip(desired_steering_angle, -max_steering_control, max_steering_control)
-
-    return limited_steering_angle, target_index, crosstrack_error, absolute_distance
-    
+        return limited_steering_angle, target_index, crosstrack_error, absolute_distance
+        
 
 # Example usage
 if __name__ == "__main__":

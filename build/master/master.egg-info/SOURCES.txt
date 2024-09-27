@@ -13,6 +13,7 @@ master/__init__.py
 master/gstreamer_host.py
 master/master_code.py
 master/odometry.py
+master/pid.py
 master/stanley_controller.py
 master/build/.built_by
 master/build/COLCON_IGNORE
