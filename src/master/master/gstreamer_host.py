@@ -1,6 +1,7 @@
 from threading import Thread
 import gi
 import time
+import cv2
 
 import cairo
 
@@ -10,7 +11,7 @@ from gi.repository import Gst, GLib, GstVideo
 
 class Gstream():
     def __init__(self):
-        self.hosting_ip = "10.0.3.244"
+        self.hosting_ip = "10.0.3.243"
 
         self.user_data = {"video_info": None}
         self.width = 0
@@ -26,9 +27,12 @@ class Gstream():
         self.speed_limiter_text = 100
         self.gps_status_text = ""
         self.stanley_at_final_point_text = "Not complete"
+        self.gps_path_saving_text = "Not saving"
         self.stanley_k_text = 0
         self.stanley_v_text = 0
         self.stanley_path_reset_state = 0
+
+        self.pid_values = [0, 0, 0]
 
     def text_overlay(self, cairo_ctx, text, x_position, y_position, font_size = 20, r = 1, g = 1, b = 1, a = 1):
         cairo_ctx.select_font_face("Sans", cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
@@ -89,14 +93,21 @@ class Gstream():
         else:
             self.text_overlay(cairo_ctx, f"Autonomous drive: {self.stanley_running_text}", 0, self.height - 40)
 
+        #GPS PATH SAVING STATUS
+        self.text_overlay(cairo_ctx, f"Path saving: {self.gps_path_saving_text}", 0, self.height - 60)
+
         #AUTONOMOUS PATH STATUS
-        self.text_overlay(cairo_ctx, f"Path status: {self.stanley_at_final_point_text}", 0, self.height - 60)
+        self.text_overlay(cairo_ctx, f"Path status: {self.stanley_at_final_point_text}", 0, self.height - 80)
 
         #STANLEY V
-        self.text_overlay(cairo_ctx, f"Stanley V: {self.stanley_v_text}", 0, self.height - 80)
+        self.text_overlay(cairo_ctx, f"Stanley V: {self.stanley_v_text}", 0, self.height - 100)
 
         #STANLEY K
-        self.text_overlay(cairo_ctx, f"Stanley K: {self.stanley_k_text}", 0, self.height - 100)
+        self.text_overlay(cairo_ctx, f"Stanley K: {self.stanley_k_text}", 0, self.height - 120)
+
+        #PID
+
+        self.text_overlay(cairo_ctx, f"PID: {self.pid_values}", 0, self.height - 140)
 
             #### TOP LEFT ####
 
@@ -109,7 +120,6 @@ class Gstream():
             self.text_overlay(cairo_ctx, "Resetting path yaw & index...", self.width / 2 - 220, self.height / 2, 40, 1, 0, 0, 1)
         
         #TODO: MINIMAP
-
 
     def on_draw_callback(self, overlay, cairo_ctx, timestamp, duration, user_data):
         # Get the video frame information (width, height, etc.)
@@ -160,4 +170,4 @@ if __name__ == "__main__":
     gstream_obj = Gstream()
     gstream_obj.start_stream()
     while True:
-        sleep(0.1)
+        time.sleep(0.1)

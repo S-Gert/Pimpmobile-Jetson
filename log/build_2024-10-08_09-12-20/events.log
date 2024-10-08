@@ -1,0 +1,93 @@
+[0.000000] (-) TimerEvent: {}
+[0.000561] (-) JobUnselected: {'identifier': 'gps_publisher'}
+[0.000736] (-) JobUnselected: {'identifier': 'master'}
+[0.001101] (-) JobUnselected: {'identifier': 'slam'}
+[0.001378] (-) JobUnselected: {'identifier': 'teleop_pm'}
+[0.001665] (-) JobUnselected: {'identifier': 'turtlesim'}
+[0.001761] (lidar) JobQueued: {'identifier': 'lidar', 'dependencies': OrderedDict()}
+[0.001840] (lidar) JobStarted: {'identifier': 'lidar'}
+[0.099599] (-) TimerEvent: {}
+[0.200370] (-) TimerEvent: {}
+[0.301065] (-) TimerEvent: {}
+[0.401770] (-) TimerEvent: {}
+[0.502479] (-) TimerEvent: {}
+[0.603287] (-) TimerEvent: {}
+[0.704157] (-) TimerEvent: {}
+[0.804837] (-) TimerEvent: {}
+[0.905358] (-) TimerEvent: {}
+[1.005851] (-) TimerEvent: {}
+[1.106334] (-) TimerEvent: {}
+[1.206922] (-) TimerEvent: {}
+[1.307622] (-) TimerEvent: {}
+[1.408179] (-) TimerEvent: {}
+[1.508722] (-) TimerEvent: {}
+[1.609252] (-) TimerEvent: {}
+[1.709773] (-) TimerEvent: {}
+[1.810336] (-) TimerEvent: {}
+[1.910959] (-) TimerEvent: {}
+[2.011544] (-) TimerEvent: {}
+[2.089559] (lidar) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/lidar', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/lidar/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/lidar/install.log', '--install-scripts', '$base/lib/lidar', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/pimpmobile/ros2_ws/src/lidar', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'SSH_CLIENT': '10.0.3.97 52874 22', 'LC_TIME': 'et_EE.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/pimpmobile/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/usr/local/cuda-11.4/lib64:/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'BROWSER': '/home/pimpmobile/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/pimpmobile', 'TERM_PROGRAM_VERSION': '1.93.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-75fdb50b-2700-4d19-9182-9d248206dac9.sock', 'JETSON_L4T': '35.4.1', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Orin Nano Developer Kit', 'VSCODE_GIT_ASKPASS_MAIN': '/home/pimpmobile/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'et_EE.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/pimpmobile/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install:/home/pimpmobile/ros2_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '3', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/usr/local/cuda-11.4/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.vscode-server/cli/servers/Stable-38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40/server/bin/remote-cli:/home/pimpmobile/.local/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/home/pimpmobile/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'et_EE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'et_EE.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra23x', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-06fcf53f98.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'et_EE.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'et_EE.UTF-8', 'LC_IDENTIFICATION': 'et_EE.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/lidar', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.0.3.97 52874 10.0.3.210 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'et_EE.UTF-8', 'LC_PAPER': 'et_EE.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '5.1.2', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/home/pimpmobile/ros2_ws/install/turtlesim', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[2.111697] (-) TimerEvent: {}
+[2.212324] (-) TimerEvent: {}
+[2.313063] (-) TimerEvent: {}
+[2.373777] (lidar) StderrLine: {'line': b'/home/pimpmobile/.local/lib/python3.8/site-packages/setuptools/dist.py:472: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[2.374432] (lidar) StderrLine: {'line': b'!!\n'}
+[2.374612] (lidar) StderrLine: {'line': b'\n'}
+[2.374788] (lidar) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.374938] (lidar) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[2.375078] (lidar) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[2.375212] (lidar) StderrLine: {'line': b'\n'}
+[2.375341] (lidar) StderrLine: {'line': b'        This deprecation is overdue, please update your project and remove deprecated\n'}
+[2.375489] (lidar) StderrLine: {'line': b'        calls to avoid build errors in the future.\n'}
+[2.375616] (lidar) StderrLine: {'line': b'\n'}
+[2.375745] (lidar) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[2.375871] (lidar) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.375994] (lidar) StderrLine: {'line': b'\n'}
+[2.376115] (lidar) StderrLine: {'line': b'!!\n'}
+[2.376236] (lidar) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[2.413171] (-) TimerEvent: {}
+[2.513759] (-) TimerEvent: {}
+[2.614413] (-) TimerEvent: {}
+[2.685477] (lidar) StdoutLine: {'line': b'running egg_info\n'}
+[2.714521] (-) TimerEvent: {}
+[2.724883] (lidar) StdoutLine: {'line': b'writing ../../build/lidar/lidar.egg-info/PKG-INFO\n'}
+[2.725989] (lidar) StdoutLine: {'line': b'writing dependency_links to ../../build/lidar/lidar.egg-info/dependency_links.txt\n'}
+[2.726531] (lidar) StdoutLine: {'line': b'writing entry points to ../../build/lidar/lidar.egg-info/entry_points.txt\n'}
+[2.727020] (lidar) StdoutLine: {'line': b'writing requirements to ../../build/lidar/lidar.egg-info/requires.txt\n'}
+[2.727589] (lidar) StdoutLine: {'line': b'writing top-level names to ../../build/lidar/lidar.egg-info/top_level.txt\n'}
+[2.814714] (-) TimerEvent: {}
+[2.915403] (-) TimerEvent: {}
+[3.016107] (-) TimerEvent: {}
+[3.116801] (-) TimerEvent: {}
+[3.217512] (-) TimerEvent: {}
+[3.318190] (-) TimerEvent: {}
+[3.418847] (-) TimerEvent: {}
+[3.519483] (-) TimerEvent: {}
+[3.620116] (-) TimerEvent: {}
+[3.720745] (-) TimerEvent: {}
+[3.821352] (-) TimerEvent: {}
+[3.921961] (-) TimerEvent: {}
+[4.022576] (-) TimerEvent: {}
+[4.096507] (lidar) StdoutLine: {'line': b"writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'\n"}
+[4.097012] (lidar) StdoutLine: {'line': b'running build\n'}
+[4.097231] (lidar) StdoutLine: {'line': b'running build_py\n'}
+[4.097561] (lidar) StdoutLine: {'line': b'copying lidar/__init__.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar\n'}
+[4.097960] (lidar) StdoutLine: {'line': b'copying lidar/lidarsubscriber.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar\n'}
+[4.098700] (lidar) StdoutLine: {'line': b'running install\n'}
+[4.110457] (lidar) StdoutLine: {'line': b'running install_lib\n'}
+[4.122656] (-) TimerEvent: {}
+[4.174749] (lidar) StdoutLine: {'line': b'running install_data\n'}
+[4.175283] (lidar) StdoutLine: {'line': b'copying resource/lidar -> /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index/packages\n'}
+[4.175462] (lidar) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/lidar/share/lidar\n'}
+[4.175685] (lidar) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.217045] (lidar) StdoutLine: {'line': b"removing '/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[4.217772] (lidar) StdoutLine: {'line': b'Copying ../../build/lidar/lidar.egg-info to /home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages/lidar-0.0.0-py3.8.egg-info\n'}
+[4.219727] (lidar) StdoutLine: {'line': b'running install_scripts\n'}
+[4.222727] (-) TimerEvent: {}
+[4.323126] (-) TimerEvent: {}
+[4.332893] (lidar) StdoutLine: {'line': b'Installing lidar script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar\n'}
+[4.333770] (lidar) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/lidar/install.log'\n"}
+[4.415297] (lidar) CommandEnded: {'returncode': 0}
+[4.423328] (-) TimerEvent: {}
+[4.453789] (lidar) JobEnded: {'identifier': 'lidar', 'rc': 0}
+[4.456068] (-) EventReactorShutdown: {}

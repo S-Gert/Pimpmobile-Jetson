@@ -20,8 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'lidar_talker = lidar.publisher_member_function:main',
-        	'lidar_listener = lidar.lidarsubscriber:main',
+        	'lidar = lidar.lidarsubscriber:main',
         ],
     },
 )

@@ -5,7 +5,7 @@ from sensor_msgs.msg import LaserScan
 from std_msgs.msg import String, Int32MultiArray
 
 
-class LidarSubscriber(Node):
+class Lidar(Node):
 
     def __init__(self):
         super().__init__('lidar_subscriber_publisher')
@@ -49,24 +49,19 @@ class LidarSubscriber(Node):
         for i in range(start_index, end_index):
             data.append(round(msg.ranges[i], 2))
         data = np.array_split(data, 5)
-
         self.obstacle_array = self.obstacles(data)
-        #self.get_logger().info('obstacles: "%s"' % self.obstacle_array)
-        #self.get_logger().info('lidar array: "%s"' % data)
 
     def timer_callback(self):
         msg = Int32MultiArray()
         msg.data = self.obstacle_array
         self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % msg.data)
-        self.i += 1
     
 
 def main(args=None):
     rclpy.init(args=args)
-    lidar_subscriber = LidarSubscriber()
-    rclpy.spin(lidar_subscriber)
-    lidar_subscriber.destroy_node()
+    lidar = Lidar()
+    rclpy.spin(lidar)
+    lidar.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

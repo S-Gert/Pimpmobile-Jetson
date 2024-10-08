@@ -5,37 +5,23 @@ class PIDController:
         self.kd = 0.0  # Derivative gain
         self.output_limits = 0  # Tuple of (min_output, max_output)
         self.integral = 0
-        self.prev_error = None
+        self.prev_error = 0.0
 
     def reset(self):
         """Reset the PID controller state."""
         self.integral = 0
-        self.prev_error = None
+        self.prev_error = 0.0
 
-    def compute(self, error, dt, output_limits):
-        """Compute the PID control output."""
-        # Integral term calculation
-        self.output_limits = (0.75 * output_limits, output_limits)
+    def compute(self, crosstrack_error, dt, max_speed):
+        proportional = crosstrack_error
+        self.integral += crosstrack_error * dt
+        derivative = (crosstrack_error - self.prev_error) / dt
 
-        self.integral += error * dt
+        pid_output = (self.kp * proportional) + (self.ki * self.integral) + (self.kd * derivative)
 
-        # Derivative term calculation
-        derivative = 0
-        if self.prev_error is not None and dt > 0:
-            derivative = (error - self.prev_error) / dt
+        self.prev_error = crosstrack_error
 
-        # PID output calculation
-        output = self.kp * error + self.ki * self.integral + self.kd * derivative
-        print(f"{self.kp = }, {self.ki = }, {self.kd = }")
+        speed = max_speed - abs(pid_output)
+        speed = max(max_speed*0.25 , min(speed, max_speed))
 
-        # Apply output limits
-        min_output, max_output = self.output_limits
-        if min_output is not None:
-            output = max(output, min_output)
-        if max_output is not None:
-            output = min(output, max_output)
-
-        # Save current error for next derivative calculation
-        self.prev_error = error
-
-        return output
+        return speed

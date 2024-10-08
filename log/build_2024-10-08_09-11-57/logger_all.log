@@ -1,0 +1,224 @@
+[0.582s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'lidar']
+[0.582s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffabd88a90>>, merge_install=False, metas=['./colcon.meta'], mixin=None, mixin_files=None, mixin_verb=('build',), packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['lidar'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffabd88a90>, verb_name='build', verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffabd95040>)
+[0.701s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.702s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pimpmobile/ros2_ws'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.736s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.736s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.736s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.736s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.736s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.738s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.740s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'ignore'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'ignore_ament_install'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['colcon_pkg']
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'colcon_pkg'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['colcon_meta']
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'colcon_meta'
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extensions ['ros']
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(src/gps_publisher) by extension 'ros'
+[0.747s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gps_publisher' with type 'ros.ament_python' and name 'gps_publisher'
+[0.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['ignore', 'ignore_ament_install']
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'ignore'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'ignore_ament_install'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['colcon_pkg']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'colcon_pkg'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['colcon_meta']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'colcon_meta'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extensions ['ros']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/lidar) by extension 'ros'
+[0.750s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lidar' with type 'ros.ament_python' and name 'lidar'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['ignore', 'ignore_ament_install']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'ignore'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'ignore_ament_install'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['colcon_pkg']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'colcon_pkg'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['colcon_meta']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'colcon_meta'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extensions ['ros']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(src/master) by extension 'ros'
+[0.753s] DEBUG:colcon.colcon_core.package_identification:Package 'src/master' with type 'ros.ament_python' and name 'master'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ignore_ament_install'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['colcon_pkg']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'colcon_pkg'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['colcon_meta']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'colcon_meta'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['ros']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'ros'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['cmake', 'python']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'cmake'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'python'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extensions ['python_setup_py']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials) by extension 'python_setup_py'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) by extension 'ignore'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/ros_tutorials) ignored
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) by extension 'ignore'
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/roscpp_tutorials) ignored
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) by extension 'ignore'
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/rospy_tutorials) ignored
+[0.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['ignore', 'ignore_ament_install']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ignore'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ignore_ament_install'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['colcon_pkg']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'colcon_pkg'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['colcon_meta']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'colcon_meta'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extensions ['ros']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_tutorials/turtlesim) by extension 'ros'
+[0.760s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_tutorials/turtlesim' with type 'ros.ament_cmake' and name 'turtlesim'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['ignore', 'ignore_ament_install']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ignore'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ignore_ament_install'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['colcon_pkg']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'colcon_pkg'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['colcon_meta']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'colcon_meta'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extensions ['ros']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam) by extension 'ros'
+[0.762s] DEBUG:colcon.colcon_core.package_identification:Package 'src/slam' with type 'ros.ament_python' and name 'slam'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['ignore', 'ignore_ament_install']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'ignore'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'ignore_ament_install'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['colcon_pkg']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'colcon_pkg'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['colcon_meta']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'colcon_meta'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extensions ['ros']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_pm) by extension 'ros'
+[0.765s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop_pm' with type 'ros.ament_python' and name 'teleop_pm'
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.812s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'gps_publisher' in 'src/gps_publisher'
+[0.812s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'master' in 'src/master'
+[0.812s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'slam' in 'src/slam'
+[0.812s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'turtlesim' in 'src/ros_tutorials/turtlesim'
+[0.812s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'teleop_pm' in 'src/teleop_pm'
+[0.813s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.813s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.818s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/pimpmobile/ldlidar_ros2_ws/install
+[0.819s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/pimpmobile/ros2_ws/install
+[0.822s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 276 installed packages in /opt/ros/foxy
+[0.825s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.940s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'lidar' is in: /home/pimpmobile/ros2_ws/install/lidar
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding lidar
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_args' from command line to 'None'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target' from command line to 'None'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_cache' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_first' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_force_configure' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'ament_cmake_args' from command line to 'None'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_cmake_args' from command line to 'None'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.943s] DEBUG:colcon.colcon_core.verb:Building package 'lidar' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pimpmobile/ros2_ws/build/lidar', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pimpmobile/ros2_ws/install/lidar', 'merge_install': False, 'path': '/home/pimpmobile/ros2_ws/src/lidar', 'symlink_install': False, 'test_result_base': None}
+[0.943s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.945s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.946s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pimpmobile/ros2_ws/src/lidar' with build type 'ament_python'
+[0.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'ament_prefix_path')
+[0.954s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.954s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/ament_prefix_path.ps1'
+[0.956s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/ament_prefix_path.dsv'
+[0.957s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/ament_prefix_path.sh'
+[0.959s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.959s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.453s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pimpmobile/ros2_ws/src/lidar'
+[1.454s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.454s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.073s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pimpmobile/ros2_ws/src/lidar': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed install_data
+[5.974s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pimpmobile/ros2_ws/src/lidar' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/lidar build --build-base /home/pimpmobile/ros2_ws/build/lidar/build install --record /home/pimpmobile/ros2_ws/build/lidar/install.log --install-scripts $base/lib/lidar --single-version-externally-managed install_data
+[5.985s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar' for CMake module files
+[5.986s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar' for CMake config files
+[5.988s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/lib'
+[5.989s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/bin'
+[5.989s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/lib/pkgconfig/lidar.pc'
+[5.990s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/lib/python3.8/site-packages'
+[5.990s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'pythonpath')
+[5.991s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/pythonpath.ps1'
+[5.993s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/pythonpath.dsv'
+[5.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/hook/pythonpath.sh'
+[5.996s] Level 1:colcon.colcon_core.environment:checking '/home/pimpmobile/ros2_ws/install/lidar/bin'
+[5.996s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar)
+[5.997s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.ps1'
+[6.000s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.dsv'
+[6.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.sh'
+[6.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.bash'
+[6.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/pimpmobile/ros2_ws/install/lidar/share/lidar/package.zsh'
+[6.007s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pimpmobile/ros2_ws/install/lidar/share/colcon-core/packages/lidar)
+[6.008s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.009s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.009s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.009s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.059s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.060s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.060s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.095s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.097s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.ps1'
+[6.100s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pimpmobile/ros2_ws/install/_local_setup_util_ps1.py'
+[6.105s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.ps1'
+[6.110s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.sh'
+[6.112s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pimpmobile/ros2_ws/install/_local_setup_util_sh.py'
+[6.113s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.sh'
+[6.118s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.bash'
+[6.120s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.bash'
+[6.125s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pimpmobile/ros2_ws/install/local_setup.zsh'
+[6.127s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pimpmobile/ros2_ws/install/setup.zsh'

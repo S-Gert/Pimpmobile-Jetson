@@ -4,7 +4,6 @@ from sensor_msgs.msg import NavSatFix
 from std_msgs.msg import String, Int32MultiArray
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy 
 from geometry_msgs.msg import PoseWithCovariance
-from master.gstreamer_host import Gstream
 
 import struct
 import numpy as np
@@ -12,34 +11,37 @@ import pandas as pd
 import threading
 import serial
 import time
-from master.odometry import Odometry
 import atexit
-import math
 
 from master.stanley_controller import Stanley
 from master.pid import PIDController
+from master.pathsave import SavePath
+from master.gstreamer_host import Gstream
+from master.cairo_gui_updater import CairoUpdater
 
 #arduino_nano_port = '/dev/ttyUSB0' # '/dev/ttyUSB1'
-arduino_port = '/dev/ttyACM0'#'/dev/ttyACM0'
+arduino_port = '/dev/ttyACM0'#'/dev/ttyACM1'
 arduino = serial.Serial(port=arduino_port, baudrate=115200, timeout=1)
 print("Opening port...")
 time.sleep(2)
 
 class Master(Node):
+    def __init__(self):
+        super().__init__('Pimpmaster')
 
-    def __init__(self, odometry_object):
-        super().__init__('Master_Code')
-
-        # Start gstreamer pipeline
+        '''
+        INITIALIZE OBJECTS
+        '''
         self.gstream_obj = Gstream()
         self.gstream_obj.start_stream()
-        
-        # Stanley object
+        self.cgui_updater = CairoUpdater(self.gstream_obj)
         self.stanley_obj = Stanley()
-
-        # PID object
         self.pid_obj = PIDController()
+        self.pathsave_obj = SavePath()
 
+        '''
+        SUBSCRIBERS
+        '''
         self.sub_lidar = self.create_subscription(
             Int32MultiArray,
             'lidar_pimp',
@@ -58,8 +60,11 @@ class Master(Node):
             self.teleop_callback,
             10)
         
-        self.sub_lidar 
-        self.sub_gps
+        '''
+        VARIABLES
+        '''
+
+        self.mainloop_running = True
 
         # Arduino mega serial
         self.arduino_line = 0
@@ -79,44 +84,43 @@ class Master(Node):
         self.to_stanley_drive_toggle = 0
         self.to_stanley_k_addition = 0
         self.to_stanley_v_addition = 0
-        self.to_reset_press_time = 0
-
-        # Camera UI variables
-        self.last_update_time = 0
 
         # GPS variables
         self.file_path: str = '/home/pimpmobile/ros2_ws/src/gps_publisher/gps_publisher/gps_log_data.csv'
         self.gps_df: pd.DataFrame = pd.read_csv(self.file_path)
         self.gps_x_col = self.gps_df["X"].values 
         self.gps_y_col = self.gps_df["Y"].values
-        self.path_yaw = self.stanley_obj.calculate_path_yaw(self.gps_x_col, self.gps_y_col) 
+        self.path_yaw = self.stanley_obj.calculate_path_yaw(self.gps_x_col, self.gps_y_col)
+        self.gps_logger_cleared = False 
 
         self.gps_robot_x = 0
         self.gps_robot_y = 0
         self.gps_robot_z = 0
-        
-        self.gps_robot_last_x, self.gps_robot_last_y = 0, 0
-        self.gps_speed_last_x, self.gps_speed_last_y = 0, 0
+    
+        self.gps_robot_last_x = 0
+        self.gps_robot_last_y = 0
 
         # Stanley variables
         self.at_final_point = False
         self.yaw = 0
-        self.mainloop_running = True
-        self.k = 0.7
-        self.v = 1.5 # 110 11.1ms
+        self.k = 0.3
+        self.v = 2.0 # 110 11.1ms
         self.k_s = 0
         self.target_index = 0
         self.absolute_distance = 0
         self.previous_time = 0
+        self.max_steering_control = np.radians(45)
 
         # PID variables
-        self.pid_obj.kp = 0.8
-        self.pid_obj.ki = 0.03
-        self.pid_obj.kd = 0.5
+        self.declare_parameter('pimp_kp', 3)
+        self.declare_parameter('pimp_ki', 0.03)
+        self.declare_parameter('pimp_kd', 0.3)
+        self.pid_obj.kp = self.get_parameter('pimp_kp').value
+        self.pid_obj.ki = self.get_parameter('pimp_ki').value
+        self.pid_obj.kd = self.get_parameter('pimp_kd').value
         self.last_dt = None
 
-        self.distance_tolerance = 0.15
-        self.max_steering_control = np.radians(45)
+
 
     def lidar_callback(self, msg):
         lid_arr = msg.data
@@ -130,6 +134,7 @@ class Master(Node):
         self.gps_robot_x = msg.pose.position.x
         self.gps_robot_y = msg.pose.position.y
         self.gps_robot_z = msg.pose.position.z
+        self.to_save_path()
 
     def write_arduino(self, values: list) -> None:
         if len(values) != 3:
@@ -145,7 +150,10 @@ class Master(Node):
             pass
 
     def check_if_at_final_point(self):
-        if self.target_index > len(self.gps_x_col) - 4:
+        '''
+        BROKEN TODO: fix it.
+        '''
+        if self.target_index > len(self.gps_x_col) - 9:
             if self.absolute_distance < 0.8:
                 self.at_final_point = True
         self.at_final_point = False
@@ -156,29 +164,22 @@ class Master(Node):
         self.gps_y_col = self.gps_df["Y"].values
         self.path_yaw = self.stanley_obj.calculate_path_yaw(self.gps_x_col, self.gps_y_col)
 
-    def teleop_callback(self, msg):
-        self.to_motors = msg.data[0]
-        self.to_servo = msg.data[1]
-        self.to_brakes = msg.data[2]
-        self.to_reverse = msg.data[3]
-        if self.to_reverse == 1:
-            self.to_motors = -self.to_motors
-        self.to_speed_limiter = msg.data[4]
-        self.to_handbrake_toggle = msg.data[5]
-        if self.to_handbrake_toggle == 1:
-            self.to_motors = 0
-            self.to_brakes = 1
-        self.to_gps_saving_toggle = msg.data[6]
-        self.to_stanley_reset = msg.data[7]
-        if self.to_stanley_reset == 1:
-            self.at_final_point = False
-            self.stanley_obj.prev_target_index = 0
-            self.update_path_yaw()
-            self.pid_obj.reset()
-            
-        self.to_stanley_drive_toggle = msg.data[8]
-        
-        self.to_stanley_k_addition = msg.data[9]
+    def to_save_path(self):
+        if self.to_gps_saving_toggle == 1:
+            if self.gps_logger_cleared == False:
+                self.pathsave_obj.clear_csv()
+                self.gps_logger_cleared = True
+            self.pathsave_obj.write_to_csv(self.gps_robot_x, self.gps_robot_y, self.gps_robot_z)
+        else:
+            self.gps_logger_cleared = False
+
+    def reset_stanley(self):
+        self.at_final_point = False
+        self.stanley_obj.prev_target_index = 0
+        self.update_path_yaw()
+        self.pid_obj.reset()
+
+    def to_update_stanley_vk(self):
         if self.to_stanley_k_addition > 0:
             self.k += 0.01
             self.k = round(self.k, 3)
@@ -186,7 +187,6 @@ class Master(Node):
             self.k -= 0.01
             self.k = round(self.k, 3)
 
-        self.to_stanley_v_addition = msg.data[10]
         if self.to_stanley_v_addition > 0:
             self.v += 0.01
             self.v = round(self.v, 3)
@@ -194,52 +194,47 @@ class Master(Node):
             self.v -= 0.01
             self.v = round(self.v, 3)
 
-
+    def teleop_callback(self, msg):
+        self.to_motors = msg.data[0]
+        self.to_servo = msg.data[1]
+        self.to_brakes = msg.data[2]
+        self.to_reverse = msg.data[3]
+        if self.to_reverse:
+            self.to_motors = -self.to_motors
+        
+        self.to_speed_limiter = msg.data[4]
+        self.to_handbrake_toggle = msg.data[5]
+        if self.to_handbrake_toggle:
+            self.to_motors = 0
+            self.to_brakes = 1
+        
+        self.to_gps_saving_toggle = msg.data[6]
+        self.to_stanley_reset = msg.data[7]
+        if self.to_stanley_reset == 1:
+            self.reset_stanley()
+            
+        self.to_stanley_drive_toggle = msg.data[8]
+        self.to_stanley_k_addition = msg.data[9]
+        self.to_stanley_v_addition = msg.data[10]
+        self.to_update_stanley_vk()
+        
 
     def update_camera_ui(self):
-        ui_update_rate = 0.5 # seconds
+        self.cgui_updater.update_speed(self.gps_robot_x, self.gps_robot_y)
+        self.cgui_updater.update_stanley_reset(self.to_stanley_reset)
+        self.cgui_updater.update_speed_limiter(self.to_speed_limiter)
+        self.cgui_updater.update_gps_status(self.gps_robot_x, self.gps_robot_y)
+        self.cgui_updater.update_stanley_params(self.k, self.v)
+        self.cgui_updater.update_pid_values(self.pid_obj.kp, self.pid_obj.ki, self.pid_obj.kd)
+        self.cgui_updater.update_gps_saving_toggle(self.to_gps_saving_toggle)
+        self.cgui_updater.update_final_point_status(self.at_final_point)
+        self.cgui_updater.update_stanley_running_status(self.to_stanley_drive_toggle)
+        self.cgui_updater.update_gear(self.to_handbrake_toggle, self.to_reverse)
 
-        self.gstream_obj.speed_limiter_text = self.to_speed_limiter
-        self.gstream_obj.gps_status_text = f"X:{self.gps_robot_x}, Y:{self.gps_robot_y}"
-
-        self.gstream_obj.stanley_k_text = self.k
-        self.gstream_obj.stanley_v_text = self.v
-
-        if self.to_stanley_reset == 1:
-            self.to_reset_press_time = time.time()
-            self.gstream_obj.stanley_path_reset_state = 1
-        elif time.time() > self.to_reset_press_time + 2:
-            self.gstream_obj.stanley_path_reset_state = 0
-
-        if self.at_final_point == True:
-            self.gstream_obj.stanley_at_final_point_text = "Path complete"
-        else:
-            self.gstream_obj.stanley_at_final_point_text = "Not complete"
-
-        if self.to_stanley_drive_toggle == 1:
-            self.gstream_obj.stanley_running_text = "Running"
-        else:
-            self.gstream_obj.stanley_running_text = "Not running"
-
-        if self.to_handbrake_toggle == 1:
-            self.gstream_obj.current_gear_text = "HB"
-        elif self.to_reverse == 1:
-            self.gstream_obj.current_gear_text = "R"
-        else:
-            self.gstream_obj.current_gear_text = "D"
-        if time.time() > self.last_update_time + ui_update_rate:
-            
-            distance = 0
-            if self.gps_robot_x - self.gps_speed_last_x != 0 and self.gps_robot_y - self.gps_speed_last_y != 0:
-                squared_difference = abs((self.gps_speed_last_x - self.gps_robot_x)**2 - (self.gps_speed_last_y - self.gps_robot_y)**2)
-                distance = math.sqrt(squared_difference)
-            
-            speed = (distance / ui_update_rate) * (1 / ui_update_rate)
-            self.gstream_obj.speed_text = round(speed, 2)
-            self.gps_speed_last_x, self.gps_speed_last_y = self.gps_robot_x, self.gps_robot_y
-            self.last_update_time = time.time()
-            #print(f"distance: {distance}, speed: {speed}")
-
+    def update_pid_params(self):
+        self.pid_obj.kp = self.get_parameter('pimp_kp').value
+        self.pid_obj.ki = self.get_parameter('pimp_ki').value
+        self.pid_obj.kd = self.get_parameter('pimp_kd').value
 
     def mainloop(self):
         """
@@ -279,11 +274,14 @@ class Master(Node):
                     dt = 0.01  # Initialize with a small time delta
                 self.last_dt = time.time()
 
+                self.update_pid_params()
                 pid_speed = self.pid_obj.compute(crosstrack_error, dt, self.v)
 
                 final_speed = int((pid_speed*100) * self.to_speed_limiter / 100)
+                
+                self.get_logger().info(f"{final_speed = }, P = {self.pid_obj.kp}, I = {self.pid_obj.ki}, D = {self.pid_obj.kd}")
                 #print(f"PID speed output: {pid_speed}, final speed: {final_speed}, dt: {dt}, speed: {self.v}")
-                print(f"------------------------------------------------------")
+                #print(f"------------------------------------------------------")
 
                 self.write_arduino([final_speed, -limited_steering_angle, 0])
                 self.arduino_line = self.read_arduino()
@@ -296,13 +294,7 @@ def exit_handler() -> None:
 
 def main(args=None):
     rclpy.init(args=args)
-    odom_object = Odometry(64, 0.44, 0.155) # odometry object 64 ticks, 44 wheel distance, 15.5 wheel radius (m)
-    m = Master(odom_object)
-
-
-    ##### Multithreading arduino nano ###
-    #encoder_read_thread = threading.Thread(target = m.read_arduino_nano_data)
-    #encoder_read_thread.start()
+    m = Master()
 
     ##### Multithreading gps log file reading and logic #####
     mainloop_thread = threading.Thread(target = m.mainloop)
@@ -312,9 +304,7 @@ def main(args=None):
     rclpy.spin(m)
 
     ##### Multithreading close ###
-    #m.nano_running = False
     m.mainloop_running = False
-    #encoder_read_thread.join()
     mainloop_thread.join()
     #####
 
