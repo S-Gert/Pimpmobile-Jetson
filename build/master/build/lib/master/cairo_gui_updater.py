@@ -43,8 +43,8 @@ class CairoUpdater():
         self.gstream_obj.stanley_k_text = k
         self.gstream_obj.stanley_v_text = v
 
-    def update_pid_values(self, kp, ki, kd):
-        self.gstream_obj.pid_values = [kp, ki, kd]
+    def update_pid_values(self, final_speed, kp, ki, kd):
+        self.gstream_obj.pid_values = [final_speed, kp, ki, kd]
 
     def update_gps_saving_toggle(self, gps_saving_toggle):
         if gps_saving_toggle == 1:

@@ -11,7 +11,7 @@ from gi.repository import Gst, GLib, GstVideo
 
 class Gstream():
     def __init__(self):
-        self.hosting_ip = "10.0.3.243"
+        self.hosting_ip = "10.0.3.244"
 
         self.user_data = {"video_info": None}
         self.width = 0
@@ -32,7 +32,7 @@ class Gstream():
         self.stanley_v_text = 0
         self.stanley_path_reset_state = 0
 
-        self.pid_values = [0, 0, 0]
+        self.pid_values = [0, 0, 0, 0]
 
     def text_overlay(self, cairo_ctx, text, x_position, y_position, font_size = 20, r = 1, g = 1, b = 1, a = 1):
         cairo_ctx.select_font_face("Sans", cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)

@@ -31,6 +31,7 @@ class Master(Node):
 
         '''
         INITIALIZE OBJECTS
+    
         '''
         self.gstream_obj = Gstream()
         self.gstream_obj.start_stream()
@@ -104,7 +105,9 @@ class Master(Node):
         self.at_final_point = False
         self.yaw = 0
         self.k = 0.3
-        self.v = 2.0 # 110 11.1ms
+        self.k_min, self.k_max = 0.3, 0.8
+        self.v = 1.5 # 110 11.1ms
+        self.v_min, self.v_max = 0.5, self.v
         self.k_s = 0
         self.target_index = 0
         self.absolute_distance = 0
@@ -112,7 +115,8 @@ class Master(Node):
         self.max_steering_control = np.radians(45)
 
         # PID variables
-        self.declare_parameter('pimp_kp', 3)
+        self.final_speed = 0
+        self.declare_parameter('pimp_kp', 2)
         self.declare_parameter('pimp_ki', 0.03)
         self.declare_parameter('pimp_kd', 0.3)
         self.pid_obj.kp = self.get_parameter('pimp_kp').value
@@ -225,7 +229,7 @@ class Master(Node):
         self.cgui_updater.update_speed_limiter(self.to_speed_limiter)
         self.cgui_updater.update_gps_status(self.gps_robot_x, self.gps_robot_y)
         self.cgui_updater.update_stanley_params(self.k, self.v)
-        self.cgui_updater.update_pid_values(self.pid_obj.kp, self.pid_obj.ki, self.pid_obj.kd)
+        self.cgui_updater.update_pid_values(self.final_speed, self.pid_obj.kp, self.pid_obj.ki, self.pid_obj.kd)
         self.cgui_updater.update_gps_saving_toggle(self.to_gps_saving_toggle)
         self.cgui_updater.update_final_point_status(self.at_final_point)
         self.cgui_updater.update_stanley_running_status(self.to_stanley_drive_toggle)
@@ -235,6 +239,10 @@ class Master(Node):
         self.pid_obj.kp = self.get_parameter('pimp_kp').value
         self.pid_obj.ki = self.get_parameter('pimp_ki').value
         self.pid_obj.kd = self.get_parameter('pimp_kd').value
+
+    def map_range(self, value, value_min ,value_max ,mapped_min ,mapped_max):
+        result = (value-value_min) * (mapped_max - mapped_min) / (value_max-value_min) + mapped_min
+        return round(result, 2)
 
     def mainloop(self):
         """
@@ -277,13 +285,15 @@ class Master(Node):
                 self.update_pid_params()
                 pid_speed = self.pid_obj.compute(crosstrack_error, dt, self.v)
 
-                final_speed = int((pid_speed*100) * self.to_speed_limiter / 100)
+                self.final_speed = int((pid_speed*100) * self.to_speed_limiter / 100)
                 
-                self.get_logger().info(f"{final_speed = }, P = {self.pid_obj.kp}, I = {self.pid_obj.ki}, D = {self.pid_obj.kd}")
+                self.get_logger().info(f"{self.final_speed = }, P = {self.pid_obj.kp}, I = {self.pid_obj.ki}, D = {self.pid_obj.kd}")
                 #print(f"PID speed output: {pid_speed}, final speed: {final_speed}, dt: {dt}, speed: {self.v}")
                 #print(f"------------------------------------------------------")
 
-                self.write_arduino([final_speed, -limited_steering_angle, 0])
+                self.k = self.map_range(pid_speed, self.v_min, self.v_max, self.k_max, self.k_min)
+
+                self.write_arduino([self.final_speed, -limited_steering_angle, self.to_brakes])
                 self.arduino_line = self.read_arduino()
 
         
