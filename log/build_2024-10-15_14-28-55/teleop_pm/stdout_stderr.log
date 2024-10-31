@@ -1,0 +1,31 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+writing ../../build/teleop_pm/teleop_pm.egg-info/PKG-INFO
+writing dependency_links to ../../build/teleop_pm/teleop_pm.egg-info/dependency_links.txt
+writing entry points to ../../build/teleop_pm/teleop_pm.egg-info/entry_points.txt
+writing requirements to ../../build/teleop_pm/teleop_pm.egg-info/requires.txt
+writing top-level names to ../../build/teleop_pm/teleop_pm.egg-info/top_level.txt
+reading manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+writing manifest file '../../build/teleop_pm/teleop_pm.egg-info/SOURCES.txt'
+running build
+running build_py
+copying teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm
+copying teleop_pm/__init__.py -> /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm
+running install
+running install_lib
+creating /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm
+copying /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm/teleop_serial.py -> /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm
+copying /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm/teleopserial.py -> /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm
+copying /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm
+copying /home/pimpmobile/ros2_ws/build/teleop_pm/build/lib/teleop_pm/__init__.py -> /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm/teleop_serial.py to teleop_serial.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm/teleopserial.py to teleopserial.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm/subscriber_member_function.py to subscriber_member_function.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm/__init__.py to __init__.cpython-310.pyc
+running install_data
+running install_egg_info
+Copying ../../build/teleop_pm/teleop_pm.egg-info to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages/teleop_pm-0.0.0-py3.10.egg-info
+running install_scripts
+Installing tops script to /home/pimpmobile/ros2_ws/install/teleop_pm/lib/teleop_pm
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/teleop_pm/install.log'

@@ -38,8 +38,8 @@ class Lidar(Node):
                 all_sectors.append(True)
             else:
                 all_sectors.append(False)
-        return all_sectors
         #self.get_logger().info('obstacles: "%s"' % all_sectors)
+        return all_sectors
 
 
     def listener_callback(self, msg):

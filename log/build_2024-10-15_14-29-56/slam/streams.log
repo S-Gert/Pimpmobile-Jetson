@@ -1,0 +1,25 @@
+[2.961s] Invoking command in '/home/pimpmobile/ros2_ws/src/slam': PYTHONPATH=/home/pimpmobile/ros2_ws/build/slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/slam build --build-base /home/pimpmobile/ros2_ws/build/slam/build install --record /home/pimpmobile/ros2_ws/build/slam/install.log --install-scripts $base/lib/slam --single-version-externally-managed install_data
+[3.456s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[3.456s]   warnings.warn(
+[3.474s] running egg_info
+[3.476s] writing ../../build/slam/slam.egg-info/PKG-INFO
+[3.477s] writing dependency_links to ../../build/slam/slam.egg-info/dependency_links.txt
+[3.477s] writing entry points to ../../build/slam/slam.egg-info/entry_points.txt
+[3.477s] writing requirements to ../../build/slam/slam.egg-info/requires.txt
+[3.478s] writing top-level names to ../../build/slam/slam.egg-info/top_level.txt
+[3.482s] reading manifest file '../../build/slam/slam.egg-info/SOURCES.txt'
+[3.484s] writing manifest file '../../build/slam/slam.egg-info/SOURCES.txt'
+[3.484s] running build
+[3.484s] running build_py
+[3.485s] running install
+[3.486s] running install_lib
+[3.488s] byte-compiling /home/pimpmobile/ros2_ws/install/slam/lib/python3.10/site-packages/slam/odometry.py to odometry.cpython-310.pyc
+[3.489s] Sorry: IndentationError: expected an indented block after function definition on line 24 (odometry.py, line 28)
+[3.489s] running install_data
+[3.489s] running install_egg_info
+[3.493s] removing '/home/pimpmobile/ros2_ws/install/slam/lib/python3.10/site-packages/slam-0.0.0-py3.10.egg-info' (and everything under it)
+[3.494s] Copying ../../build/slam/slam.egg-info to /home/pimpmobile/ros2_ws/install/slam/lib/python3.10/site-packages/slam-0.0.0-py3.10.egg-info
+[3.496s] running install_scripts
+[3.543s] Installing odometry script to /home/pimpmobile/ros2_ws/install/slam/lib/slam
+[3.544s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/slam/install.log'
+[3.629s] Invoked command in '/home/pimpmobile/ros2_ws/src/slam' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/slam/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/slam build --build-base /home/pimpmobile/ros2_ws/build/slam/build install --record /home/pimpmobile/ros2_ws/build/slam/install.log --install-scripts $base/lib/slam --single-version-externally-managed install_data

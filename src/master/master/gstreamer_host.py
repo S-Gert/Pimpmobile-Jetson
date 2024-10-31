@@ -2,6 +2,7 @@ from threading import Thread
 import gi
 import time
 import cv2
+from ultralytics import YOLO
 
 import cairo
 
@@ -11,15 +12,11 @@ from gi.repository import Gst, GLib, GstVideo
 
 class Gstream():
     def __init__(self):
-        self.hosting_ip = "10.0.3.244"
+        self.hosting_ip = "10.0.6.239"
 
         self.user_data = {"video_info": None}
-        self.width = 0
-        self.height = 0
-
-        self.text_display_start_time = 0
-        self.is_text_displaying = False
-        self.text_display_duration = 3
+        self.width = 1280
+        self.height = 720
 
         self.speed_text = 0
         self.stanley_running_text = "Not running"
@@ -49,7 +46,7 @@ class Gstream():
 
         cairo_ctx.set_source_rgba(r, g, b, a)
         cairo_ctx.move_to(x_position, y_position)
-        cairo_ctx.show_text(text) 
+        cairo_ctx.show_text(text)
 
     def draw_overlay(self, cairo_ctx):
         image_surface = cairo.ImageSurface.create_from_png("/home/pimpmobile/ros2_ws/src/master/icons/pimpmyride.png")
@@ -122,14 +119,13 @@ class Gstream():
         #TODO: MINIMAP
 
     def on_draw_callback(self, overlay, cairo_ctx, timestamp, duration, user_data):
-        # Get the video frame information (width, height, etc.)
         video_info = self.user_data["video_info"]
 
         if video_info is None:
             return
         
-        self.width = video_info.width
-        self.height = video_info.height
+        #self.width = video_info.width
+        #self.height = video_info.height
         
         self.draw_overlay(cairo_ctx)
 
@@ -157,6 +153,7 @@ class Gstream():
             "rtph264pay ! "
             f"udpsink host={self.hosting_ip} port=5000 sync=false"
         )
+
 
         self.overlay = self.pipeline.get_by_name("overlay")
         

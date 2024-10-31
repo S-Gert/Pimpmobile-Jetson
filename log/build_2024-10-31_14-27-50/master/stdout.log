@@ -1,0 +1,31 @@
+running egg_info
+writing ../../build/master/master.egg-info/PKG-INFO
+writing dependency_links to ../../build/master/master.egg-info/dependency_links.txt
+writing entry points to ../../build/master/master.egg-info/entry_points.txt
+writing requirements to ../../build/master/master.egg-info/requires.txt
+writing top-level names to ../../build/master/master.egg-info/top_level.txt
+reading manifest file '../../build/master/master.egg-info/SOURCES.txt'
+writing manifest file '../../build/master/master.egg-info/SOURCES.txt'
+running build
+running build_py
+copying master/stream_host.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/yolo.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/gstreamer_host.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+copying master/cairo_overlay.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+running install
+running install_lib
+copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/stream_host.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master
+copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/yolo.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master
+copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/gstreamer_host.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master
+copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/cairo_overlay.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master
+byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/stream_host.py to stream_host.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/yolo.py to yolo.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/gstreamer_host.py to gstreamer_host.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/cairo_overlay.py to cairo_overlay.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/master/master.egg-info to /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master-0.0.0-py3.10.egg-info
+running install_scripts
+Installing master script to /home/pimpmobile/ros2_ws/install/master/lib/master
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/master/install.log'

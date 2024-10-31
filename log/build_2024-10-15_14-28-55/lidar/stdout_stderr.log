@@ -1,0 +1,35 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running egg_info
+writing ../../build/lidar/lidar.egg-info/PKG-INFO
+writing dependency_links to ../../build/lidar/lidar.egg-info/dependency_links.txt
+writing entry points to ../../build/lidar/lidar.egg-info/entry_points.txt
+writing requirements to ../../build/lidar/lidar.egg-info/requires.txt
+writing top-level names to ../../build/lidar/lidar.egg-info/top_level.txt
+reading manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+writing manifest file '../../build/lidar/lidar.egg-info/SOURCES.txt'
+running build
+running build_py
+copying lidar/lidarsubscriber.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+copying lidar/__init__.py -> /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar
+running install
+running install_lib
+creating /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/publisher_member_function.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/lidar_subscriber_node.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/lidarsubscriber.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/subscriber_member_function.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar
+copying /home/pimpmobile/ros2_ws/build/lidar/build/lib/lidar/__init__.py -> /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar/publisher_member_function.py to publisher_member_function.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar/lidar_subscriber_node.py to lidar_subscriber_node.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar/lidarsubscriber.py to lidarsubscriber.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar/subscriber_member_function.py to subscriber_member_function.cpython-310.pyc
+byte-compiling /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/lidar -> /home/pimpmobile/ros2_ws/install/lidar/share/ament_index/resource_index/packages
+copying package.xml -> /home/pimpmobile/ros2_ws/install/lidar/share/lidar
+running install_egg_info
+Copying ../../build/lidar/lidar.egg-info to /home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages/lidar-0.0.0-py3.10.egg-info
+running install_scripts
+Installing lidar script to /home/pimpmobile/ros2_ws/install/lidar/lib/lidar
+writing list of installed files to '/home/pimpmobile/ros2_ws/build/lidar/install.log'
