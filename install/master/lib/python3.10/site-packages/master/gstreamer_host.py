@@ -18,10 +18,6 @@ class Gstream():
         self.width = 1280
         self.height = 720
 
-        self.text_display_start_time = 0
-        self.is_text_displaying = False
-        self.text_display_duration = 3
-
         self.speed_text = 0
         self.stanley_running_text = "Not running"
         self.current_gear_text = ""
@@ -123,7 +119,6 @@ class Gstream():
         #TODO: MINIMAP
 
     def on_draw_callback(self, overlay, cairo_ctx, timestamp, duration, user_data):
-        # Get the video frame information (width, height, etc.)
         video_info = self.user_data["video_info"]
 
         if video_info is None:
@@ -158,6 +153,7 @@ class Gstream():
             "rtph264pay ! "
             f"udpsink host={self.hosting_ip} port=5000 sync=false"
         )
+
 
         self.overlay = self.pipeline.get_by_name("overlay")
         

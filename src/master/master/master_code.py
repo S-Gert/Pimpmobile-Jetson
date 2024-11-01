@@ -16,7 +16,7 @@ import atexit
 from master.stanley_controller import Stanley
 from master.pid import PIDController
 from master.pathsave import SavePath
-from master.gstreamer_host import Gstream
+from master.stream_host import Gstream
 from master.cairo_gui_updater import CairoUpdater
 
 #arduino_nano_port = '/dev/ttyUSB0' # '/dev/ttyUSB1'
@@ -33,9 +33,9 @@ class Master(Node):
         INITIALIZE OBJECTS
     
         '''
-        self.gstream_obj = Gstream()
-        self.gstream_obj.start_stream()
-        self.cgui_updater = CairoUpdater(self.gstream_obj)
+        self.stream_object = Gstream()
+        self.cgui_updater = CairoUpdater(self.stream_object.get_cairo_overlay_object())
+        self.stream_object.start_stream_in_thread()
         self.stanley_obj = Stanley()
         self.pid_obj = PIDController()
         self.pathsave_obj = SavePath()

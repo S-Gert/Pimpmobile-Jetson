@@ -1,0 +1,34 @@
+[1.545s] Invoking command in '/home/pimpmobile/ros2_ws/src/master': PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed install_data
+[2.053s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[2.053s]   warnings.warn(
+[2.072s] running egg_info
+[2.073s] writing ../../build/master/master.egg-info/PKG-INFO
+[2.073s] writing dependency_links to ../../build/master/master.egg-info/dependency_links.txt
+[2.074s] writing entry points to ../../build/master/master.egg-info/entry_points.txt
+[2.074s] writing requirements to ../../build/master/master.egg-info/requires.txt
+[2.075s] writing top-level names to ../../build/master/master.egg-info/top_level.txt
+[2.078s] reading manifest file '../../build/master/master.egg-info/SOURCES.txt'
+[2.081s] writing manifest file '../../build/master/master.egg-info/SOURCES.txt'
+[2.081s] running build
+[2.081s] running build_py
+[2.082s] copying master/stream_host.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[2.082s] copying master/gstreamer_host.py -> /home/pimpmobile/ros2_ws/build/master/build/lib/master
+[2.083s] running install
+[2.084s] running install_lib
+[2.085s] copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/stream_host.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master
+[2.087s] copying /home/pimpmobile/ros2_ws/build/master/build/lib/master/gstreamer_host.py -> /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master
+[2.088s]   File "/home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/stream_host.py", line 8
+[2.089s]     def __init__:
+[2.089s]                 ^
+[2.089s] SyntaxError: invalid syntax
+[2.089s] 
+[2.089s] byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/stream_host.py to stream_host.cpython-310.pyc
+[2.090s] byte-compiling /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/gstreamer_host.py to gstreamer_host.cpython-310.pyc
+[2.091s] running install_data
+[2.091s] running install_egg_info
+[2.096s] removing '/home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master-0.0.0-py3.10.egg-info' (and everything under it)
+[2.097s] Copying ../../build/master/master.egg-info to /home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master-0.0.0-py3.10.egg-info
+[2.100s] running install_scripts
+[2.147s] Installing master script to /home/pimpmobile/ros2_ws/install/master/lib/master
+[2.149s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/master/install.log'
+[2.223s] Invoked command in '/home/pimpmobile/ros2_ws/src/master' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/master/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/master build --build-base /home/pimpmobile/ros2_ws/build/master/build install --record /home/pimpmobile/ros2_ws/build/master/install.log --install-scripts $base/lib/master --single-version-externally-managed install_data

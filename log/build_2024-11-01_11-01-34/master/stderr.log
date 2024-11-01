@@ -1,0 +1,7 @@
+/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+  File "/home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages/master/stream_host.py", line 8
+    def __init__:
+                ^
+SyntaxError: invalid syntax
+
