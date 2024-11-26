@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import cairo
 import threading
+import time
 from master.cairo_overlay import CairoOverlay
 from master.yolovision import YoloPimp
 
@@ -13,7 +14,7 @@ class Gstream():
         source = 0
         hosting_ip = "10.0.6.239"
         port = 5007
-        fps = 30.0
+        fps = 60.0
         self.width = 1280
         self.height = 720
 
@@ -26,8 +27,8 @@ class Gstream():
 
         #TODO: mjpeg format, ultrafast jne jne jne
         gst_str = (
-            f"appsrc ! video/x-raw,format=BGR,self.width={self.width},self.height={self.height},framerate={int(fps)}/1 ! "
-            f"videoconvert ! x264enc tune=zerolatency bitrate=5000 speed-preset=ultrafast ! "
+            f"appsrc ! queue ! video/x-raw,format=BGR,self.width={self.width},self.height={self.height},framerate={int(fps)}/1 ! "
+            f"videoconvert ! queue ! x264enc tune=zerolatency bitrate=2000 speed-preset=veryfast ! "
             f"rtph264pay ! udpsink host={hosting_ip} port={port} sync=false async=false "
         )
 
@@ -37,43 +38,63 @@ class Gstream():
         return self.cairo_overlay_obj
 
     def draw_yolo_overlay(self, results):
+        if results is None:
+            return
+
         for result in results:
-            boxes = result.boxes
-            masks = result.masks
+            # Extract bounding boxes and masks
+            boxes = result.boxes  # YOLO detection bounding boxes
+            masks = result.masks  # YOLO instance segmentation masks (if any)
 
+            # Draw bounding boxes
+            if boxes is not None:
+                for box in boxes:
+                    x1, y1, x2, y2 = map(int, box.xyxy)
+                    class_id = int(box.cls)
+                    score = box.conf
+
+                    color = tuple(np.random.randint(0, 255, 3).tolist())
+                    label = f"Class {class_id}: {score:.2f}"
+
+                    cv2.rectangle(self.annotated_frame, (x1, y1), (x2, y2), color, 2)
+                    cv2.putText(
+                        self.annotated_frame,
+                        label,
+                        (x1, y1 - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        0.5,
+                        color,
+                        2,
+                    )
             if masks is not None:
-                self.annotated_frame = result.plot()
+                for mask in masks:
+                    binary_mask = mask.data > 0.5
+                    color_mask = np.random.randint(0, 255, (1, 3), dtype=np.uint8)
 
-            for box in boxes:
-                xyxy = box.xyxy[0].cpu().numpy().astype(int)
-                x_min, y_min, x_max, y_max = xyxy
+                    self.annotated_frame[binary_mask] = (
+                        self.annotated_frame[binary_mask] * 0.5 + color_mask * 0.5
+                    ).astype(np.uint8)
 
-                x_center = int((x_min + x_max) / 2)
-                y_center = int((y_min + y_max) / 2)
-
-                position = ((x_center - (self.width / 2)) / (self.width / 2)) * 100
-                position = int(position) 
-                position_text = f"Offset: {position}"
-                print(position_text)
-                cv2.putText(self.annotated_frame, position_text, (x_min, y_min - 10),
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-                cv2.circle(self.annotated_frame, (x_center, y_center), 5, (0, 255, 0), -1)
 
     def start_stream(self):
         if not self.cvgstream_output.isOpened():
             print("Error: Could not open GStreamer pipeline.")
             self.cap.release()
             exit()
-        
+        results = None
         try:
+            time_end = 0
             while True:
+                time_start = time.time()
                 ret, frame = self.cap.read()
                 if not ret:
                     print("Error: Failed to read frame from camera.")
                     break
 
                 try:
-                    results = self.yolo_obj.predict(frame)
+                    if time_start > time_end + 0.5:
+                        results = self.yolo_obj.predict(frame)
+                        time_end = time.time()
                 except Exception as e:
                     print(f"Error during YOLO prediction: {e}")
                     continue

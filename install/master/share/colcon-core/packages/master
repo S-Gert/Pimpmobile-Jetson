@@ -1,1 +1,1 @@
-cv2:math:odometry:rclpy:serial:std_msgs
+cv2:cv_bridge:math:odometry:rclpy:sensor_msgs:serial:std_msgs

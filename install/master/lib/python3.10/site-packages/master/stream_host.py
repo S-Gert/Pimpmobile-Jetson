@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import cairo
 import threading
+import time
 from master.cairo_overlay import CairoOverlay
 from master.yolovision import YoloPimp
 
@@ -13,7 +14,7 @@ class Gstream():
         source = 0
         hosting_ip = "10.0.6.239"
         port = 5007
-        fps = 30.0
+        fps = 60.0
         self.width = 1280
         self.height = 720
 
@@ -26,16 +27,19 @@ class Gstream():
 
         #TODO: mjpeg format, ultrafast jne jne jne
         gst_str = (
-            f"appsrc ! video/x-raw,format=BGR,self.width={self.width},self.height={self.height},framerate={int(fps)}/1 ! "
-            f"videoconvert ! x264enc tune=zerolatency bitrate=1500 speed-preset=superfast ! "
-            f"rtph264pay ! udpsink host={hosting_ip} port={port}"
+            f"appsrc ! queue ! video/x-raw,format=BGR,self.width={self.width},self.height={self.height},framerate={int(fps)}/1 ! "
+            f"videoconvert ! queue ! x264enc tune=zerolatency bitrate=2000 speed-preset=veryfast ! "
+            f"rtph264pay ! udpsink host={hosting_ip} port={port} sync=false async=false "
         )
+
         self.cvgstream_output = cv2.VideoWriter(gst_str, cv2.CAP_GSTREAMER, 0, fps, (self.width, self.height), True)
 
     def get_cairo_overlay_object(self):
         return self.cairo_overlay_obj
 
     def draw_yolo_overlay(self, results):
+        if results == None:
+            return
         for result in results:
             boxes = result.boxes
             masks = result.masks
@@ -54,31 +58,35 @@ class Gstream():
                 position = int(position) 
                 position_text = f"Offset: {position}"
                 print(position_text)
-                cv2.putText(self.annotated_frame, position_text, (x_min, y_min - 10),
-                           cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-                cv2.circle(self.annotated_frame, (x_center, y_center), 5, (0, 255, 0), -1)
+                # cv2.putText(self.annotated_frame, position_text, (x_min, y_min - 10),
+                #            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                # cv2.circle(self.annotated_frame, (x_center, y_center), 5, (0, 255, 0), -1)
 
     def start_stream(self):
         if not self.cvgstream_output.isOpened():
             print("Error: Could not open GStreamer pipeline.")
             self.cap.release()
             exit()
-        
+        results = None
         try:
+            time_end = 0
             while True:
+                time_start = time.time()
                 ret, frame = self.cap.read()
                 if not ret:
                     print("Error: Failed to read frame from camera.")
                     break
 
                 try:
-                    results = self.yolo_obj.predict(frame)
+                    if time_start > time_end + 0.5:
+                        results = self.yolo_obj.predict(frame)
+                        time_end = time.time()
                 except Exception as e:
                     print(f"Error during YOLO prediction: {e}")
                     continue
 
                 self.annotated_frame = frame.copy()
-                self.draw_yolo_overlay(results)
+                #self.draw_yolo_overlay(results)
 
 
                 # Create Cairo overlay for each frame
@@ -91,7 +99,9 @@ class Gstream():
 
                 # Convert the Cairo overlay to BGR and blend it with the frame
                 overlay_bgr = cv2.cvtColor(overlay, cv2.COLOR_BGRA2BGR)
-                self.annotated_frame = cv2.addWeighted(self.annotated_frame, 1.0, overlay_bgr, 1, 0)
+                #overlay_bgr = cv2.cvtColor(overlay, cv2.COLOR_BGR2YUV_I420)
+
+                self.annotated_frame = cv2.addWeighted(self.annotated_frame, 1, overlay_bgr, 1.5, 0)
 
                 self.cvgstream_output.write(self.annotated_frame)
 

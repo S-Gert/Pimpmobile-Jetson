@@ -12,13 +12,13 @@ icons/pimpmyride.png
 master/__init__.py
 master/cairo_gui_updater.py
 master/cairo_overlay.py
-master/gstreamer_host.py
 master/master_code.py
 master/odometry.py
 master/pathsave.py
 master/pid.py
 master/stanley_controller.py
 master/stream_host.py
+master/stream_host2.py
 master/yolovision.py
 master/build/.built_by
 master/build/COLCON_IGNORE

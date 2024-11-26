@@ -30,18 +30,19 @@ class Master(Node):
         super().__init__('Pimpmaster')
 
         '''
-        INITIALIZE OBJECTS
+        Initialize objects.
     
         '''
         self.stream_object = Gstream()
         self.cgui_updater = CairoUpdater(self.stream_object.get_cairo_overlay_object())
         self.stream_object.start_stream_in_thread()
+        
         self.stanley_obj = Stanley()
         self.pid_obj = PIDController()
         self.pathsave_obj = SavePath()
 
         '''
-        SUBSCRIBERS
+        Subscribers
         '''
         self.sub_lidar = self.create_subscription(
             Int32MultiArray,
@@ -259,6 +260,7 @@ class Master(Node):
             
             self.update_camera_ui()
 
+            # TODO: fix lidar or find alternative
             # Stanley #### and not self.obstacle
             while not self.at_final_point and (self.arduino_line == 1500 or self.to_stanley_drive_toggle == 1):
                 self.update_camera_ui()

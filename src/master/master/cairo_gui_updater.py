@@ -3,6 +3,9 @@ import time
 import math
 
 class CairoUpdater():
+    '''
+    Used with master to update cairo_overlay.py variables.
+    '''
     def __init__(self, cairo_overlay_object):
         self.cairo_overlay_obj = cairo_overlay_object
 

@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
         	'master = master.master_code:main',
+            'ros_stream = master.stream_host2:main',
         ],
     },
 )

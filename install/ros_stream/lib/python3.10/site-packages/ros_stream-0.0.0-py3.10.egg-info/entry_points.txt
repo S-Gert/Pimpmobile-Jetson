@@ -1,0 +1,3 @@
+[console_scripts]
+video_stream = ros_stream.stream_host_test:main
+

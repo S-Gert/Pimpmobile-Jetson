@@ -1,0 +1,67 @@
+[0.000000] (-) TimerEvent: {}
+[0.000600] (-) JobUnselected: {'identifier': 'gps_publisher'}
+[0.001082] (-) JobUnselected: {'identifier': 'lidar'}
+[0.001395] (-) JobUnselected: {'identifier': 'master'}
+[0.001673] (-) JobUnselected: {'identifier': 'slam'}
+[0.001767] (-) JobUnselected: {'identifier': 'teleop_pm'}
+[0.001848] (ros_stream) JobQueued: {'identifier': 'ros_stream', 'dependencies': OrderedDict()}
+[0.001924] (ros_stream) JobStarted: {'identifier': 'ros_stream'}
+[0.099439] (-) TimerEvent: {}
+[0.200035] (-) TimerEvent: {}
+[0.300653] (-) TimerEvent: {}
+[0.401251] (-) TimerEvent: {}
+[0.501859] (-) TimerEvent: {}
+[0.602431] (-) TimerEvent: {}
+[0.703037] (-) TimerEvent: {}
+[0.803658] (-) TimerEvent: {}
+[0.904252] (-) TimerEvent: {}
+[1.004836] (-) TimerEvent: {}
+[1.105435] (-) TimerEvent: {}
+[1.206038] (-) TimerEvent: {}
+[1.306684] (-) TimerEvent: {}
+[1.376312] (ros_stream) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ros_stream', 'build', '--build-base', '/home/pimpmobile/ros2_ws/build/ros_stream/build', 'install', '--record', '/home/pimpmobile/ros2_ws/build/ros_stream/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/pimpmobile/ros2_ws/src/ros_stream', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pimpmobile', 'SSH_CLIENT': '10.0.6.249 54726 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pimpmobile/ros2_ws/install/turtlesim/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:', 'MOTD_SHOWN': 'pam', 'HOME': '/home/pimpmobile', 'OLDPWD': '/home/pimpmobile/ros2_ws/src', 'SSH_TTY': '/dev/pts/5', 'JETSON_L4T': '36.4.0', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Jetson Orin Nano Developer Kit', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/pimpmobile/ros2_ws/install:/home/pimpmobile/ldlidar_ros2_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'pimpmobile', 'JETSON_MODULE': 'NVIDIA Jetson Orin Nano (Developer kit)', 'JETSON_SERIAL_NUMBER': '1421823044971', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '11', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/pimpmobile/.local/bin:/usr/local/cuda-12.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra234', 'AMENT_PREFIX_PATH': '/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ros2_ws/install/teleop_pm:/home/pimpmobile/ros2_ws/install/slam:/home/pimpmobile/ros2_ws/install/master:/home/pimpmobile/ros2_ws/install/lidar:/home/pimpmobile/ros2_ws/install/gps_publisher:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/pimpmobile/ros2_ws/build/ros_stream', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '10.0.6.249 54726 10.0.6.47 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pimpmobile/ros2_ws/build/ros_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages:/home/pimpmobile/ros2_ws/install/turtlesim/lib/python3.8/site-packages:/home/pimpmobile/ros2_ws/install/teleop_pm/lib/python3.10/site-packages:/home/pimpmobile/ros2_ws/install/slam/lib/python3.10/site-packages:/home/pimpmobile/ros2_ws/install/master/lib/python3.10/site-packages:/home/pimpmobile/ros2_ws/install/lidar/lib/python3.10/site-packages:/home/pimpmobile/ros2_ws/install/gps_publisher/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'JETSON_JETPACK': '6.1', 'CMAKE_PREFIX_PATH': '/home/pimpmobile/ros2_ws/install/turtlesim:/home/pimpmobile/ldlidar_ros2_ws/install/ldlidar_stl_ros2', 'JETSON_P_NUMBER': 'p3767-0005'}, 'shell': False}
+[1.406795] (-) TimerEvent: {}
+[1.507359] (-) TimerEvent: {}
+[1.607967] (-) TimerEvent: {}
+[1.708568] (-) TimerEvent: {}
+[1.809167] (-) TimerEvent: {}
+[1.868959] (ros_stream) StdoutLine: {'line': b'running egg_info\n'}
+[1.870157] (ros_stream) StdoutLine: {'line': b'creating ../../build/ros_stream/ros_stream.egg-info\n'}
+[1.870574] (ros_stream) StdoutLine: {'line': b'writing ../../build/ros_stream/ros_stream.egg-info/PKG-INFO\n'}
+[1.871084] (ros_stream) StdoutLine: {'line': b'writing dependency_links to ../../build/ros_stream/ros_stream.egg-info/dependency_links.txt\n'}
+[1.871412] (ros_stream) StdoutLine: {'line': b'writing entry points to ../../build/ros_stream/ros_stream.egg-info/entry_points.txt\n'}
+[1.871622] (ros_stream) StdoutLine: {'line': b'writing requirements to ../../build/ros_stream/ros_stream.egg-info/requires.txt\n'}
+[1.871813] (ros_stream) StdoutLine: {'line': b'writing top-level names to ../../build/ros_stream/ros_stream.egg-info/top_level.txt\n'}
+[1.872176] (ros_stream) StdoutLine: {'line': b"writing manifest file '../../build/ros_stream/ros_stream.egg-info/SOURCES.txt'\n"}
+[1.875368] (ros_stream) StdoutLine: {'line': b"reading manifest file '../../build/ros_stream/ros_stream.egg-info/SOURCES.txt'\n"}
+[1.876677] (ros_stream) StdoutLine: {'line': b"writing manifest file '../../build/ros_stream/ros_stream.egg-info/SOURCES.txt'\n"}
+[1.876926] (ros_stream) StdoutLine: {'line': b'running build\n'}
+[1.877119] (ros_stream) StdoutLine: {'line': b'running build_py\n'}
+[1.877390] (ros_stream) StdoutLine: {'line': b'creating /home/pimpmobile/ros2_ws/build/ros_stream/build\n'}
+[1.877632] (ros_stream) StdoutLine: {'line': b'creating /home/pimpmobile/ros2_ws/build/ros_stream/build/lib\n'}
+[1.877816] (ros_stream) StdoutLine: {'line': b'creating /home/pimpmobile/ros2_ws/build/ros_stream/build/lib/ros_stream\n'}
+[1.877962] (ros_stream) StdoutLine: {'line': b'copying ros_stream/__init__.py -> /home/pimpmobile/ros2_ws/build/ros_stream/build/lib/ros_stream\n'}
+[1.878134] (ros_stream) StdoutLine: {'line': b'copying ros_stream/stream_host_test.py -> /home/pimpmobile/ros2_ws/build/ros_stream/build/lib/ros_stream\n'}
+[1.878562] (ros_stream) StdoutLine: {'line': b'running install\n'}
+[1.879061] (ros_stream) StdoutLine: {'line': b'running install_lib\n'}
+[1.880726] (ros_stream) StdoutLine: {'line': b'creating /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream\n'}
+[1.880948] (ros_stream) StdoutLine: {'line': b'copying /home/pimpmobile/ros2_ws/build/ros_stream/build/lib/ros_stream/__init__.py -> /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream\n'}
+[1.881160] (ros_stream) StdoutLine: {'line': b'copying /home/pimpmobile/ros2_ws/build/ros_stream/build/lib/ros_stream/stream_host_test.py -> /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream\n'}
+[1.882364] (ros_stream) StdoutLine: {'line': b'byte-compiling /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream/__init__.py to __init__.cpython-310.pyc\n'}
+[1.882876] (ros_stream) StdoutLine: {'line': b'byte-compiling /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream/stream_host_test.py to stream_host_test.cpython-310.pyc\n'}
+[1.883988] (ros_stream) StdoutLine: {'line': b'running install_data\n'}
+[1.884433] (ros_stream) StdoutLine: {'line': b'creating /home/pimpmobile/ros2_ws/install/ros_stream/share/ament_index\n'}
+[1.884664] (ros_stream) StdoutLine: {'line': b'creating /home/pimpmobile/ros2_ws/install/ros_stream/share/ament_index/resource_index\n'}
+[1.884848] (ros_stream) StdoutLine: {'line': b'creating /home/pimpmobile/ros2_ws/install/ros_stream/share/ament_index/resource_index/packages\n'}
+[1.885027] (ros_stream) StdoutLine: {'line': b'copying resource/ros_stream -> /home/pimpmobile/ros2_ws/install/ros_stream/share/ament_index/resource_index/packages\n'}
+[1.885165] (ros_stream) StdoutLine: {'line': b'copying package.xml -> /home/pimpmobile/ros2_ws/install/ros_stream/share/ros_stream\n'}
+[1.885322] (ros_stream) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.888704] (ros_stream) StdoutLine: {'line': b'Copying ../../build/ros_stream/ros_stream.egg-info to /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream-0.0.0-py3.10.egg-info\n'}
+[1.890682] (ros_stream) StdoutLine: {'line': b'running install_scripts\n'}
+[1.909256] (-) TimerEvent: {}
+[1.932767] (ros_stream) StdoutLine: {'line': b'Installing video_stream script to /home/pimpmobile/ros2_ws/install/ros_stream/lib/ros_stream\n'}
+[1.933640] (ros_stream) StdoutLine: {'line': b"writing list of installed files to '/home/pimpmobile/ros2_ws/build/ros_stream/install.log'\n"}
+[1.997932] (ros_stream) CommandEnded: {'returncode': 0}
+[2.009517] (-) TimerEvent: {}
+[2.037101] (ros_stream) JobEnded: {'identifier': 'ros_stream', 'rc': 0}
+[2.039275] (-) EventReactorShutdown: {}

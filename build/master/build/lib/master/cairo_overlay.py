@@ -1,6 +1,9 @@
 import cairo
 
 class CairoOverlay():
+    '''
+    Used with stream_host.py to show cairo overlay data.
+    '''
     def __init__(self, width=1280, height=720):
         self.user_data = {"video_info": None}
         self.width = width
