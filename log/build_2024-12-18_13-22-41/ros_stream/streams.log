@@ -1,0 +1,24 @@
+[3.738s] Invoking command in '/home/pimpmobile/ros2_ws/src/ros_stream': PYTHONPATH=/home/pimpmobile/ros2_ws/build/ros_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros_stream build --build-base /home/pimpmobile/ros2_ws/build/ros_stream/build install --record /home/pimpmobile/ros2_ws/build/ros_stream/install.log --single-version-externally-managed install_data
+[4.274s] running egg_info
+[4.275s] writing ../../build/ros_stream/ros_stream.egg-info/PKG-INFO
+[4.276s] writing dependency_links to ../../build/ros_stream/ros_stream.egg-info/dependency_links.txt
+[4.277s] writing entry points to ../../build/ros_stream/ros_stream.egg-info/entry_points.txt
+[4.277s] writing requirements to ../../build/ros_stream/ros_stream.egg-info/requires.txt
+[4.277s] writing top-level names to ../../build/ros_stream/ros_stream.egg-info/top_level.txt
+[4.282s] reading manifest file '../../build/ros_stream/ros_stream.egg-info/SOURCES.txt'
+[4.284s] writing manifest file '../../build/ros_stream/ros_stream.egg-info/SOURCES.txt'
+[4.285s] running build
+[4.286s] running build_py
+[4.287s] copying ros_stream/stream_host_test.py -> /home/pimpmobile/ros2_ws/build/ros_stream/build/lib/ros_stream
+[4.288s] running install
+[4.288s] running install_lib
+[4.289s] copying /home/pimpmobile/ros2_ws/build/ros_stream/build/lib/ros_stream/stream_host_test.py -> /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream
+[4.291s] byte-compiling /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream/stream_host_test.py to stream_host_test.cpython-310.pyc
+[4.293s] running install_data
+[4.294s] running install_egg_info
+[4.298s] removing '/home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream-0.0.0-py3.10.egg-info' (and everything under it)
+[4.299s] Copying ../../build/ros_stream/ros_stream.egg-info to /home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages/ros_stream-0.0.0-py3.10.egg-info
+[4.301s] running install_scripts
+[4.351s] Installing video_stream script to /home/pimpmobile/ros2_ws/install/ros_stream/lib/ros_stream
+[4.352s] writing list of installed files to '/home/pimpmobile/ros2_ws/build/ros_stream/install.log'
+[4.467s] Invoked command in '/home/pimpmobile/ros2_ws/src/ros_stream' returned '0': PYTHONPATH=/home/pimpmobile/ros2_ws/build/ros_stream/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pimpmobile/ros2_ws/install/ros_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros_stream build --build-base /home/pimpmobile/ros2_ws/build/ros_stream/build install --record /home/pimpmobile/ros2_ws/build/ros_stream/install.log --single-version-externally-managed install_data

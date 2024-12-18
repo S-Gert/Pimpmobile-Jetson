@@ -25,9 +25,9 @@ except serial.SerialException as e:
 class GpsPublisher(Node):
     def __init__(self):
         super().__init__('gps_publisher')
-        #self.publisher_raw_ = self.create_publisher(NavSatFix, 'gps_raw_data_pimp', 10)
+        self.publisher_raw_ = self.create_publisher(NavSatFix, 'gps_raw_data_pimp', 10)
         timer_period = 0.05  # seconds
-        #self.timer_raw = self.create_timer(timer_period, self.gps_callback)
+        self.timer_raw = self.create_timer(timer_period, self.gps_callback)
 
         self.publisher_enu_ = self.create_publisher(PoseWithCovariance, 'gps_enu_pimp', 10)
         self.timer_enu = self.create_timer(timer_period, self.enu_callback)

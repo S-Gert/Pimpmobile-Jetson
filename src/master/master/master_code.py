@@ -107,7 +107,7 @@ class Master(Node):
         self.yaw = 0
         self.k = 0.3
         self.k_min, self.k_max = 0.3, 0.8
-        self.v = 1.5 # 110 11.1ms
+        self.v = 1.1 # 110 11.1ms
         self.v_min, self.v_max = 0.5, self.v
         self.k_s = 0
         self.target_index = 0
@@ -245,6 +245,13 @@ class Master(Node):
         result = (value-value_min) * (mapped_max - mapped_min) / (value_max-value_min) + mapped_min
         return round(result, 2)
 
+    def is_cone_obstacle(self):
+        cone_detected = self.stream_object.area_limit_exceeded
+        if cone_detected:
+            self.obstacle = True
+        else:
+            self.obstacle = False
+
     def mainloop(self):
         """
         Runs on seperate thread, doing all the gps logic
@@ -256,15 +263,16 @@ class Master(Node):
 
         while self.mainloop_running:
             self.arduino_line = self.read_arduino()
+            
             self.write_arduino([int(self.to_motors*self.to_speed_limiter / 100), self.to_servo, self.to_brakes])
             
             self.update_camera_ui()
 
-            # TODO: fix lidar or find alternative
-            # Stanley #### and not self.obstacle
             while not self.at_final_point and (self.arduino_line == 1500 or self.to_stanley_drive_toggle == 1):
                 self.update_camera_ui()
                 
+                #### STANLEY LOGIC, REPLACED WITH OPENCV LINE FOLLOWING. ####
+
                 self.yaw = np.arctan2(self.gps_robot_y - self.gps_robot_last_y, self.gps_robot_x - self.gps_robot_last_x)
 
                 if time.time() > self.previous_time + 0.2:
@@ -281,22 +289,59 @@ class Master(Node):
                 if self.last_dt is not None:
                     dt = time.time() - self.last_dt
                 else:
-                    dt = 0.01  # Initialize with a small time delta
+                    dt = 0.01
                 self.last_dt = time.time()
 
-                self.update_pid_params()
-                pid_speed = self.pid_obj.compute(crosstrack_error, dt, self.v)
+                #self.update_pid_params()
+                #pid_speed = self.pid_obj.compute(crosstrack_error, dt, self.v)
 
-                self.final_speed = int((pid_speed*100) * self.to_speed_limiter / 100)
+                # self.final_speed = int((pid_speed*100) * self.to_speed_limiter / 100)
+                self.final_speed = int((self.v*100) * self.to_speed_limiter / 100)
                 
                 self.get_logger().info(f"{self.final_speed = }, P = {self.pid_obj.kp}, I = {self.pid_obj.ki}, D = {self.pid_obj.kd}")
                 #print(f"PID speed output: {pid_speed}, final speed: {final_speed}, dt: {dt}, speed: {self.v}")
                 #print(f"------------------------------------------------------")
 
-                self.k = self.map_range(pid_speed, self.v_min, self.v_max, self.k_max, self.k_min)
+                #self.k = self.map_range(pid_speed, self.v_min, self.v_max, self.k_max, self.k_min)
 
-                self.write_arduino([self.final_speed, -limited_steering_angle, self.to_brakes])
-                self.arduino_line = self.read_arduino()
+                self.is_cone_obstacle()
+                if self.obstacle:
+                    self.write_arduino([0, -limited_steering_angle, 1])
+                else:
+                    self.write_arduino([self.final_speed, -limited_steering_angle, self.to_brakes])
+                
+                '''
+            while self.arduino_line == 1500:
+                while self.obstacle:
+                    self.write_arduino([0, 0, 1])
+                
+                servo_max_turn = 120 
+
+                detected_line_center = self.stream_object.centerx
+                centerx_range_min = 800
+                centerx_range_max = 1000
+
+                line_range_center = (centerx_range_min + centerx_range_max) / 2
+
+                scaling_factor = servo_max_turn / (centerx_range_max - centerx_range_min)
+                
+                if detected_line_center > centerx_range_max:
+                    distance_from_center = detected_line_center - line_range_center
+                    #turn servo left
+                    steering_angle = min(distance_from_center * scaling_factor, servo_max_turn)
+
+                elif detected_line_center < centerx_range_min:
+                    distance_from_center = line_range_center - detected_line_center
+                    #turn servo right
+                    steering_angle = -min(distance_from_center * scaling_factor, servo_max_turn)
+                else:
+                    steering_angle = 0
+                
+                self.final_speed = 70 * (self.to_speed_limiter / 100)
+                print(f"speed: {self.final_speed}, turn: {steering_angle}")
+
+                self.write_arduino([int(self.final_speed), int(steering_angle), self.to_brakes])
+                self.arduino_line = self.read_arduino()'''
 
         
 @atexit.register

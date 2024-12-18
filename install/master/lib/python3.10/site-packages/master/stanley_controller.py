@@ -92,10 +92,10 @@ class Stanley():
         # Constrains steering angle to the vehicle limits
         if time.time() > (self.prev_t+0.5):
             self.prev_t = time.time()
-            print(f"target indx: {target_index}, prev_index: {self.prev_target_index}, robot_x: {robot_x}, robot_y: {robot_y}, x: {dx}, y: {dy}")
-            print(f"robot yaw: {yaw}, path yaw: {path_yaw[target_index]}")
-            print(f"desired steering: {desired_steering_angle}, yaw error: {yaw_error}, crosst_steering_error: {crosstrack_steering_error}, crosstrack error: {crosstrack_error}")
-            print("---------------------------------------------------------------------------------------------------------------")
+            #print(f"target indx: {target_index}, prev_index: {self.prev_target_index}, robot_x: {robot_x}, robot_y: {robot_y}, x: {dx}, y: {dy}")
+            #print(f"robot yaw: {yaw}, path yaw: {path_yaw[target_index]}")
+            #print(f"desired steering: {desired_steering_angle}, yaw error: {yaw_error}, crosst_steering_error: {crosstrack_steering_error}, crosstrack error: {crosstrack_error}")
+            #print("---------------------------------------------------------------------------------------------------------------")
         limited_steering_angle = np.clip(desired_steering_angle, -max_steering_control, max_steering_control)
 
         return limited_steering_angle, target_index, crosstrack_error, absolute_distance
